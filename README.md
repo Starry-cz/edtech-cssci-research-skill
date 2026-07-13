@@ -1,18 +1,33 @@
 # 教育技术学 CSSCI 研究助手
 
-一个面向中文教育技术学、教育数字化与智能教育研究的 Codex Skill，覆盖从选题和研究设计到论文写作、章节收束、投稿前自检的完整工作流。
+一个面向中文教育技术学、教育数字化与智能教育研究的 Codex Skill，覆盖选题诊断、研究问题、文献检索、研究设计、论文写作、章节收束和投稿前自检。
 
 本项目强调“研究问题—研究设计—证据—结论”的闭合关系。它不会只把句子改得更像论文，也不会用“技术赋能、融合创新、模式重塑”等抽象词代替机制解释。
 
 ## 主要能力
 
 - 选题打磨、研究问题提炼与论文结构设计
+- 中英文文献检索规划、结构化阅读、Zotero 整理与综述矩阵
 - 题目、摘要、引言、文献综述、理论框架与机制写作
-- 研究设计、结果解释、讨论、结论与政策/实践建议
+- 数据采集与分析诊断、结果解释、讨论、结论与政策/实践建议
 - 博士论文和学位论文章节、小节及文献述评结尾
 - CSSCI/中文核心投稿前终稿自检与反 AI 模板表达检查
 - 目标期刊匹配、投稿规范和 CSSCI 收录状态核验
 - 文献、DOI、政策、数据和引用真实性检查
+
+## 九种任务模式
+
+Skill 会先识别任务类型，再按需读取对应规则：
+
+1. `topic_diagnosis`：判断选题价值、范围、证据可得性与伦理风险。
+2. `research_question_refinement`：把宽泛主题改造成可回答的问题。
+3. `outline_building`：为章节分配论证任务并检查结构漂移。
+4. `literature_review_planning`：规划概念簇、检索式、综述结构与研究缺口。
+5. `literature_search_to_review`：完成检索记录、来源筛选、结构化笔记、Zotero 与综述矩阵工作流。
+6. `draft_review`：按具体文本证据诊断整稿。
+7. `section_revision`：在不新增虚构材料的前提下修订章节。
+8. `citation_and_evidence_check`：核对来源状态、主张强度和因果边界。
+9. `pre_submission_check`：识别投稿阻断项、重要修改项和润色项。
 
 ## 支持的研究范式
 
@@ -49,6 +64,17 @@
 - 相关研究不写成因果研究，预测性能不等同于教学效果。
 - 未核实内容使用 `[待核验]`、`[待补材料]` 或明确的检索步骤。
 - CSSCI 目录、期刊栏目和格式要求以当前官方信息为准。
+
+### 诊断而非机械打分
+
+- 每项审查使用 `Pass / Partial / Fail`，并引用草稿中的具体证据。
+- 风险项必须同时给出位置、问题依据、修改动作和预期改善。
+- 材料不足时使用 `[needs user verification]`、`[待核验]` 或 `[待补材料]`，不把“用户未提供”误判为“论文没有”。
+- 不套用固定样本量、统一数据清理比例或单一统计阈值；判断服从研究问题、数据结构与识别条件。
+
+### 来源状态可追踪
+
+文献从检索到使用依次标记为 `candidate source`、`metadata only`、`abstract only`、`full text read`、`in Zotero` 或 `imported to Zotero`。Zotero 中存在条目不等于已阅读全文，也不等于元数据准确。
 
 ## 安装
 
@@ -90,12 +116,21 @@ git clone https://github.com/Starry-cz/edtech-cssci-research-skill.git "$HOME\.c
 使用 $edtech-cssci-research-skill，按教育技术学 CSSCI 审稿视角做投稿前自检，并按“必须修改、建议修改、可保留”分类。
 ```
 
+```text
+使用 $edtech-cssci-research-skill，为“生成式人工智能反馈与大学生论证写作修订”设计中英文检索式、筛选日志、Zotero 标签和综述矩阵。没有读到全文的来源不要写成已核实结论。
+```
+
+```text
+使用 $edtech-cssci-research-skill，诊断这份平台日志研究的数据生成、分析单位、缺失处理、训练/验证隔离和因果措辞；逐项给出 Pass、Partial 或 Fail。
+```
+
 若只需要正文，可在请求中明确说明“只给正文，不要写作说明”。
 
 ## 输出形式
 
 - 正文写作：正文 + 简短的写作逻辑与证据边界说明
 - 结构或诊断：方案/问题 + 判断依据
+- 文献任务：检索策略 + 来源状态 + 筛选日志 + 阅读笔记/矩阵 + 引文风险
 - 终稿自检：总体判断 + 5—8 个主要问题 + 修改建议 + 反模板快扫
 - 章节收束：默认一段式正文 + 收束逻辑说明
 - 资料不足：待补信息、可选研究设计或检索核验步骤
@@ -109,16 +144,27 @@ edtech-cssci-research-skill/
 │   └── openai.yaml
 ├── references/
 │   ├── writing-workflow.md
+│   ├── operating-modes-and-diagnostics.md
+│   ├── literature-search-and-zotero.md
+│   ├── data-collection-and-analysis.md
 │   ├── self-review.md
 │   ├── chapter-synthesis.md
 │   ├── research-paradigms.md
 │   ├── evidence-and-citation.md
-│   └── journal-verification.md
+│   ├── journal-verification.md
+│   └── validation-scenarios.md
+├── assets/
+│   ├── literature-review-matrix-template.md
+│   └── revision-report-template.md
+├── examples/
+│   ├── good-outline.md
+│   ├── weak-outline.md
+│   └── sample-review.md
 ├── LICENSE
 └── README.md
 ```
 
-`SKILL.md` 负责核心规则和任务路由；`references/` 中的文件仅在相关任务触发时按需读取，避免一次加载全部内容。
+`SKILL.md` 负责核心规则和任务路由；`references/` 按任务读取；`assets/` 提供可复用交付模板；`examples/` 展示诊断和改写的质量边界。
 
 ## 研究与投稿规范
 
@@ -139,8 +185,9 @@ edtech-cssci-research-skill/
 - [`c-journal-paper-self-review-zh`](https://github.com/Smoothsailing0/Data-/tree/main/skills/c-journal-paper-self-review-zh)
 - [`public-management-c-journal-writing-zh`](https://github.com/Smoothsailing0/Data-/tree/main/skills/public-management-c-journal-writing-zh)
 - [`public-management-chapter-ending-synthesis-zh`](https://github.com/Smoothsailing0/Data-/tree/main/skills/public-management-chapter-ending-synthesis-zh)
+- [`social-science-paper-writing-skill`](https://github.com/fakerqwq/social-science-paper-writing-skill)：启发了任务模式、诊断标签、来源状态、检索到综述和修订报告等功能设计。
 
-教育技术学规则、研究范式、证据边界和全部正文均为独立整理与重写，不复制原项目文本。
+上述项目用于功能分析和结构参考。教育技术学规则、研究范式、证据边界、示例和全部正文均为独立整理与重写；未复制或再发布来源仓库文本。
 
 ## 使用边界
 

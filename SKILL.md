@@ -1,6 +1,6 @@
 ---
 name: edtech-cssci-research-skill
-description: "Plan, write, revise, synthesize, and self-review Chinese education technology papers for CSSCI and related core journals. Use for topic selection, titles, abstracts, introductions, literature reviews, concepts, theories and mechanisms, research designs, evidence and results, discussions and conclusions, dissertation chapter or subsection endings, journal matching, citation verification, pre-submission review, and anti-template or anti-AI-style revision across design-based research, learning analytics, surveys, experiments, case studies, QCA, policy or text analysis, systematic reviews, qualitative, quantitative, and mixed methods."
+description: "Plan, search, write, revise, diagnose, synthesize, and self-review Chinese education technology papers for CSSCI and related core journals. Use for topic diagnosis, research-question refinement, outline building, Chinese/English literature search and Zotero workflows, structured reading notes, literature review matrices, titles, abstracts, introductions, theories and mechanisms, research design and data analysis review, section revision, chapter endings, citation/evidence/causal-risk checking, journal matching, and pre-submission review across design-based research, learning analytics, surveys, experiments, case studies, QCA, policy or text analysis, systematic reviews, qualitative, quantitative, and mixed methods."
 ---
 
 # 教育技术学 CSSCI 研究助手
@@ -20,11 +20,29 @@ description: "Plan, write, revise, synthesize, and self-review Chinese education
 按任务阅读对应文件，不要一次加载全部参考资料：
 
 - 题目、摘要、引言、综述、理论、方法、结果、讨论、结论或改写：`references/writing-workflow.md`
+- 选题诊断、研究问题细化、大纲、全文诊断、章节修订和投稿检查：`references/operating-modes-and-diagnostics.md`
+- CNKI/Google Scholar 等检索、结构化阅读、Zotero 和综述矩阵：`references/literature-search-and-zotero.md`
 - 投稿前终稿审查、反 AI 痕迹检查：`references/self-review.md`
 - 本章小结、小节总结、文献述评结尾、实证或案例章节收束：`references/chapter-synthesis.md`
 - 设计型研究、学习分析、实验、问卷、案例、QCA、文本分析、系统综述、质性或混合方法：`references/research-paradigms.md`
+- 抽样、测量、数据清理、统计方法与诊断：`references/data-collection-and-analysis.md`
 - 文献检索、引文、证据或结果边界：`references/evidence-and-citation.md`
 - 期刊匹配、CSSCI资格与投稿格式：`references/journal-verification.md`
+- 诊断报告和综述矩阵直接使用：`assets/revision-report-template.md`、`assets/literature-review-matrix-template.md`
+
+## Operating modes
+
+从请求中选择一种主模式；用户未指定时简短说明所选模式：
+
+- `topic_diagnosis`：判断选题的问题意识、教育技术学相关性、可行性、证据与伦理风险。
+- `research_question_refinement`：把宽泛主题转为 2—4 个可研究问题，并列证据需求与取舍。
+- `outline_building`：搭建或修复题目—问题—文献—理论—方法—分析—结论结构。
+- `literature_review_planning`：规划检索范围、文献簇、纳排逻辑和 gap statement。
+- `literature_search_to_review`：完成检索、筛选、来源状态、结构化笔记、Zotero 组织、矩阵与综述草稿。
+- `draft_review`：以逐项 `Pass / Partial / Fail` 诊断全文。
+- `section_revision`：保留可核验主张，修订章节并标记剩余缺口。
+- `citation_and_evidence_check`：检查引文、数据来源、直接引语和因果越界。
+- `pre_submission_check`：区分阻断投稿问题与一般润色问题，给出提交判断。
 
 ## 强制工作流
 
@@ -36,6 +54,8 @@ description: "Plan, write, revise, synthesize, and self-review Chinese education
 4. **材料**：落到文献发现、政策节点、教学活动、设计迭代、平台日志、量表题项、课堂观察、访谈、统计结果或机制环节中的哪一类。
 5. **边界**：方法能支持什么判断，不能支持什么判断；结论适用于哪些学习者、课程、学校、平台和时间范围。
 6. **表达**：删除作者排队、流程式开头、机械对偶、宣传口号、空泛拔高和无证据判断。
+
+信息不足时必须列出：缺什么、为何影响判断、用户应提供什么、当前仍能完成什么；不得静默补造。
 
 ## 论证单元地图
 
@@ -58,6 +78,14 @@ description: "Plan, write, revise, synthesize, and self-review Chinese education
 - 终稿自检按“总体判断—主要问题—可执行修改—反模板快扫”输出，问题需定位到章节或句段。
 - 修改建议按“必须修改 / 建议修改 / 可保留”排序。
 - 若用户要求先读文献再写，先列实际使用且可核验的来源，再写正文。
+- 诊断为每个问题提供“标签—严重度—用户材料中的证据—具体操作—预期改善”，不用“加强论证”等空话。
+- `Pass` 表示明确、具体、有证据且已整合；`Partial` 表示存在但模糊、迟置、证据不足或未整合；`Fail` 表示缺失、矛盾、不可核验或无法从材料判断。
+
+## 来源状态与风险标签
+
+检索和写作时区分 `candidate source`、`metadata only`、`abstract only`、`full text read`、`in Zotero`、`imported to Zotero`；Zotero 中有记录不等于已阅读或支持当前主张。
+
+按需使用：`Topic Summary`、`Research Question Too Broad`、`Structure Drift`、`Literature Listing`、`Missing Research Gap`、`Theory Decoration`、`Conceptual Ambiguity`、`Method Mismatch`、`Sampling Gap`、`Operationalization Gap`、`Data Provenance Gap`、`Data Cleaning Gap`、`Statistical Test Mismatch`、`Evidence Gap`、`Citation Risk`、`Quotation Risk`、`Causal Overclaim`、`Conclusion Overreach`。每个标签必须指向用户材料中的证据。
 
 ## 最终检查
 

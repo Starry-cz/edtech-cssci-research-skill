@@ -10,6 +10,8 @@
 
 不得把第 3 类写成事实。无法访问原文时，说明限制，并列出待核验字段：作者、题名、期刊、年份、卷期、页码、DOI或稳定链接。
 
+检索任务还要使用更细的来源状态：`candidate source`、`metadata only`、`abstract only`、`full text read`、`in Zotero` 和 `imported to Zotero`。各状态允许支持的主张及 Zotero 操作见 `literature-search-and-zotero.md`；库中存在条目不能证明已阅读全文。
+
 ## 检索与引用
 
 - 先明确概念同义词、数据库、时间范围、文献类型和纳排标准，再声称“系统检索”。
@@ -17,6 +19,7 @@
 - 把引用放到其支持的对象、方法、发现或观点之后，避免一串文献承担不明判断。
 - 区分理论文献、原始研究、综述、政策文件、技术产品资料和新闻；政策可说明环境，不能替代理论和效果证据。
 - 用户要求“先读文献再写”时，先列本轮实际参照来源及链接。
+- 引文风险按 `unsupported citation`、`bibliographic mismatch`、`primary-source needed`、`page verification needed`、`citation granularity issue` 或 `causal overclaim` 标记，并说明如何核验。
 
 ## 解释边界
 
