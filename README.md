@@ -10,7 +10,7 @@
 - 中英文文献检索规划、结构化阅读、Zotero 整理与综述矩阵
 - 题目、摘要、引言、文献综述、理论框架与机制写作
 - 数据采集与分析诊断、结果解释、讨论、结论与政策/实践建议
-- 可解释机器学习：防泄漏预处理、模型比较、样本外验证、SHAP/ALE、稳健性与可视化
+- 可解释机器学习：防泄漏预处理、多模型选择、层次SHAP、PCA-ALE、分组比较、稳定性、节点消融与可视化
 - 博士论文和学位论文章节、小节及文献述评结尾
 - CSSCI/中文核心投稿前终稿自检与反 AI 模板表达检查
 - 目标期刊匹配、投稿规范和 CSSCI 收录状态核验
@@ -131,6 +131,10 @@ git clone https://github.com/Starry-cz/edtech-cssci-research-skill.git "$HOME\.c
 使用 $edtech-cssci-research-skill，为学生学习结果预测设计一套可解释机器学习流程：按学校分组切分数据，比较线性基线、随机森林和 XGBoost，报告样本外性能，再用 SHAP 与 ALE 解释并规划 CSSCI 论文图表。
 ```
 
+```text
+使用 $edtech-cssci-research-skill，审查这套课堂观察机器学习结果：20个模型在同一测试集排序，58个特征归入多级理论维度，按维度汇总SHAP，并进行了PCA-ALE、学科分组、Bootstrap和删除节点实验。请识别选模、维度规模、小样本、稳定性和解释边界问题。
+```
+
 若只需要正文，可在请求中明确说明“只给正文，不要写作说明”。
 
 ## 输出形式
@@ -155,6 +159,7 @@ edtech-cssci-research-skill/
 │   ├── literature-search-and-zotero.md
 │   ├── data-collection-and-analysis.md
 │   ├── interpretable-machine-learning.md
+│   ├── hierarchical-ml-interpretation.md
 │   ├── self-review.md
 │   ├── chapter-synthesis.md
 │   ├── research-paradigms.md

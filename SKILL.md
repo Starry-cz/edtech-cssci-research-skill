@@ -1,6 +1,6 @@
 ---
 name: edtech-cssci-research-skill
-description: "Plan, search, write, revise, diagnose, synthesize, and self-review Chinese education technology papers for CSSCI and related core journals. Use for topic diagnosis, research-question refinement, outline building, Chinese/English literature search and Zotero workflows, structured reading notes, literature review matrices, titles, abstracts, introductions, theories and mechanisms, research design and data analysis review, interpretable machine learning with leakage-safe preprocessing, model comparison, SHAP/ALE explanation and visualization, section revision, chapter endings, citation/evidence/causal-risk checking, journal matching, and pre-submission review across design-based research, learning analytics, surveys, experiments, case studies, QCA, policy or text analysis, systematic reviews, qualitative, quantitative, and mixed methods."
+description: "Plan, search, write, revise, diagnose, synthesize, and self-review Chinese education technology papers for CSSCI and related core journals. Use for topic diagnosis, research-question refinement, outline building, Chinese/English literature search and Zotero workflows, structured reading notes, literature review matrices, titles, abstracts, introductions, theories and mechanisms, research design and data analysis review, interpretable machine learning with leakage-safe preprocessing, multi-model selection, hierarchical/grouped SHAP, PCA-ALE, subgroup comparisons, stability and ablation analysis, visualization, section revision, chapter endings, citation/evidence/causal-risk checking, journal matching, and pre-submission review across design-based research, learning analytics, surveys, experiments, case studies, QCA, policy or text analysis, systematic reviews, qualitative, quantitative, and mixed methods."
 ---
 
 # 教育技术学 CSSCI 研究助手
@@ -27,6 +27,7 @@ description: "Plan, search, write, revise, diagnose, synthesize, and self-review
 - 设计型研究、学习分析、实验、问卷、案例、QCA、文本分析、系统综述、质性或混合方法：`references/research-paradigms.md`
 - 抽样、测量、数据清理、统计方法与诊断：`references/data-collection-and-analysis.md`
 - 可解释机器学习的数据处理、建模验证、SHAP/ALE、可视化与结果报告：`references/interpretable-machine-learning.md`
+- 理论特征层次分类、分组SHAP、PCA-ALE、分组比较、Bootstrap稳定性和节点消融：`references/hierarchical-ml-interpretation.md`
 - 文献检索、引文、证据或结果边界：`references/evidence-and-citation.md`
 - 期刊匹配、CSSCI资格与投稿格式：`references/journal-verification.md`
 - 诊断报告、综述矩阵和机器学习报告直接使用：`assets/revision-report-template.md`、`assets/literature-review-matrix-template.md`、`assets/interpretable-ml-report-template.md`
@@ -87,7 +88,7 @@ description: "Plan, search, write, revise, diagnose, synthesize, and self-review
 
 检索和写作时区分 `candidate source`、`metadata only`、`abstract only`、`full text read`、`in Zotero`、`imported to Zotero`；Zotero 中有记录不等于已阅读或支持当前主张。
 
-按需使用：`Topic Summary`、`Research Question Too Broad`、`Structure Drift`、`Literature Listing`、`Missing Research Gap`、`Theory Decoration`、`Conceptual Ambiguity`、`Method Mismatch`、`Sampling Gap`、`Operationalization Gap`、`Data Provenance Gap`、`Data Cleaning Gap`、`Statistical Test Mismatch`、`Evidence Gap`、`Citation Risk`、`Quotation Risk`、`Causal Overclaim`、`Conclusion Overreach`。每个标签必须指向用户材料中的证据。
+按需使用：`Topic Summary`、`Research Question Too Broad`、`Structure Drift`、`Literature Listing`、`Missing Research Gap`、`Theory Decoration`、`Conceptual Ambiguity`、`Method Mismatch`、`Sampling Gap`、`Operationalization Gap`、`Data Provenance Gap`、`Data Cleaning Gap`、`Criterion Contamination`、`Test-set Selection`、`Hierarchy Size Bias`、`Ablation-Fidelity Confusion`、`Statistical Test Mismatch`、`Evidence Gap`、`Citation Risk`、`Quotation Risk`、`Causal Overclaim`、`Conclusion Overreach`。每个标签必须指向用户材料中的证据。
 
 ## 最终检查
 
