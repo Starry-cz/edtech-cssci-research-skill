@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title description">
+  <title id="title">教育技术学 CSSCI 研究助手</title>
+  <desc id="description">从真实教育问题出发，形成问题、理论、模型、证据、实践与结论之间可追溯的论证链。</desc>
+  <defs>
+    <linearGradient id="background" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="0.52" stop-color="#172554"/>
+      <stop offset="1" stop-color="#312e81"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+    <filter id="glow" x="-30%" y="-40%" width="160%" height="180%"><feGaussianBlur stdDeviation="10" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="420" rx="28" fill="url(#background)"/>
+  <circle cx="1035" cy="75" r="170" fill="#38bdf8" opacity=".10"/><circle cx="1110" cy="300" r="190" fill="#a78bfa" opacity=".10"/>
+  <path d="M0 337 C210 275 340 410 560 336 S890 257 1200 345 V420 H0Z" fill="#020617" opacity=".22"/>
+  <rect x="72" y="59" width="154" height="34" rx="17" fill="#ffffff" opacity=".12"/>
+  <text x="149" y="82" text-anchor="middle" fill="#e0f2fe" font-size="16" font-family="Arial, 'Microsoft YaHei', sans-serif" letter-spacing="1">CODEX SKILL</text>
+  <text x="72" y="155" fill="#ffffff" font-size="48" font-weight="700" font-family="Arial, 'Microsoft YaHei', sans-serif">教育技术学 CSSCI 研究助手</text>
+  <text x="72" y="204" fill="#cbd5e1" font-size="23" font-family="Arial, 'Microsoft YaHei', sans-serif">让教育技术研究从真实问题出发，经得起证据与审稿追问。</text>
+  <rect x="72" y="240" width="676" height="4" rx="2" fill="url(#accent)" filter="url(#glow)"/>
+  <g font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="15" font-weight="600" transform="translate(72 285)">
+    <rect width="124" height="47" rx="12" fill="#0ea5e9" opacity=".92"/><text x="62" y="30" text-anchor="middle" fill="#ffffff">真实问题</text><path d="M133 24H151 M151 20L158 24L151 28" fill="none" stroke="#67e8f9" stroke-width="2"/>
+    <rect x="166" width="104" height="47" rx="12" fill="#1d4ed8" opacity=".92"/><text x="218" y="30" text-anchor="middle" fill="#ffffff">理论机制</text><path d="M279 24H297 M297 20L304 24L297 28" fill="none" stroke="#93c5fd" stroke-width="2"/>
+    <rect x="312" width="104" height="47" rx="12" fill="#4338ca" opacity=".92"/><text x="364" y="30" text-anchor="middle" fill="#ffffff">研究模型</text><path d="M425 24H443 M443 20L450 24L443 28" fill="none" stroke="#c4b5fd" stroke-width="2"/>
+    <rect x="458" width="104" height="47" rx="12" fill="#6d28d9" opacity=".92"/><text x="510" y="30" text-anchor="middle" fill="#ffffff">研究证据</text><path d="M571 24H589 M589 20L596 24L589 28" fill="none" stroke="#ddd6fe" stroke-width="2"/>
+    <rect x="604" width="104" height="47" rx="12" fill="#7e22ce" opacity=".92"/><text x="656" y="30" text-anchor="middle" fill="#ffffff">实践结论</text>
+  </g>
+  <g transform="translate(878 142)"><circle cx="120" cy="76" r="78" fill="#ffffff" opacity=".08"/><circle cx="120" cy="76" r="56" fill="none" stroke="url(#accent)" stroke-width="2" opacity=".9"/><path d="M88 86 C102 48 133 46 151 66 C168 85 148 116 119 111 C99 107 89 99 88 86Z" fill="#22d3ee" opacity=".82"/><path d="M93 62 C110 84 131 91 157 86" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity=".9"/><circle cx="104" cy="71" r="5" fill="#ffffff"/><circle cx="139" cy="82" r="5" fill="#ffffff"/><path d="M73 119 L95 99 M168 42 L150 59 M178 122 L156 104" stroke="#c4b5fd" stroke-width="3" stroke-linecap="round"/></g>
+  <text x="998" y="351" text-anchor="middle" fill="#cbd5e1" font-size="15" font-family="Arial, 'Microsoft YaHei', sans-serif">问题 · 理论 · 证据 · 边界</text>
+</svg>
