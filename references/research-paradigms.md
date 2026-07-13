@@ -1,6 +1,6 @@
 # 教育技术学研究范式与报告要点
 
-仅在选择、撰写或审查研究设计时读取。所有范式都要报告研究问题、对象与情境、证据生成、分析过程、结果边界和伦理状态；涉及经验数据时同时读取 `data-collection-and-analysis.md`。经验研究的透明报告可参照 [AERA 报告标准](https://www.aera.net/Research-Policy-Advocacy/AERA-Shaping-Research-Policy/Standards-for-Research-Conduct/Standards-for-Empirical-Social-Science-Research)；定量、质性与混合研究可核对 [APA JARS](https://www.apa.org/journals/authors/all-instructions.html)。
+仅在选择、撰写或审查研究设计时读取。所有范式都要报告研究问题、对象与情境、证据生成、分析过程、结果边界和伦理状态；涉及经验数据时同时读取 `data-collection-and-analysis.md`，涉及定量教育数据分析的设计、执行和报告时再读取 `education-data-analysis.md`。经验研究的透明报告可参照 [AERA 报告标准](https://www.aera.net/Research-Policy-Advocacy/AERA-Shaping-Research-Policy/Standards-for-Research-Conduct/Standards-for-Empirical-Social-Science-Research)；定量、质性与混合研究可核对 [APA JARS](https://www.apa.org/journals/authors/all-instructions.html)。
 
 ## 设计型研究
 

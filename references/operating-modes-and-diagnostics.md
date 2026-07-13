@@ -70,6 +70,14 @@
 3. 检查框架是否进入数据、编码、分析和结果，而非只在引言或图中出现。
 4. 核对图中节点、箭头、方向和视觉等级是否与正文证据一致；证据不足时降低贡献强度。
 
+## `education_data_analysis`
+
+1. 读取 `education-data-analysis.md` 与 `data-collection-and-analysis.md`，明确研究问题、估计对象、分析单位、层级、结果变量、时间点与结论边界。
+2. 建立数据字典和清理台账，区分原始、去标识化、分析与派生数据；说明排除、缺失、异常值、量表计分和变量构造。
+3. 先完成样本流向、分布、缺失、组别、时间和聚类结构的描述与可视化，再选择测量分析和主模型。
+4. 按结果变量、独立/配对、层级、重复测量、时间顺序和识别条件选择分析；报告效应量、不确定性、模型诊断和合理敏感性分析。
+5. 用“问题—数据—结果—教育解释—边界”写作，并使用 `assets/education-data-analysis-report-template.md` 输出可复现的分析计划或报告；预测任务再读取 `interpretable-machine-learning.md`。
+
 ## `reference_and_artifact_audit`
 
 1. 读取 `reference-integrity-and-manuscript-artifacts.md`，确认目标期刊最新官方格式。

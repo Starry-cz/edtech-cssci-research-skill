@@ -1,6 +1,6 @@
 ---
 name: edtech-cssci-research-skill
-description: "Support Chinese education technology, educational digitalization, and intelligent-education papers for CSSCI and related core journals. Use for topic and research-question diagnosis; literature search, Zotero, review matrices, citation verification; theory, mechanism, conceptual/practice model building and framework defense; research design, data analysis, and leakage-safe interpretable machine learning with SHAP/ALE and hierarchical or subgroup interpretation; titles, abstracts, sections, chapter endings, and full-paper revision; reviewer-response letters, revision ledgers, and project decision memory; reference, figure, anonymous-manuscript, DOCX/PDF, submission-package, journal-matching, and pre-submission audits. Covers conceptual, policy-comparative, design-based, learning-analytics, survey, experimental, case, QCA, systematic-review, qualitative, quantitative, and mixed-methods research."
+description: "Support Chinese education technology, educational digitalization, intelligent-education papers for CSSCI/core journals. Use for topic and research-question diagnosis; literature search, Zotero, review matrices, citation verification; theory, mechanism, conceptual/practice model building and framework defense; research design and educational data analysis including data audit, cleaning, descriptive statistics, visualization, psychometrics, group comparisons, regression, SEM, multilevel and longitudinal modeling; leakage-safe interpretable machine learning with SHAP/ALE and hierarchical or subgroup interpretation; writing and full-paper revision; reviewer-response letters, revision ledgers, project decision memory; and reference, figure, anonymous-manuscript, DOCX/PDF, submission-package, journal-matching, and pre-submission audits. Covers conceptual, policy-comparative, design-based, learning-analytics, survey, experimental, case, QCA, systematic-review, qualitative, quantitative, and mixed-methods research."
 ---
 
 # 教育技术学 CSSCI 研究助手
@@ -27,6 +27,7 @@ description: "Support Chinese education technology, educational digitalization, 
 - 设计型研究、学习分析、实验、问卷、案例、QCA、文本分析、系统综述、质性或混合方法：`references/research-paradigms.md`
 - 概念模型、智能教育系统、教师画像/测评/推荐、课程与教研模式、政策比较或实践体系：`references/problem-model-evidence-practice.md`
 - 二维矩阵、连续谱、类型学、多层模型、机制图和框架可辩护性：`references/framework-defense-and-figure-audit.md`
+- 教育数据分析的数据审计、清理、描述统计、可视化、测量、推断、回归、SEM、多层或纵向模型：`references/education-data-analysis.md`
 - 抽样、测量、数据清理、统计方法与诊断：`references/data-collection-and-analysis.md`
 - 可解释机器学习的数据处理、建模验证、SHAP/ALE、可视化与结果报告：`references/interpretable-machine-learning.md`
 - 理论特征层次分类、分组SHAP、PCA-ALE、分组比较、Bootstrap稳定性和节点消融：`references/hierarchical-ml-interpretation.md`
@@ -35,7 +36,7 @@ description: "Support Chinese education technology, educational digitalization, 
 - 长周期论文项目、术语决议、数据/稿件版本与开放问题：`references/project-memory-and-decision-log.md`
 - 参考文献双向核对、匿名稿、图表、DOCX/PDF 和投稿包：`references/reference-integrity-and-manuscript-artifacts.md`
 - 期刊匹配、CSSCI资格与投稿格式：`references/journal-verification.md`
-- 诊断报告、综述矩阵、研究架构画布、机器学习报告、审稿回应台账、项目上下文和投稿包直接使用：`assets/revision-report-template.md`、`assets/literature-review-matrix-template.md`、`assets/problem-model-evidence-canvas.md`、`assets/interpretable-ml-report-template.md`、`assets/reviewer-response-and-revision-ledger-template.md`、`assets/project-context-template.md`、`assets/submission-package-checklist.md`
+- 诊断报告、综述矩阵、研究架构画布、教育数据分析报告、机器学习报告、审稿回应台账、项目上下文和投稿包直接使用：`assets/revision-report-template.md`、`assets/literature-review-matrix-template.md`、`assets/problem-model-evidence-canvas.md`、`assets/education-data-analysis-report-template.md`、`assets/interpretable-ml-report-template.md`、`assets/reviewer-response-and-revision-ledger-template.md`、`assets/project-context-template.md`、`assets/submission-package-checklist.md`
 
 ## Operating modes
 
@@ -52,6 +53,7 @@ description: "Support Chinese education technology, educational digitalization, 
 - `section_revision`：保留可核验主张，修订章节并标记剩余缺口。
 - `reviewer_response_and_revision`：拆解审稿意见，处理多审稿人共识与冲突，生成回应函、修改台账和版本检查点。
 - `framework_defense`：检验框架维度、层级、操作化、边界案例、竞争解释及图文一致性。
+- `education_data_analysis`：完成教育数据的数据审计、清理、描述与可视化、测量质量、模型选择、诊断、稳健性、结果报告与复现边界。
 - `citation_and_evidence_check`：检查引文、数据来源、直接引语和因果越界。
 - `reference_and_artifact_audit`：检查正文—文后条目、匿名化、图表、DOCX/PDF 渲染和投稿包一致性。
 - `interpretable_ml_analysis`：完成防泄漏数据处理、基线与候选模型比较、样本外验证、SHAP/ALE 解释、可视化和报告。
@@ -94,6 +96,7 @@ description: "Support Chinese education technology, educational digitalization, 
 - 结构、诊断、标题或修改建议必须给出简短判断依据。
 - 终稿自检按“总体判断—主要问题—可执行修改—反模板快扫”输出，问题需定位到章节或句段。
 - 审稿修订按“意见—判断—决定—修改位置—验证—状态”记录；多位审稿人的共识、冲突与独有意见分开处理。
+- 教育数据分析按“分析问题—数据与变量—清理—描述/测量—主模型—诊断与稳健性—教育解释—复现与边界”输出。
 - 修改建议按“必须修改 / 建议修改 / 可保留”排序。
 - 若用户要求先读文献再写，先列实际使用且可核验的来源，再写正文。
 - 诊断为每个问题提供“标签—严重度—用户材料中的证据—具体操作—预期改善”，不用“加强论证”等空话。
@@ -103,7 +106,7 @@ description: "Support Chinese education technology, educational digitalization, 
 
 检索和写作时区分 `candidate source`、`metadata only`、`abstract only`、`full text read`、`in Zotero`、`imported to Zotero`；Zotero 中有记录不等于已阅读或支持当前主张。
 
-按需使用：`Topic Summary`、`Research Question Too Broad`、`Structure Drift`、`Literature Listing`、`Missing Research Gap`、`Theory Decoration`、`Conceptual Ambiguity`、`Method Mismatch`、`Sampling Gap`、`Operationalization Gap`、`Data Provenance Gap`、`Data Cleaning Gap`、`Criterion Contamination`、`Test-set Selection`、`Hierarchy Size Bias`、`Ablation-Fidelity Confusion`、`Statistical Test Mismatch`、`Evidence Gap`、`Citation Risk`、`Quotation Risk`、`Causal Overclaim`、`Conclusion Overreach`。每个标签必须指向用户材料中的证据。
+按需使用：`Topic Summary`、`Research Question Too Broad`、`Structure Drift`、`Literature Listing`、`Missing Research Gap`、`Theory Decoration`、`Conceptual Ambiguity`、`Method Mismatch`、`Sampling Gap`、`Operationalization Gap`、`Data Provenance Gap`、`Data Cleaning Gap`、`Data Dictionary Gap`、`Missingness Mechanism Gap`、`Measurement Invariance Gap`、`Cluster Dependence Gap`、`Model Assumption Gap`、`Multiplicity Transparency Gap`、`Effect Size/Uncertainty Gap`、`Reproducibility Gap`、`Criterion Contamination`、`Test-set Selection`、`Hierarchy Size Bias`、`Ablation-Fidelity Confusion`、`Statistical Test Mismatch`、`Evidence Gap`、`Citation Risk`、`Quotation Risk`、`Causal Overclaim`、`Conclusion Overreach`。每个标签必须指向用户材料中的证据。
 
 ## 最终检查
 

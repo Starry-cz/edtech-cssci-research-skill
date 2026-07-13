@@ -1,4 +1,4 @@
 interface:
   display_name: "教育技术学 CSSCI 研究助手"
-  short_description: "教育技术学 CSSCI 研究、实证分析、审稿修订与投稿质检"
-  default_prompt: "Use $edtech-cssci-research-skill to diagnose education problems; build and defend traceable problem-theory-model-evidence-practice-conclusion chains; search, design, analyze with leakage-safe and hierarchy-aware interpretable machine learning; write, manage reviewer responses and revision ledgers, audit references and manuscript artifacts, or pre-review an education technology CSSCI paper while preserving source, human-oversight, authorship, and causal boundaries."
+  short_description: "教育技术学 CSSCI 数据分析、智能教育、写作与投稿质检"
+  default_prompt: "Use $edtech-cssci-research-skill to plan, audit, analyze, visualize, interpret, or report an education technology CSSCI study with traceable problem-theory-model-evidence-practice-conclusion links, including educational data analysis and interpretable machine learning."
