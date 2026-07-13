@@ -9,6 +9,7 @@
 - 选题打磨、研究问题提炼与论文结构设计
 - 中英文文献检索规划、结构化阅读、Zotero 整理与综述矩阵
 - 题目、摘要、引言、文献综述、理论框架与机制写作
+- 教育难题分类、概念模型、技术系统、实践模式和“问题—模型—证据—实践”闭环设计
 - 数据采集与分析诊断、结果解释、讨论、结论与政策/实践建议
 - 可解释机器学习：防泄漏预处理、多模型选择、层次SHAP、PCA-ALE、分组比较、稳定性、节点消融与可视化
 - 博士论文和学位论文章节、小节及文献述评结尾
@@ -16,20 +17,22 @@
 - 目标期刊匹配、投稿规范和 CSSCI 收录状态核验
 - 文献、DOI、政策、数据和引用真实性检查
 
-## 十种任务模式
+## 十二种任务模式
 
 Skill 会先识别任务类型，再按需读取对应规则：
 
 1. `topic_diagnosis`：判断选题价值、范围、证据可得性与伦理风险。
 2. `research_question_refinement`：把宽泛主题改造成可回答的问题。
 3. `outline_building`：为章节分配论证任务并检查结构漂移。
-4. `literature_review_planning`：规划概念簇、检索式、综述结构与研究缺口。
-5. `literature_search_to_review`：完成检索记录、来源筛选、结构化笔记、Zotero 与综述矩阵工作流。
-6. `draft_review`：按具体文本证据诊断整稿。
-7. `section_revision`：在不新增虚构材料的前提下修订章节。
-8. `citation_and_evidence_check`：核对来源状态、主张强度和因果边界。
-9. `interpretable_ml_analysis`：完成防泄漏数据处理、模型比较、样本外验证、SHAP/ALE 解释和可视化。
-10. `pre_submission_check`：识别投稿阻断项、重要修改项和润色项。
+4. `conceptual_model_building`：区分结构、机制、效能、发展、价值与治理难题，建立理论—模型—证据映射。
+5. `practice_model_design`：设计指标、数据、系统、场景、反馈、应用验证和迭代关系。
+6. `literature_review_planning`：规划概念簇、检索式、综述结构与研究缺口。
+7. `literature_search_to_review`：完成检索记录、来源筛选、结构化笔记、Zotero 与综述矩阵工作流。
+8. `draft_review`：按具体文本证据诊断整稿。
+9. `section_revision`：在不新增虚构材料的前提下修订章节。
+10. `citation_and_evidence_check`：核对来源状态、主张强度和因果边界。
+11. `interpretable_ml_analysis`：完成防泄漏数据处理、模型比较、样本外验证、SHAP/ALE 解释和可视化。
+12. `pre_submission_check`：识别投稿阻断项、重要修改项和润色项。
 
 ## 支持的研究范式
 
@@ -60,6 +63,10 @@ Skill 会先识别任务类型，再按需读取对应规则：
 ```
 
 区分“技术存在”“技术被使用”“学习过程发生变化”和“学习结果发生变化”，避免从技术可用性直接推导教育效果。
+
+### 模型与实践可追溯
+
+模型研究按“目标—构念—数据—分析与交互—服务与评价”检查。每个层、环、箭头和标签都应有理论来源、观测证据、操作过程或应用主体；区分模型提出、技术实现、可用性、初步效果、机制成立与可推广性。
 
 ### 证据边界明确
 
@@ -124,6 +131,10 @@ git clone https://github.com/Starry-cz/edtech-cssci-research-skill.git "$HOME\.c
 ```
 
 ```text
+使用 $edtech-cssci-research-skill，诊断这个教师智能研修模型。先识别结构、机制、效能、发展、价值和治理难题，再检查模型中每个节点是否有理论、数据、活动和验证证据，并给出图表重构方案。
+```
+
+```text
 使用 $edtech-cssci-research-skill，诊断这份平台日志研究的数据生成、分析单位、缺失处理、训练/验证隔离和因果措辞；逐项给出 Pass、Partial 或 Fail。
 ```
 
@@ -155,6 +166,7 @@ edtech-cssci-research-skill/
 │   └── openai.yaml
 ├── references/
 │   ├── writing-workflow.md
+│   ├── problem-model-evidence-practice.md
 │   ├── operating-modes-and-diagnostics.md
 │   ├── literature-search-and-zotero.md
 │   ├── data-collection-and-analysis.md
@@ -169,6 +181,7 @@ edtech-cssci-research-skill/
 ├── assets/
 │   ├── literature-review-matrix-template.md
 │   ├── revision-report-template.md
+│   ├── problem-model-evidence-canvas.md
 │   └── interpretable-ml-report-template.md
 ├── examples/
 │   ├── good-outline.md
@@ -206,6 +219,8 @@ edtech-cssci-research-skill/
 - [`social-science-paper-writing-skill`](https://github.com/fakerqwq/social-science-paper-writing-skill)：启发了任务模式、诊断标签、来源状态、检索到综述和修订报告等功能设计。
 
 上述项目用于功能分析和结构参考。教育技术学规则、研究范式、证据边界、示例和全部正文均为独立整理与重写；未复制或再发布来源仓库文本。
+
+此外，本项目使用作者有权访问的本地教育技术学论文语料开展功能性综合，新增了难题分类、模型可追溯、图表论证、伴随式测评、人机协同与实践验证规则。仓库不包含论文 PDF、全文摘录、Zotero 数据库或私人文件路径；相关规则均为跨论文抽象后的独立表述，不用于复刻特定作者文风。
 
 ## 使用边界
 

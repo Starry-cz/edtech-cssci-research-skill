@@ -1,6 +1,6 @@
 ---
 name: edtech-cssci-research-skill
-description: "Plan, search, write, revise, diagnose, synthesize, and self-review Chinese education technology papers for CSSCI and related core journals. Use for topic diagnosis, research-question refinement, outline building, Chinese/English literature search and Zotero workflows, structured reading notes, literature review matrices, titles, abstracts, introductions, theories and mechanisms, research design and data analysis review, interpretable machine learning with leakage-safe preprocessing, multi-model selection, hierarchical/grouped SHAP, PCA-ALE, subgroup comparisons, stability and ablation analysis, visualization, section revision, chapter endings, citation/evidence/causal-risk checking, journal matching, and pre-submission review across design-based research, learning analytics, surveys, experiments, case studies, QCA, policy or text analysis, systematic reviews, qualitative, quantitative, and mixed methods."
+description: "Plan, search, write, revise, diagnose, synthesize, and self-review Chinese education technology papers for CSSCI and related core journals. Use for topic diagnosis, research-question refinement, problem classification, conceptual or mechanism framework building, problem-model-evidence-practice design, Chinese/English literature search and Zotero workflows, structured reading notes, literature review matrices, titles, abstracts, introductions, theories and mechanisms, research design and data analysis review, interpretable machine learning with leakage-safe preprocessing, multi-model selection, hierarchical/grouped SHAP, PCA-ALE, subgroup comparisons, stability and ablation analysis, visualization, section revision, chapter endings, citation/evidence/causal-risk checking, journal matching, and pre-submission review across conceptual, policy-comparative, design-based, learning analytics, surveys, experiments, case studies, QCA, systematic reviews, qualitative, quantitative, and mixed-methods research."
 ---
 
 # 教育技术学 CSSCI 研究助手
@@ -25,12 +25,13 @@ description: "Plan, search, write, revise, diagnose, synthesize, and self-review
 - 投稿前终稿审查、反 AI 痕迹检查：`references/self-review.md`
 - 本章小结、小节总结、文献述评结尾、实证或案例章节收束：`references/chapter-synthesis.md`
 - 设计型研究、学习分析、实验、问卷、案例、QCA、文本分析、系统综述、质性或混合方法：`references/research-paradigms.md`
+- 概念模型、智能教育系统、教师画像/测评/推荐、课程与教研模式、政策比较或实践体系：`references/problem-model-evidence-practice.md`
 - 抽样、测量、数据清理、统计方法与诊断：`references/data-collection-and-analysis.md`
 - 可解释机器学习的数据处理、建模验证、SHAP/ALE、可视化与结果报告：`references/interpretable-machine-learning.md`
 - 理论特征层次分类、分组SHAP、PCA-ALE、分组比较、Bootstrap稳定性和节点消融：`references/hierarchical-ml-interpretation.md`
 - 文献检索、引文、证据或结果边界：`references/evidence-and-citation.md`
 - 期刊匹配、CSSCI资格与投稿格式：`references/journal-verification.md`
-- 诊断报告、综述矩阵和机器学习报告直接使用：`assets/revision-report-template.md`、`assets/literature-review-matrix-template.md`、`assets/interpretable-ml-report-template.md`
+- 诊断报告、综述矩阵、研究架构画布和机器学习报告直接使用：`assets/revision-report-template.md`、`assets/literature-review-matrix-template.md`、`assets/problem-model-evidence-canvas.md`、`assets/interpretable-ml-report-template.md`
 
 ## Operating modes
 
@@ -39,6 +40,8 @@ description: "Plan, search, write, revise, diagnose, synthesize, and self-review
 - `topic_diagnosis`：判断选题的问题意识、教育技术学相关性、可行性、证据与伦理风险。
 - `research_question_refinement`：把宽泛主题转为 2—4 个可研究问题，并列证据需求与取舍。
 - `outline_building`：搭建或修复题目—问题—文献—理论—方法—分析—结论结构。
+- `conceptual_model_building`：识别结构、机制、效能、发展、价值或治理难题，建立理论—模型—证据映射。
+- `practice_model_design`：设计并审查指标、系统、场景、活动、反馈、应用验证与迭代关系。
 - `literature_review_planning`：规划检索范围、文献簇、纳排逻辑和 gap statement。
 - `literature_search_to_review`：完成检索、筛选、来源状态、结构化笔记、Zotero 组织、矩阵与综述草稿。
 - `draft_review`：以逐项 `Pass / Partial / Fail` 诊断全文。
@@ -58,6 +61,8 @@ description: "Plan, search, write, revise, diagnose, synthesize, and self-review
 5. **边界**：方法能支持什么判断，不能支持什么判断；结论适用于哪些学习者、课程、学校、平台和时间范围。
 6. **表达**：删除作者排队、流程式开头、机械对偶、宣传口号、空泛拔高和无证据判断。
 
+涉及模型或模式构建时，再检查：每个层、环、箭头和标签是否有理论来源、数据观测点、操作过程或应用主体；不得把命名、框架图或系统展示本身当作效果证据。
+
 信息不足时必须列出：缺什么、为何影响判断、用户应提供什么、当前仍能完成什么；不得静默补造。
 
 ## 论证单元地图
@@ -73,6 +78,8 @@ description: "Plan, search, write, revise, diagnose, synthesize, and self-review
 3. 技术提供了什么可供性、约束或反馈，实际如何被使用。
 4. 哪些规则、资源、能力、实施忠实度和情境条件改变了作用过程。
 5. 哪些过程证据连接技术使用与结果，何时失效或产生非预期后果。
+
+可将教育难题暂分为结构、机制、效能、发展、价值和治理六类，但分类必须来自具体材料。技术方案须形成“目标—构念—数据—分析与交互—服务与评价”关系，并保留人的目标设定、审核、申诉和最终决策权。
 
 ## 统一输出契约
 
@@ -97,4 +104,5 @@ description: "Plan, search, write, revise, diagnose, synthesize, and self-review
 - 理论是否参与设计和结果解释，方法是否真正回答问题。
 - 关键判断是否有证据，结果是否超越表格复述，因果措辞是否符合设计。
 - 章节结尾是否提炼判断而非重排标题，结论和建议是否受证据边界约束。
+- 模型图与流程图是否可追溯到理论、数据、方法、结果和使用主体，图表是否承担明确论证任务。
 - 是否核验动态期刊信息，并删除明显模板句与空泛拔高。
