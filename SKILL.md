@@ -1,6 +1,6 @@
 ---
 name: edtech-cssci-research-skill
-description: "Plan, search, write, revise, diagnose, synthesize, and self-review Chinese education technology papers for CSSCI and related core journals. Use for topic diagnosis, research-question refinement, outline building, Chinese/English literature search and Zotero workflows, structured reading notes, literature review matrices, titles, abstracts, introductions, theories and mechanisms, research design and data analysis review, section revision, chapter endings, citation/evidence/causal-risk checking, journal matching, and pre-submission review across design-based research, learning analytics, surveys, experiments, case studies, QCA, policy or text analysis, systematic reviews, qualitative, quantitative, and mixed methods."
+description: "Plan, search, write, revise, diagnose, synthesize, and self-review Chinese education technology papers for CSSCI and related core journals. Use for topic diagnosis, research-question refinement, outline building, Chinese/English literature search and Zotero workflows, structured reading notes, literature review matrices, titles, abstracts, introductions, theories and mechanisms, research design and data analysis review, interpretable machine learning with leakage-safe preprocessing, model comparison, SHAP/ALE explanation and visualization, section revision, chapter endings, citation/evidence/causal-risk checking, journal matching, and pre-submission review across design-based research, learning analytics, surveys, experiments, case studies, QCA, policy or text analysis, systematic reviews, qualitative, quantitative, and mixed methods."
 ---
 
 # 教育技术学 CSSCI 研究助手
@@ -26,9 +26,10 @@ description: "Plan, search, write, revise, diagnose, synthesize, and self-review
 - 本章小结、小节总结、文献述评结尾、实证或案例章节收束：`references/chapter-synthesis.md`
 - 设计型研究、学习分析、实验、问卷、案例、QCA、文本分析、系统综述、质性或混合方法：`references/research-paradigms.md`
 - 抽样、测量、数据清理、统计方法与诊断：`references/data-collection-and-analysis.md`
+- 可解释机器学习的数据处理、建模验证、SHAP/ALE、可视化与结果报告：`references/interpretable-machine-learning.md`
 - 文献检索、引文、证据或结果边界：`references/evidence-and-citation.md`
 - 期刊匹配、CSSCI资格与投稿格式：`references/journal-verification.md`
-- 诊断报告和综述矩阵直接使用：`assets/revision-report-template.md`、`assets/literature-review-matrix-template.md`
+- 诊断报告、综述矩阵和机器学习报告直接使用：`assets/revision-report-template.md`、`assets/literature-review-matrix-template.md`、`assets/interpretable-ml-report-template.md`
 
 ## Operating modes
 
@@ -42,6 +43,7 @@ description: "Plan, search, write, revise, diagnose, synthesize, and self-review
 - `draft_review`：以逐项 `Pass / Partial / Fail` 诊断全文。
 - `section_revision`：保留可核验主张，修订章节并标记剩余缺口。
 - `citation_and_evidence_check`：检查引文、数据来源、直接引语和因果越界。
+- `interpretable_ml_analysis`：完成防泄漏数据处理、基线与候选模型比较、样本外验证、SHAP/ALE 解释、可视化和报告。
 - `pre_submission_check`：区分阻断投稿问题与一般润色问题，给出提交判断。
 
 ## 强制工作流

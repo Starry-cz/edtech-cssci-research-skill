@@ -1,4 +1,4 @@
 interface:
   display_name: "教育技术学 CSSCI 研究助手"
-  short_description: "教育技术学 CSSCI 选题、检索、研究设计、写作、诊断与自检"
-  default_prompt: "Use $edtech-cssci-research-skill to diagnose, search, design, write, revise, or pre-review an education technology CSSCI paper while preserving source and causal boundaries."
+  short_description: "教育技术学 CSSCI 选题、检索、可解释机器学习、写作与自检"
+  default_prompt: "Use $edtech-cssci-research-skill to diagnose, search, design, analyze with leakage-safe interpretable machine learning, write, revise, or pre-review an education technology CSSCI paper while preserving source and causal boundaries."

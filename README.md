@@ -10,12 +10,13 @@
 - 中英文文献检索规划、结构化阅读、Zotero 整理与综述矩阵
 - 题目、摘要、引言、文献综述、理论框架与机制写作
 - 数据采集与分析诊断、结果解释、讨论、结论与政策/实践建议
+- 可解释机器学习：防泄漏预处理、模型比较、样本外验证、SHAP/ALE、稳健性与可视化
 - 博士论文和学位论文章节、小节及文献述评结尾
 - CSSCI/中文核心投稿前终稿自检与反 AI 模板表达检查
 - 目标期刊匹配、投稿规范和 CSSCI 收录状态核验
 - 文献、DOI、政策、数据和引用真实性检查
 
-## 九种任务模式
+## 十种任务模式
 
 Skill 会先识别任务类型，再按需读取对应规则：
 
@@ -27,12 +28,14 @@ Skill 会先识别任务类型，再按需读取对应规则：
 6. `draft_review`：按具体文本证据诊断整稿。
 7. `section_revision`：在不新增虚构材料的前提下修订章节。
 8. `citation_and_evidence_check`：核对来源状态、主张强度和因果边界。
-9. `pre_submission_check`：识别投稿阻断项、重要修改项和润色项。
+9. `interpretable_ml_analysis`：完成防泄漏数据处理、模型比较、样本外验证、SHAP/ALE 解释和可视化。
+10. `pre_submission_check`：识别投稿阻断项、重要修改项和润色项。
 
 ## 支持的研究范式
 
 - 设计型研究（DBR）
 - 学习分析与教育数据挖掘
+- 可解释机器学习与教育预测建模
 - 问卷、量表、回归与结构方程模型
 - 实验与准实验
 - 案例研究、访谈和质性研究
@@ -124,6 +127,10 @@ git clone https://github.com/Starry-cz/edtech-cssci-research-skill.git "$HOME\.c
 使用 $edtech-cssci-research-skill，诊断这份平台日志研究的数据生成、分析单位、缺失处理、训练/验证隔离和因果措辞；逐项给出 Pass、Partial 或 Fail。
 ```
 
+```text
+使用 $edtech-cssci-research-skill，为学生学习结果预测设计一套可解释机器学习流程：按学校分组切分数据，比较线性基线、随机森林和 XGBoost，报告样本外性能，再用 SHAP 与 ALE 解释并规划 CSSCI 论文图表。
+```
+
 若只需要正文，可在请求中明确说明“只给正文，不要写作说明”。
 
 ## 输出形式
@@ -147,6 +154,7 @@ edtech-cssci-research-skill/
 │   ├── operating-modes-and-diagnostics.md
 │   ├── literature-search-and-zotero.md
 │   ├── data-collection-and-analysis.md
+│   ├── interpretable-machine-learning.md
 │   ├── self-review.md
 │   ├── chapter-synthesis.md
 │   ├── research-paradigms.md
@@ -155,7 +163,8 @@ edtech-cssci-research-skill/
 │   └── validation-scenarios.md
 ├── assets/
 │   ├── literature-review-matrix-template.md
-│   └── revision-report-template.md
+│   ├── revision-report-template.md
+│   └── interpretable-ml-report-template.md
 ├── examples/
 │   ├── good-outline.md
 │   ├── weak-outline.md
@@ -174,6 +183,10 @@ edtech-cssci-research-skill/
 - [APA：Journal Article Reporting Standards](https://www.apa.org/journals/authors/all-instructions.html)
 - [PRISMA 2020](https://www.prisma-statement.org/prisma-2020)
 - [Society for Learning Analytics Research](https://www.solaresearch.org/publications/hla-17/hla17-chapter4/)
+- [scikit-learn：数据泄漏与 Pipeline](https://scikit-learn.org/stable/common_pitfalls.html)
+- [SHAP TreeExplainer 官方文档](https://shap.readthedocs.io/en/latest/generated/shap.TreeExplainer.html)
+- [Apley 与 Zhu：Accumulated Local Effects](https://doi.org/10.1111/rssb.12377)
+- [钱佳、崔晓楠：是什么塑造了中小学生的创新能力](https://doi.org/10.16382/j.cnki.1000-5560.2026.07.005)
 - [南京大学中国社会科学研究评价中心](https://cssrac.nju.edu.cn/)
 - [《中国电化教育》官方网站](https://zdjy.cbpt.cnki.net/portal)
 - [《电化教育研究》官方网站](https://aver.nwnu.edu.cn/)

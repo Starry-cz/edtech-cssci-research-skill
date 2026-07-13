@@ -15,6 +15,7 @@
 - 区分描述、预测和因果；预测准确率不等同于学习机制或教学效果。
 - 报告数据权限、知情方式、去标识化、算法偏差、公平性、可解释性和反馈可能造成的影响。
 - 将隐私与伦理视为研究成立条件，而非附录声明；参考 [SoLAR 学习分析伦理综述](https://www.solaresearch.org/publications/hla-17/hla17-chapter4/)。
+- 使用随机森林、梯度提升、XGBoost、SHAP、ALE 或其他可解释机器学习方法时，读取 `interpretable-machine-learning.md`，报告防泄漏切分、调参、样本外性能、解释假设和可视化边界。
 
 ## 问卷、量表与结构方程
 
