@@ -1,0 +1,4 @@
+interface:
+  display_name: "教育技术学 CSSCI 研究助手"
+  short_description: "教育技术学 CSSCI 论文研究设计、写作和投稿前自检助手"
+  default_prompt: "Use $edtech-cssci-research-skill to develop an education technology CSSCI research plan and verify its evidence boundaries."
