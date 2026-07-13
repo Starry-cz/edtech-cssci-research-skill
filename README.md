@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/readme-hero.svg" alt="教育技术学 CSSCI 研究助手：问题、理论、模型、证据、实践与结论形成可追溯论证链" width="100%" />
+  <img src="assets/readme-hero-v2.png" alt="教育技术学 CSSCI 研究助手：面向教育技术实证研究的智能学术助手与证据链可视化" width="100%" />
 </p>
 
 # 教育技术学 CSSCI 研究助手
