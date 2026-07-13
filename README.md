@@ -12,12 +12,14 @@
 - 教育难题分类、概念模型、技术系统、实践模式和“问题—模型—证据—实践”闭环设计
 - 数据采集与分析诊断、结果解释、讨论、结论与政策/实践建议
 - 可解释机器学习：防泄漏预处理、多模型选择、层次SHAP、PCA-ALE、分组比较、稳定性、节点消融与可视化
+- 分析框架防御：维度依据、竞争解释、层级一致性、边界案例、操作化与图文一致性审计
+- 审稿意见拆解、多审稿人冲突处理、回应函、修订台账与项目决策记忆
 - 博士论文和学位论文章节、小节及文献述评结尾
-- CSSCI/中文核心投稿前终稿自检与反 AI 模板表达检查
+- CSSCI/中文核心投稿前终稿自检、原创性责任与模板化表达检查
 - 目标期刊匹配、投稿规范和 CSSCI 收录状态核验
-- 文献、DOI、政策、数据和引用真实性检查
+- 文献、DOI、政策、数据和引用真实性检查，以及匿名稿、图表、DOCX/PDF 和投稿包质检
 
-## 十二种任务模式
+## 十五种任务模式
 
 Skill 会先识别任务类型，再按需读取对应规则：
 
@@ -30,9 +32,12 @@ Skill 会先识别任务类型，再按需读取对应规则：
 7. `literature_search_to_review`：完成检索记录、来源筛选、结构化笔记、Zotero 与综述矩阵工作流。
 8. `draft_review`：按具体文本证据诊断整稿。
 9. `section_revision`：在不新增虚构材料的前提下修订章节。
-10. `citation_and_evidence_check`：核对来源状态、主张强度和因果边界。
-11. `interpretable_ml_analysis`：完成防泄漏数据处理、模型比较、样本外验证、SHAP/ALE 解释和可视化。
-12. `pre_submission_check`：识别投稿阻断项、重要修改项和润色项。
+10. `reviewer_response_and_revision`：拆解审稿意见，处理共识与冲突，生成回应函、修订台账和版本检查点。
+11. `framework_defense`：检验框架维度、层级、操作化、边界案例、竞争解释与图文一致性。
+12. `citation_and_evidence_check`：核对来源状态、主张强度和因果边界。
+13. `reference_and_artifact_audit`：双向核对参考文献，并审计匿名稿、图表、DOCX/PDF 与投稿包。
+14. `interpretable_ml_analysis`：完成防泄漏数据处理、模型比较、样本外验证、SHAP/ALE 解释和可视化。
+15. `pre_submission_check`：识别投稿阻断项、重要修改项和润色项。
 
 ## 支持的研究范式
 
@@ -85,6 +90,10 @@ Skill 会先识别任务类型，再按需读取对应规则：
 ### 来源状态可追踪
 
 文献从检索到使用依次标记为 `candidate source`、`metadata only`、`abstract only`、`full text read`、`in Zotero` 或 `imported to Zotero`。Zotero 中存在条目不等于已阅读全文，也不等于元数据准确。
+
+### 修订过程可追溯
+
+审稿意见按“意见—判断—决定—修改位置—验证—状态”进入台账，多位审稿人的共识、冲突和独有意见分开处理。长期项目区分已核验事实、作者决定、工作假设和待核验项，并保持稿件、数据、代码、图表、摘要、结论与回应函版本一致。
 
 ## 安装
 
@@ -146,6 +155,18 @@ git clone https://github.com/Starry-cz/edtech-cssci-research-skill.git "$HOME\.c
 使用 $edtech-cssci-research-skill，审查这套课堂观察机器学习结果：20个模型在同一测试集排序，58个特征归入多级理论维度，按维度汇总SHAP，并进行了PCA-ALE、学科分组、Bootstrap和删除节点实验。请识别选模、维度规模、小样本、稳定性和解释边界问题。
 ```
 
+```text
+使用 $edtech-cssci-research-skill，整理两位审稿人的意见。请区分共识、冲突和独有问题，为每条意见给出处理决定、修改位置、验证方式，并生成回应函和修订台账。
+```
+
+```text
+使用 $edtech-cssci-research-skill，审查这个“教师—智能体协同教学”二维框架。重点检查维度为什么成立、是否处于同一层级、缺失象限如何解释、边界案例如何编码，以及图中箭头是否超出证据。
+```
+
+```text
+使用 $edtech-cssci-research-skill，核对终稿的正文引文与文后条目、匿名信息、图表和 DOCX/PDF 渲染，并输出投稿包阻断项。
+```
+
 若只需要正文，可在请求中明确说明“只给正文，不要写作说明”。
 
 ## 输出形式
@@ -167,7 +188,10 @@ edtech-cssci-research-skill/
 ├── references/
 │   ├── writing-workflow.md
 │   ├── problem-model-evidence-practice.md
+│   ├── framework-defense-and-figure-audit.md
 │   ├── operating-modes-and-diagnostics.md
+│   ├── revision-and-reviewer-response.md
+│   ├── project-memory-and-decision-log.md
 │   ├── literature-search-and-zotero.md
 │   ├── data-collection-and-analysis.md
 │   ├── interpretable-machine-learning.md
@@ -176,11 +200,15 @@ edtech-cssci-research-skill/
 │   ├── chapter-synthesis.md
 │   ├── research-paradigms.md
 │   ├── evidence-and-citation.md
+│   ├── reference-integrity-and-manuscript-artifacts.md
 │   ├── journal-verification.md
 │   └── validation-scenarios.md
 ├── assets/
 │   ├── literature-review-matrix-template.md
 │   ├── revision-report-template.md
+│   ├── reviewer-response-and-revision-ledger-template.md
+│   ├── project-context-template.md
+│   ├── submission-package-checklist.md
 │   ├── problem-model-evidence-canvas.md
 │   └── interpretable-ml-report-template.md
 ├── examples/
@@ -217,8 +245,9 @@ edtech-cssci-research-skill/
 - [`public-management-c-journal-writing-zh`](https://github.com/Smoothsailing0/Data-/tree/main/skills/public-management-c-journal-writing-zh)
 - [`public-management-chapter-ending-synthesis-zh`](https://github.com/Smoothsailing0/Data-/tree/main/skills/public-management-chapter-ending-synthesis-zh)
 - [`social-science-paper-writing-skill`](https://github.com/fakerqwq/social-science-paper-writing-skill)：启发了任务模式、诊断标签、来源状态、检索到综述和修订报告等功能设计。
+- [`cn-academic-paper-pro`](https://github.com/MasutaFu/cn-academic-paper-pro)：启发了生命周期路由、审稿回应台账、项目级决策记忆、框架可辩护性和稿件工件质检等功能设计。审查时未在该仓库根目录发现明确许可证，因此本项目只做功能与结构分析，未复制其文本、脚本或项目专属内容。
 
-上述项目用于功能分析和结构参考。教育技术学规则、研究范式、证据边界、示例和全部正文均为独立整理与重写；未复制或再发布来源仓库文本。
+上述项目用于功能分析和结构参考。共性的过程治理原则被保留，固定禁词、固定文献比例、统一篇幅阈值、未经官网核实的期刊规则、AI 检测规避方法和特定项目作者信息均未迁移。教育技术学规则、研究范式、证据边界、示例和全部正文均为独立整理与重写；未复制或再发布来源仓库文本。
 
 此外，本项目使用作者有权访问的本地教育技术学论文语料开展功能性综合，新增了难题分类、模型可追溯、图表论证、伴随式测评、人机协同与实践验证规则。仓库不包含论文 PDF、全文摘录、Zotero 数据库或私人文件路径；相关规则均为跨论文抽象后的独立表述，不用于复刻特定作者文风。
 

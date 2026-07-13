@@ -55,6 +55,28 @@
 3. 保留用户已有的可核验主张，使用占位标记暴露缺口。
 4. 输出修订文本、变更说明和剩余风险；用户要求只给正文时省略说明。
 
+## `reviewer_response_and_revision`
+
+1. 读取 `revision-and-reviewer-response.md`，识别稿件版本、意见来源、轮次与本轮授权范围。
+2. 将复合意见拆成原子任务，分类为事实、论证、方法、扩展、呈现或冲突，并标记严重度。
+3. 对每条意见选择 `accept / partial / decline / needs verification`，给出依据、修改位置和验证方式。
+4. 合并多位审稿人的共识与互补项，显式处理冲突；同步更新稿件、分析、图表、摘要、结论和回应函。
+5. 使用 `assets/reviewer-response-and-revision-ledger-template.md` 形成回应函与可追溯台账。
+
+## `framework_defense`
+
+1. 读取 `framework-defense-and-figure-audit.md`，识别框架类型、分析层级和理论/经验来源。
+2. 检查维度选择、竞争方案、组合空间、边界案例、操作化和反例。
+3. 检查框架是否进入数据、编码、分析和结果，而非只在引言或图中出现。
+4. 核对图中节点、箭头、方向和视觉等级是否与正文证据一致；证据不足时降低贡献强度。
+
+## `reference_and_artifact_audit`
+
+1. 读取 `reference-integrity-and-manuscript-artifacts.md`，确认目标期刊最新官方格式。
+2. 双向核对正文引文与文后条目，复核高风险来源、直接引语和自动导入字段。
+3. 检查主稿、匿名稿、图表、附录、声明和回应函版本一致性。
+4. 对 DOCX/PDF 做实际渲染检查；使用 `assets/submission-package-checklist.md` 输出阻断项和提交判断。
+
 ## `citation_and_evidence_check`
 
 1. 建立“主张—证据—来源状态”对应关系，定位无支持、错配、二手转引、页码和直接引语风险。

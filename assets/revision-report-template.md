@@ -2,7 +2,7 @@
 
 ## Mode
 
-`topic_diagnosis` / `outline_building` / `draft_review` / `section_revision` / `pre_submission_check` / 其他：
+`topic_diagnosis` / `outline_building` / `draft_review` / `section_revision` / `reviewer_response_and_revision` / `framework_defense` / `reference_and_artifact_audit` / `pre_submission_check` / 其他：
 
 ## 总体判断
 

@@ -21,6 +21,12 @@
 - 用户要求“先读文献再写”时，先列本轮实际参照来源及链接。
 - 引文风险按 `unsupported citation`、`bibliographic mismatch`、`primary-source needed`、`page verification needed`、`citation granularity issue` 或 `causal overclaim` 标记，并说明如何核验。
 
+## 参考文献系统完整性
+
+- 终稿阶段同时读取 `reference-integrity-and-manuscript-artifacts.md`，进行正文引文—文后条目双向核对。
+- 替换、删除、重排文献后同步检查编号、作者—年份、图表、脚注和附录，避免条目存在但未引用或正文引用无对应条目。
+- GB/T 7714、作者—年份制及条目字段服从目标期刊当前官方要求，不从学科惯例推定，也不设置跨期刊通用数量、语种或年代比例。
+
 ## 解释边界
 
 - 相关设计使用“关联、相关、预测”；只有识别条件成立时使用因果措辞。
