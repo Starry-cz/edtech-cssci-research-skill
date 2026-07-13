@@ -79,6 +79,19 @@ git clone https://github.com/Starry-cz/edtech-cssci-research-skill.git "$HOME\.c
 
 Skill 会先补足问题与证据链，再给出符合你当前阶段的输出；若材料不足，会明确标记缺口与影响，不会以虚构文献、数据或期刊规则填补。
 
+## 跨平台使用
+
+Codex 版本支持任务路由与按需读取参考文件；研究规则本身并不局限于 Codex。仓库现提供可直接粘贴到项目指令、助手指令或对话首条消息的跨平台版本。
+
+| 平台或场景 | 推荐入口 | 使用方式 |
+|---|---|---|
+| 任意支持自定义提示词的 AI 平台 | [通用核心指令](platforms/universal-research-assistant.md) | 粘贴到系统提示词、项目指令或对话首条消息 |
+| ChatGPT | [ChatGPT 适配说明](platforms/chatgpt.md) | 优先使用 Project；也可配置 Custom GPT |
+| Claude | [Claude 适配说明](platforms/claude.md) | 使用 Project Instructions 与 Project Knowledge |
+| Gemini | [Gemini 适配说明](platforms/gemini.md) | 创建 Gem，并添加必要的 Knowledge 文件 |
+
+完整说明与按任务上传的知识文件组合见 [跨平台使用说明](platforms/platform-guide.md)。不同平台不会自动读取整个 GitHub 仓库；涉及某一专题时，请上传相关 `references/` 文件，或在对话中粘贴必要材料。
+
 ## 能力全景
 
 ```mermaid
