@@ -1,101 +1,81 @@
 # 教育技术学 CSSCI 研究助手
 
-一个面向中文教育技术学、教育数字化与智能教育研究的 Codex Skill，贯通选题诊断、文献检索、理论与模型建构、研究设计、数据分析、论文写作及投稿前自检。
+> 面向中文教育技术学、教育数字化与智能教育研究的 Codex Skill。贯通选题、文献、理论、模型、方法、数据分析、论文写作、审稿修订与投稿质检。
 
-其核心优势是以真实教育问题为起点，建立“问题—理论—模型—证据—实践—结论”的可追溯论证链，强调技术作用机制、研究证据与结论边界，避免以“技术赋能、融合创新、模式重塑”等抽象表述替代实质性解释。
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-blue.svg)](LICENSE)
+![Language](https://img.shields.io/badge/language-Chinese-red.svg)
+![Domain](https://img.shields.io/badge/domain-Education%20Technology-6f42c1.svg)
+![Skill](https://img.shields.io/badge/Codex-Skill-111827.svg)
 
-## 主要能力
+本项目的核心不是“把句子改得更像论文”，而是从真实教育问题出发，建立可追溯的：
 
-- 选题打磨、研究问题提炼与论文结构设计
-- 中英文文献检索规划、结构化阅读、Zotero 整理与综述矩阵
-- 题目、摘要、引言、文献综述、理论框架与机制写作
-- 教育难题分类、概念模型、技术系统、实践模式和“问题—模型—证据—实践”闭环设计
-- 数据采集与分析诊断、结果解释、讨论、结论与政策/实践建议
-- 可解释机器学习：防泄漏预处理、多模型选择、层次SHAP、PCA-ALE、分组比较、稳定性、节点消融与可视化
-- 分析框架防御：维度依据、竞争解释、层级一致性、边界案例、操作化与图文一致性审计
-- 审稿意见拆解、多审稿人冲突处理、回应函、修订台账与项目决策记忆
-- 博士论文和学位论文章节、小节及文献述评结尾
-- CSSCI/中文核心投稿前终稿自检、原创性责任与模板化表达检查
-- 目标期刊匹配、投稿规范和 CSSCI 收录状态核验
-- 文献、DOI、政策、数据和引用真实性检查，以及匿名稿、图表、DOCX/PDF 和投稿包质检
-
-## 十五种任务模式
-
-Skill 会先识别任务类型，再按需读取对应规则：
-
-1. `topic_diagnosis`：判断选题价值、范围、证据可得性与伦理风险。
-2. `research_question_refinement`：把宽泛主题改造成可回答的问题。
-3. `outline_building`：为章节分配论证任务并检查结构漂移。
-4. `conceptual_model_building`：区分结构、机制、效能、发展、价值与治理难题，建立理论—模型—证据映射。
-5. `practice_model_design`：设计指标、数据、系统、场景、反馈、应用验证和迭代关系。
-6. `literature_review_planning`：规划概念簇、检索式、综述结构与研究缺口。
-7. `literature_search_to_review`：完成检索记录、来源筛选、结构化笔记、Zotero 与综述矩阵工作流。
-8. `draft_review`：按具体文本证据诊断整稿。
-9. `section_revision`：在不新增虚构材料的前提下修订章节。
-10. `reviewer_response_and_revision`：拆解审稿意见，处理共识与冲突，生成回应函、修订台账和版本检查点。
-11. `framework_defense`：检验框架维度、层级、操作化、边界案例、竞争解释与图文一致性。
-12. `citation_and_evidence_check`：核对来源状态、主张强度和因果边界。
-13. `reference_and_artifact_audit`：双向核对参考文献，并审计匿名稿、图表、DOCX/PDF 与投稿包。
-14. `interpretable_ml_analysis`：完成防泄漏数据处理、模型比较、样本外验证、SHAP/ALE 解释和可视化。
-15. `pre_submission_check`：识别投稿阻断项、重要修改项和润色项。
-
-## 支持的研究范式
-
-- 设计型研究（DBR）
-- 学习分析与教育数据挖掘
-- 可解释机器学习与教育预测建模
-- 问卷、量表、回归与结构方程模型
-- 实验与准实验
-- 案例研究、访谈和质性研究
-- QCA、指标体系与综合评价
-- 政策、内容与计算文本分析
-- 系统综述与元分析
-- 定量、质性和混合方法研究
-
-## 工作特点
-
-### 论证功能优先
-
-生成或改写前，先判断当前内容是在提出问题、推进文献、限定概念、说明设计、呈现证据、解释机制还是收束贡献，再决定段落结构和材料密度。
-
-### 教育技术机制可解释
-
-机制分析围绕以下关系展开：
-
-```text
-主体 → 学习/教学活动 → 技术功能与实际使用 → 情境条件
-     → 过程证据 → 学习、教学或组织结果 → 适用边界
+```mermaid
+flowchart LR
+    A[真实教育问题] --> B[理论解释]
+    B --> C[模型或研究设计]
+    C --> D[可核验证据]
+    D --> E[教育实践与应用]
+    E --> F[有边界的结论]
+    F -.反思与迭代.-> A
 ```
 
-区分“技术存在”“技术被使用”“学习过程发生变化”和“学习结果发生变化”，避免从技术可用性直接推导教育效果。
+它特别强调技术如何通过学习者、教师、教学活动与情境条件产生作用，避免用“技术赋能、融合创新、模式重塑”等抽象表述替代机制解释。
 
-### 模型与实践可追溯
+## 导航
 
-模型研究按“目标—构念—数据—分析与交互—服务与评价”检查。每个层、环、箭头和标签都应有理论来源、观测证据、操作过程或应用主体；区分模型提出、技术实现、可用性、初步效果、机制成立与可推广性。
+- [30 秒找到你需要的功能](#30-秒找到你需要的功能)
+- [为什么选择这个 Skill](#为什么选择这个-skill)
+- [安装与快速开始](#安装与快速开始)
+- [完整研究流程](#完整研究流程)
+- [专项研究方法](#专项研究方法)
+- [十五种任务模式](#十五种任务模式)
+- [可直接复制的提示词](#可直接复制的提示词)
+- [文件功能速查](#文件功能速查)
+- [输出形式](#输出形式)
+- [规范、边界与许可](#规范边界与许可)
 
-### 证据边界明确
+## 30 秒找到你需要的功能
 
-- 不编造文献、DOI、政策、访谈、数据、显著性或期刊要求。
-- 相关研究不写成因果研究，预测性能不等同于教学效果。
-- 未核实内容使用 `[待核验]`、`[待补材料]` 或明确的检索步骤。
-- CSSCI 目录、期刊栏目和格式要求以当前官方信息为准。
+不用先理解全部文件。找到你当前的问题，复制最后一列的问法即可。
 
-### 诊断而非机械打分
+| 你现在需要什么 | 推荐模式 | 主要入口 | 可以这样问 |
+|---|---|---|---|
+| 把宽泛热点变成可研究选题 | `topic_diagnosis` | [任务模式](references/operating-modes-and-diagnostics.md) | “把‘AI赋能教育’改成三个可研究的CSSCI选题” |
+| 凝练研究问题、对象与范围 | `research_question_refinement` | [任务模式](references/operating-modes-and-diagnostics.md) | “检查这些研究问题是否可回答，并说明需要什么证据” |
+| 搭建或修复论文大纲 | `outline_building` | [写作工作流](references/writing-workflow.md) | “按问题—证据—结论关系重构这份大纲” |
+| 检索中英文文献、整理 Zotero | `literature_search_to_review` | [检索与 Zotero](references/literature-search-and-zotero.md) | “生成检索式、筛选日志、Zotero标签和综述矩阵” |
+| 写文献综述、理论框架或机制 | `section_revision` | [写作工作流](references/writing-workflow.md) | “把作者罗列式综述改成围绕争论推进的综述” |
+| 构建概念模型、实践模式或智能系统 | `conceptual_model_building` / `practice_model_design` | [问题—模型—证据—实践](references/problem-model-evidence-practice.md) | “检查模型每个节点是否有理论、数据、活动和验证证据” |
+| 审查二维框架、类型学或机制图 | `framework_defense` | [框架防御与图示审计](references/framework-defense-and-figure-audit.md) | “检查维度依据、边界案例、缺失象限和图中箭头” |
+| 设计问卷、实验、DBR、质性或混合研究 | 按研究范式选择 | [研究范式](references/research-paradigms.md) | “为这个问题比较实验、DBR和混合方法的适配性” |
+| 审查抽样、测量、清洗和统计分析 | `draft_review` | [数据采集与分析](references/data-collection-and-analysis.md) | “检查分析单位、缺失处理、统计检验和因果措辞” |
+| 开展教育可解释机器学习 | `interpretable_ml_analysis` | [可解释机器学习](references/interpretable-machine-learning.md) | “设计防泄漏建模、样本外验证、SHAP/ALE和图表流程” |
+| 处理层次 SHAP、PCA-ALE 与稳定性 | `interpretable_ml_analysis` | [层次机器学习解释](references/hierarchical-ml-interpretation.md) | “审查维度汇总、分组排名、Bootstrap和节点消融” |
+| 严格诊断或修改整篇论文 | `draft_review` / `section_revision` | [终稿自检](references/self-review.md) | “按Pass/Partial/Fail定位问题，并给出可执行修法” |
+| 降低模板腔、宣传腔和机械表达 | `pre_submission_check` | [原创性与反模板快扫](references/self-review.md) | “按章节定位模板句和空泛句，保留数据、引用与结论边界” |
+| 回应导师、同行或匿名审稿意见 | `reviewer_response_and_revision` | [审稿回应与修订治理](references/revision-and-reviewer-response.md) | “整理意见冲突，生成回应函和修订台账” |
+| 写本章小结或文献述评结尾 | `section_revision` | [章节收束](references/chapter-synthesis.md) | “提炼本章判断并自然引向下一章，不复述小标题” |
+| 核查引用、因果与证据真实性 | `citation_and_evidence_check` | [证据与引用](references/evidence-and-citation.md) | “建立主张—证据—来源状态表，标出越界结论” |
+| 核验期刊、CSSCI目录和投稿规则 | `pre_submission_check` | [期刊核验](references/journal-verification.md) | “只使用当前官方来源核验目标期刊投稿要求” |
+| 检查匿名稿、图表、DOCX/PDF 和投稿包 | `reference_and_artifact_audit` | [稿件工件质检](references/reference-integrity-and-manuscript-artifacts.md) | “核对引文、匿名信息、图表和最终渲染” |
 
-- 每项审查使用 `Pass / Partial / Fail`，并引用草稿中的具体证据。
-- 风险项必须同时给出位置、问题依据、修改动作和预期改善。
-- 材料不足时使用 `[needs user verification]`、`[待核验]` 或 `[待补材料]`，不把“用户未提供”误判为“论文没有”。
-- 不套用固定样本量、统一数据清理比例或单一统计阈值；判断服从研究问题、数据结构与识别条件。
+## 为什么选择这个 Skill
 
-### 来源状态可追踪
+| 核心优势 | 它具体做什么 | 避免什么问题 |
+|---|---|---|
+| **真实问题驱动** | 从学习、教学、评价、教师发展或教育治理中的矛盾进入 | 把技术热点或政策口号直接当作研究问题 |
+| **机制解释优先** | 连接主体、活动、技术功能、实际使用、情境、过程证据和结果 | 从“有技术”直接跳到“有效果” |
+| **论证链可追溯** | 检查问题—理论—模型—证据—实践—结论是否逐环闭合 | 模型命名漂亮但没有理论、数据或验证 |
+| **研究范式完整** | 覆盖 DBR、学习分析、问卷、实验、质性、QCA、系统综述和混合方法 | 用教材式方法介绍代替针对研究问题的设计 |
+| **可解释机器学习专项** | 防泄漏预处理、多模型比较、样本外验证、SHAP/ALE、层次解释与稳定性 | 把预测重要性、模型性能或消融结果写成因果效应 |
+| **证据状态透明** | 区分候选来源、元数据、摘要、全文阅读和 Zotero 状态 | 把“搜到”“导入”误写成“读过并支持结论” |
+| **修订过程可治理** | 管理多审稿人意见、冲突、回应函、修改位置、验证和版本 | 只写“已认真修改”却无法定位实际变化 |
+| **投稿交付完整** | 审查引文、匿名稿、图表、DOCX/PDF 渲染和投稿包 | 内容已定稿但因格式、匿名或版本错位返工 |
+| **原创性而非检测规避** | 修复模板句、机械对偶、宣传腔和无证据判断 | 预测AI率、插入错误或提供检测规避技巧 |
 
-文献从检索到使用依次标记为 `candidate source`、`metadata only`、`abstract only`、`full text read`、`in Zotero` 或 `imported to Zotero`。Zotero 中存在条目不等于已阅读全文，也不等于元数据准确。
+## 安装与快速开始
 
-### 修订过程可追溯
-
-审稿意见按“意见—判断—决定—修改位置—验证—状态”进入台账，多位审稿人的共识、冲突和独有意见分开处理。长期项目区分已核验事实、作者决定、工作假设和待核验项，并保持稿件、数据、代码、图表、摘要、结论与回应函版本一致。
-
-## 安装
+### 安装
 
 将仓库克隆到 Codex 的 skills 目录：
 
@@ -103,127 +83,293 @@ Skill 会先识别任务类型，再按需读取对应规则：
 git clone https://github.com/Starry-cz/edtech-cssci-research-skill.git ~/.codex/skills/edtech-cssci-research-skill
 ```
 
-Windows PowerShell 示例：
+Windows PowerShell：
 
 ```powershell
 git clone https://github.com/Starry-cz/edtech-cssci-research-skill.git "$HOME\.codex\skills\edtech-cssci-research-skill"
 ```
 
-也可以下载 ZIP，解压后将整个 `edtech-cssci-research-skill` 文件夹放入 Codex skills 目录。重新启动或刷新 Codex 后使用。
+也可以下载 ZIP，将整个文件夹解压到 Codex skills 目录，然后重新启动或刷新 Codex。
 
-## 使用示例
-
-显式调用 skill：
+### 第一次使用
 
 ```text
-使用 $edtech-cssci-research-skill，把“生成式人工智能促进大学生深度学习”改造成一个可研究的 CSSCI 选题，并说明研究对象、机制和可行证据。
+使用 $edtech-cssci-research-skill，诊断我的教育技术学论文。
+
+研究主题：[填写]
+当前阶段：[选题/综述/设计/分析/写作/返修/投稿]
+已有材料：[填写]
+目标期刊：[可选]
+
+请先判断最适合的任务模式，再指出当前最关键的问题、需要的证据和下一步动作。
 ```
+
+如果只需要正文，可明确说明：“只给正文，不要写作说明。”
+
+## 完整研究流程
+
+| 阶段 | 主要任务 | 典型交付物 | 对应文件 |
+|---|---|---|---|
+| 1. 选题与问题意识 | 识别真实教育矛盾、对象、场景、范围、证据与伦理风险 | 选题诊断、候选研究问题、证据需求 | [任务模式](references/operating-modes-and-diagnostics.md) |
+| 2. 文献检索与综述 | 中英文概念簇、完整检索式、筛选、结构化阅读、Zotero、研究缺口 | 检索日志、阅读笔记、综述矩阵、gap statement | [检索与 Zotero](references/literature-search-and-zotero.md) · [综述矩阵模板](assets/literature-review-matrix-template.md) |
+| 3. 理论、机制与模型 | 让理论进入概念、变量、设计、编码、解释和边界 | 理论—部件—证据表、机制链、概念模型 | [问题—模型—证据—实践](references/problem-model-evidence-practice.md) · [研究画布](assets/problem-model-evidence-canvas.md) |
+| 4. 研究设计与数据 | 选择范式，界定样本、测量、数据生成、分析单位、清洗和识别条件 | 研究设计、分析计划、伦理与权限清单 | [研究范式](references/research-paradigms.md) · [数据采集与分析](references/data-collection-and-analysis.md) |
+| 5. 结果、讨论与写作 | 组织题目、摘要、引言、综述、方法、结果、讨论和结论 | 正文章节、证据边界说明、章节结尾 | [写作工作流](references/writing-workflow.md) · [章节收束](references/chapter-synthesis.md) |
+| 6. 诊断、返修与回应 | 全文诊断、框架防御、多审稿人意见处理和版本传播检查 | 修订报告、回应函、修改台账 | [终稿自检](references/self-review.md) · [修订治理](references/revision-and-reviewer-response.md) · [修订台账模板](assets/reviewer-response-and-revision-ledger-template.md) |
+| 7. 投稿与交付 | 动态期刊核验、引文一致性、匿名化、图表和最终文件检查 | 投稿判断、匿名稿、投稿包清单 | [期刊核验](references/journal-verification.md) · [稿件工件质检](references/reference-integrity-and-manuscript-artifacts.md) · [投稿包清单](assets/submission-package-checklist.md) |
+
+## 专项研究方法
+
+### 教育技术学研究范式
+
+| 研究类型 | Skill 重点检查 |
+|---|---|
+| 设计型研究（DBR） | 真实问题、理论驱动设计、迭代证据、修改理由和设计原则 |
+| 学习分析与教育数据挖掘 | 日志生成、分析单位、时间窗口、特征、验证切分、隐私与公平 |
+| 问卷、回归与结构方程 | 量表来源、情境适配、样本结构、测量质量与结构逻辑 |
+| 实验与准实验 | 分配方式、对照条件、实施忠实度、效应量、污染与剩余偏差 |
+| 案例、访谈与质性研究 | 案例选择、研究者位置、编码、过程证据、反例与替代解释 |
+| QCA 与综合评价 | 条件选择、校准、必要/充分性、一致性、覆盖度和反事实 |
+| 政策与计算文本分析 | 语料来源、时间边界、筛选、编码规则和可复核性 |
+| 系统综述与元分析 | 协议、数据库、检索式、纳排、质量评价与综合方法 |
+| 混合方法 | 设计类型、整合节点、冲突处理和整合后的新增认识 |
+
+完整规则见 [research-paradigms.md](references/research-paradigms.md)。
+
+### 可解释机器学习
+
+这不是“跑一个随机森林再画 SHAP 图”，而是一条从数据生成到结论边界的完整分析链：
 
 ```text
-使用 $edtech-cssci-research-skill，重写这篇论文的引言。不要堆政策背景，要从课堂中的具体矛盾进入，并保留已有引用。
+预测目标与时点
+  → 分组/时间切分
+  → 训练折内预处理
+  → 透明基线与候选模型
+  → 样本外性能与不确定性
+  → SHAP / ALE / 置换重要性
+  → 层次、分组与稳定性分析
+  → 教育含义、风险与因果边界
 ```
+
+支持：
+
+- 学习者、班级、学校或时间层面的防泄漏切分
+- 透明基线、随机森林、Boosting 等多模型比较
+- 训练/验证/最终测试集隔离与样本外报告
+- SHAP、ALE、置换重要性与相关特征解释
+- 理论维度汇总、层次 SHAP、PCA-ALE 与分组比较
+- Bootstrap 稳定性、节点消融、敏感性和可视化
+- CSSCI 论文中的方法、结果、图表与安全措辞
+
+入口：[interpretable-machine-learning.md](references/interpretable-machine-learning.md) · [hierarchical-ml-interpretation.md](references/hierarchical-ml-interpretation.md) · [报告模板](assets/interpretable-ml-report-template.md)
+
+### 概念模型、实践模式与框架防御
+
+模型研究按“目标—构念—数据—分析与交互—服务与评价”审查。每个层、环、箭头和标签都要能够回溯到理论来源、观测证据、操作过程或应用主体。
+
+矩阵、连续谱、类型学和机制图还会检查：
+
+- 为什么选择这些维度，竞争性维度为何不采用
+- 不同维度是否处在可比较的分析层级
+- 理论组合与实际类型不一致时如何解释
+- 边界案例能否按操作化标准被复核
+- 是否为了图形整齐而过度简化经验材料
+- 图中箭头、颜色和位置是否暗示了正文没有证明的关系
+
+入口：[problem-model-evidence-practice.md](references/problem-model-evidence-practice.md) · [framework-defense-and-figure-audit.md](references/framework-defense-and-figure-audit.md)
+
+## 十五种任务模式
+
+Skill 会根据用户请求选择一种主模式，并按需加载对应资料，而不是一次读取全部文件。
+
+| 模式 | 适用任务 | 核心产出 |
+|---|---|---|
+| `topic_diagnosis` | 选题价值、范围、相关性、证据与伦理风险 | 选题判断与聚焦方向 |
+| `research_question_refinement` | 把主题改成可回答的问题 | 候选问题、分析单位、证据与方法 |
+| `outline_building` | 新建或修复论文结构 | 章节—功能—证据—问题对应表 |
+| `conceptual_model_building` | 理论、机制、概念框架和模型 | 理论—模型—证据映射 |
+| `practice_model_design` | 系统、画像、测评、推荐和实践模式 | 目标—构念—数据—交互—评价设计 |
+| `literature_review_planning` | 综述范围、概念簇、纳排与研究缺口 | 检索和综述方案 |
+| `literature_search_to_review` | 从检索到 Zotero、矩阵和综述草稿 | 可追溯文献工作流 |
+| `draft_review` | 全文或章节诊断 | `Pass / Partial / Fail` 证据化报告 |
+| `section_revision` | 题目、摘要、引言、综述、方法、讨论等改写 | 修订正文、变更说明与剩余风险 |
+| `reviewer_response_and_revision` | 导师、同行或匿名审稿返修 | 回应函、意见矩阵、修订台账 |
+| `framework_defense` | 二维框架、连续谱、类型学和机制图 | 框架风险与图示重构方案 |
+| `citation_and_evidence_check` | 引文、来源、证据和因果边界 | 主张—证据—来源状态表 |
+| `reference_and_artifact_audit` | 参考文献、匿名稿、图表、DOCX/PDF | 投稿工件检查与阻断项 |
+| `interpretable_ml_analysis` | 教育预测与可解释机器学习 | 防泄漏建模、解释、稳定性与图表方案 |
+| `pre_submission_check` | CSSCI/中文核心投稿前终审 | `submit / revise / restructure` 判断 |
+
+## 可直接复制的提示词
+
+<details>
+<summary><strong>选题诊断与研究问题</strong></summary>
 
 ```text
-使用 $edtech-cssci-research-skill，检查这个学习分析研究的方法与结果，重点判断预测指标是否被错误解释成学习成效。
+使用 $edtech-cssci-research-skill，把“生成式人工智能促进大学生深度学习”改造成三个可研究的CSSCI选题。
+
+每个选题说明：真实教育问题、研究对象、活动场景、技术作用机制、所需证据、适配方法和结论边界。不要虚构文献。
 ```
+
+</details>
+
+<details>
+<summary><strong>文献检索、Zotero 与综述</strong></summary>
 
 ```text
-使用 $edtech-cssci-research-skill，为本章写一个结尾段。不要复述小标题，要提炼作者判断并轻指下一章。
+使用 $edtech-cssci-research-skill，为“生成式人工智能反馈与大学生论证写作修订”设计中英文检索式、数据库组合、纳排标准、筛选日志、Zotero标签和综述矩阵。
+
+请区分 candidate source、metadata only、abstract only、full text read 和 Zotero 状态。没有阅读全文的来源不要写成已核实结论。
 ```
+
+</details>
+
+<details>
+<summary><strong>理论、模型与图表审查</strong></summary>
 
 ```text
-使用 $edtech-cssci-research-skill，按教育技术学 CSSCI 审稿视角做投稿前自检，并按“必须修改、建议修改、可保留”分类。
+使用 $edtech-cssci-research-skill，诊断这个教师—智能体协同教学模型。
+
+先识别主难题，再检查每个节点、层级和箭头是否有理论、数据、教学活动、使用主体和验证证据；区分模型提出、技术实现、可用性、初步效果、机制成立和可推广性，并给出图表重构方案。
 ```
+
+</details>
+
+<details>
+<summary><strong>研究设计与数据分析</strong></summary>
 
 ```text
-使用 $edtech-cssci-research-skill，为“生成式人工智能反馈与大学生论证写作修订”设计中英文检索式、筛选日志、Zotero 标签和综述矩阵。没有读到全文的来源不要写成已核实结论。
+使用 $edtech-cssci-research-skill，审查这项平台日志研究。
+
+重点检查数据生成、分析单位、预测时点、缺失处理、特征构造、训练/验证隔离、统计方法、隐私与因果措辞。逐项给出 Pass、Partial 或 Fail，并引用材料中的具体证据。
 ```
+
+</details>
+
+<details>
+<summary><strong>可解释机器学习</strong></summary>
 
 ```text
-使用 $edtech-cssci-research-skill，诊断这个教师智能研修模型。先识别结构、机制、效能、发展、价值和治理难题，再检查模型中每个节点是否有理论、数据、活动和验证证据，并给出图表重构方案。
+使用 $edtech-cssci-research-skill，为学生学习结果预测设计可解释机器学习流程。
+
+按学校分组切分数据，比较透明基线、随机森林和XGBoost，报告样本外性能与不确定性，再用SHAP和ALE解释；同时规划层次维度汇总、稳定性检验、CSSCI论文图表和不能使用的因果措辞。
 ```
+
+</details>
+
+<details>
+<summary><strong>整稿自检与反模板表达</strong></summary>
 
 ```text
-使用 $edtech-cssci-research-skill，诊断这份平台日志研究的数据生成、分析单位、缺失处理、训练/验证隔离和因果措辞；逐项给出 Pass、Partial 或 Fail。
+使用 $edtech-cssci-research-skill，对这篇论文做教育技术学CSSCI投稿前自检和原创性快扫。
+
+按摘要、引言、综述、理论、方法、结果、讨论和结论分区，输出“位置—问题—依据—修改动作—预期改善”。重点处理模板句、机械对偶、作者罗列、宣传腔和无证据拔高；保留真实数据、引用、专业术语和结论边界，不预测AI检测率。
 ```
+
+</details>
+
+<details>
+<summary><strong>审稿意见回应</strong></summary>
 
 ```text
-使用 $edtech-cssci-research-skill，为学生学习结果预测设计一套可解释机器学习流程：按学校分组切分数据，比较线性基线、随机森林和 XGBoost，报告样本外性能，再用 SHAP 与 ALE 解释并规划 CSSCI 论文图表。
+使用 $edtech-cssci-research-skill，整理两位审稿人的意见。
+
+拆分复合意见，区分共识、互补、冲突和独有问题；为每条意见给出 accept、partial、decline 或 needs verification，写明修改位置、验证方式，并生成回应函和修订台账。
 ```
+
+</details>
+
+<details>
+<summary><strong>投稿包与最终文件</strong></summary>
 
 ```text
-使用 $edtech-cssci-research-skill，审查这套课堂观察机器学习结果：20个模型在同一测试集排序，58个特征归入多级理论维度，按维度汇总SHAP，并进行了PCA-ALE、学科分组、Bootstrap和删除节点实验。请识别选模、维度规模、小样本、稳定性和解释边界问题。
+使用 $edtech-cssci-research-skill，检查这篇终稿的正文引文与文后条目、匿名信息、图表、附录、声明和DOCX/PDF渲染。
+
+目标期刊的动态要求只采用当前官方来源。输出投稿阻断项、主要修改项、润色项和最终提交判断。
 ```
 
-```text
-使用 $edtech-cssci-research-skill，整理两位审稿人的意见。请区分共识、冲突和独有问题，为每条意见给出处理决定、修改位置、验证方式，并生成回应函和修订台账。
-```
+</details>
 
-```text
-使用 $edtech-cssci-research-skill，审查这个“教师—智能体协同教学”二维框架。重点检查维度为什么成立、是否处于同一层级、缺失象限如何解释、边界案例如何编码，以及图中箭头是否超出证据。
-```
+## 文件功能速查
 
-```text
-使用 $edtech-cssci-research-skill，核对终稿的正文引文与文后条目、匿名信息、图表和 DOCX/PDF 渲染，并输出投稿包阻断项。
-```
+### 主入口
 
-若只需要正文，可在请求中明确说明“只给正文，不要写作说明”。
+| 文件 | 功能 | 什么时候看 |
+|---|---|---|
+| [`SKILL.md`](SKILL.md) | Skill 总入口：触发范围、任务路由、强制工作流、输出契约 | 想了解 Skill 如何判断和执行任务 |
+| [`agents/openai.yaml`](agents/openai.yaml) | Codex 界面名称、简介与默认提示词 | 检查安装后的展示信息 |
+| [`README.md`](README.md) | 面向使用者的功能导航与使用说明 | 不知道从哪里开始时 |
+
+### 研究流程与专项规则
+
+| 文件 | 主要用途 | 典型触发 |
+|---|---|---|
+| [`references/operating-modes-and-diagnostics.md`](references/operating-modes-and-diagnostics.md) | 选题、问题、大纲、诊断、修订和投稿模式 | “帮我诊断”“怎么选题”“如何重构” |
+| [`references/writing-workflow.md`](references/writing-workflow.md) | 题目、摘要、引言、综述、理论、方法、结果、讨论与结论 | “帮我写/改这一部分” |
+| [`references/literature-search-and-zotero.md`](references/literature-search-and-zotero.md) | 检索式、筛选、阅读状态、Zotero 与综述矩阵 | “检索文献”“整理Zotero”“写综述” |
+| [`references/problem-model-evidence-practice.md`](references/problem-model-evidence-practice.md) | 概念模型、智能系统、画像、测评、实践模式与证据闭环 | “构建模型”“设计系统”“研究实践模式” |
+| [`references/framework-defense-and-figure-audit.md`](references/framework-defense-and-figure-audit.md) | 矩阵、连续谱、类型学、机制图和图文一致性 | “框架为什么成立”“图怎么改” |
+| [`references/research-paradigms.md`](references/research-paradigms.md) | DBR、实验、问卷、质性、QCA、综述和混合方法 | “这种问题适合什么方法” |
+| [`references/data-collection-and-analysis.md`](references/data-collection-and-analysis.md) | 抽样、测量、数据清理、统计方法与诊断 | “检查数据处理和分析” |
+| [`references/interpretable-machine-learning.md`](references/interpretable-machine-learning.md) | 防泄漏建模、多模型比较、SHAP/ALE、可视化与报告 | “做可解释机器学习” |
+| [`references/hierarchical-ml-interpretation.md`](references/hierarchical-ml-interpretation.md) | 层次 SHAP、PCA-ALE、分组比较、稳定性与节点消融 | “特征有理论层级”“做分组与稳定性” |
+| [`references/evidence-and-citation.md`](references/evidence-and-citation.md) | 来源状态、引文真实性、直接引语和因果边界 | “核对引用和证据” |
+| [`references/chapter-synthesis.md`](references/chapter-synthesis.md) | 章节、小节与文献述评的结尾 | “写本章小结”“收束这一节” |
+
+### 修订、投稿与项目治理
+
+| 文件 | 主要用途 | 典型触发 |
+|---|---|---|
+| [`references/self-review.md`](references/self-review.md) | 教育技术学 C 刊终稿自检、原创性与反模板快扫 | “投稿前审查”“检查模板腔” |
+| [`references/revision-and-reviewer-response.md`](references/revision-and-reviewer-response.md) | 审稿意见、回应函、意见冲突与修订台账 | “审稿意见怎么回”“返修” |
+| [`references/project-memory-and-decision-log.md`](references/project-memory-and-decision-log.md) | 长周期项目记忆、术语决定和版本传播 | “多轮修订”“记录项目决定” |
+| [`references/journal-verification.md`](references/journal-verification.md) | CSSCI资格、目标期刊、栏目和投稿规范实时核验 | “这个期刊是否CSSCI”“投稿格式” |
+| [`references/reference-integrity-and-manuscript-artifacts.md`](references/reference-integrity-and-manuscript-artifacts.md) | 参考文献、匿名稿、图表、DOCX/PDF 与投稿包 | “终稿文件检查”“匿名化” |
+| [`references/validation-scenarios.md`](references/validation-scenarios.md) | Skill 更新后的代表性行为测试 | 开发或修改 Skill 后验证 |
+
+### 可复用模板与示例
+
+| 文件 | 可直接用于 |
+|---|---|
+| [`assets/literature-review-matrix-template.md`](assets/literature-review-matrix-template.md) | 文献综述矩阵 |
+| [`assets/revision-report-template.md`](assets/revision-report-template.md) | 全文诊断与修订报告 |
+| [`assets/problem-model-evidence-canvas.md`](assets/problem-model-evidence-canvas.md) | 问题—模型—证据—实践画布 |
+| [`assets/interpretable-ml-report-template.md`](assets/interpretable-ml-report-template.md) | 可解释机器学习分析报告 |
+| [`assets/reviewer-response-and-revision-ledger-template.md`](assets/reviewer-response-and-revision-ledger-template.md) | 审稿回应函与修订台账 |
+| [`assets/project-context-template.md`](assets/project-context-template.md) | 长周期论文项目上下文 |
+| [`assets/submission-package-checklist.md`](assets/submission-package-checklist.md) | 投稿包最终核对 |
+| [`examples/good-outline.md`](examples/good-outline.md) | 学习可用的大纲结构 |
+| [`examples/weak-outline.md`](examples/weak-outline.md) | 识别结构漂移和背景堆积 |
+| [`examples/sample-review.md`](examples/sample-review.md) | 查看证据化诊断的输出方式 |
 
 ## 输出形式
 
-- 正文写作：正文 + 简短的写作逻辑与证据边界说明
-- 结构或诊断：方案/问题 + 判断依据
-- 文献任务：检索策略 + 来源状态 + 筛选日志 + 阅读笔记/矩阵 + 引文风险
-- 终稿自检：总体判断 + 5—8 个主要问题 + 修改建议 + 反模板快扫
-- 章节收束：默认一段式正文 + 收束逻辑说明
-- 资料不足：待补信息、可选研究设计或检索核验步骤
+| 任务 | 默认输出 |
+|---|---|
+| 正文写作 | 正文 + 简短的写作逻辑与证据边界 |
+| 结构设计 | 章节/方案 + 功能、证据和研究问题对应关系 |
+| 文献任务 | 检索策略 + 来源状态 + 筛选日志 + 阅读笔记/矩阵 + 引文风险 |
+| 全文诊断 | 总体判断 + `Pass / Partial / Fail` + 定位证据 + 修改路径 |
+| 框架审查 | 主张—依据—竞争解释—操作化—边界—图示对应 |
+| 审稿返修 | 意见矩阵 + 处理决定 + 修改位置 + 回应函 + 修订台账 |
+| 可解释机器学习 | 数据流程 + 模型比较 + 解释图表 + 稳定性 + 复现与边界 |
+| 投稿前检查 | 阻断项 + 主要修改 + 润色项 + 提交判断 |
+| 资料不足 | 缺失信息 + 影响 + 用户需提供内容 + 当前仍能完成的部分 |
 
-## 项目结构
+## 规范、边界与许可
 
-```text
-edtech-cssci-research-skill/
-├── SKILL.md
-├── agents/
-│   └── openai.yaml
-├── references/
-│   ├── writing-workflow.md
-│   ├── problem-model-evidence-practice.md
-│   ├── framework-defense-and-figure-audit.md
-│   ├── operating-modes-and-diagnostics.md
-│   ├── revision-and-reviewer-response.md
-│   ├── project-memory-and-decision-log.md
-│   ├── literature-search-and-zotero.md
-│   ├── data-collection-and-analysis.md
-│   ├── interpretable-machine-learning.md
-│   ├── hierarchical-ml-interpretation.md
-│   ├── self-review.md
-│   ├── chapter-synthesis.md
-│   ├── research-paradigms.md
-│   ├── evidence-and-citation.md
-│   ├── reference-integrity-and-manuscript-artifacts.md
-│   ├── journal-verification.md
-│   └── validation-scenarios.md
-├── assets/
-│   ├── literature-review-matrix-template.md
-│   ├── revision-report-template.md
-│   ├── reviewer-response-and-revision-ledger-template.md
-│   ├── project-context-template.md
-│   ├── submission-package-checklist.md
-│   ├── problem-model-evidence-canvas.md
-│   └── interpretable-ml-report-template.md
-├── examples/
-│   ├── good-outline.md
-│   ├── weak-outline.md
-│   └── sample-review.md
-├── LICENSE
-└── README.md
-```
+### 证据与研究边界
 
-`SKILL.md` 负责核心规则和任务路由；`references/` 按任务读取；`assets/` 提供可复用交付模板；`examples/` 展示诊断和改写的质量边界。
+- 不编造文献、DOI、政策、访谈、数据、显著性、期刊要求或审稿结果。
+- 相关研究不写成因果研究，预测性能不等同于教学效果。
+- 未核实内容使用 `[待核验]`、`[待补材料]` 或明确的检索步骤。
+- CSSCI目录、期刊栏目、模板、摘要字数、引文格式和伦理要求以当前官方信息为准。
+- 不使用固定样本量、文献比例、清理比例或单一统计阈值替代方法判断。
+- 原创性检查用于提高论证质量，不预测AI检测率，也不提供检测规避方法。
 
-## 研究与投稿规范
+### 参考规范与专业资源
 
-本项目参考以下公开规范和专业资源，并要求在实际任务中核验最新版本：
+本项目要求在实际任务中核验以下规范的当前版本：
 
 - [AERA：经验社会科学研究报告标准](https://www.aera.net/Research-Policy-Advocacy/AERA-Shaping-Research-Policy/Standards-for-Research-Conduct/Standards-for-Empirical-Social-Science-Research)
 - [APA：Journal Article Reporting Standards](https://www.apa.org/journals/authors/all-instructions.html)
@@ -237,24 +383,20 @@ edtech-cssci-research-skill/
 - [《中国电化教育》官方网站](https://zdjy.cbpt.cnki.net/portal)
 - [《电化教育研究》官方网站](https://aver.nwnu.edu.cn/)
 
-## 项目来源说明
+### 项目来源说明
 
-本项目的通用中文 C 刊写作、自检和章节收束能力受到以下开源仓库内容的启发：
+本项目在功能设计层面参考了以下公开项目：
 
 - [`c-journal-paper-self-review-zh`](https://github.com/Smoothsailing0/Data-/tree/main/skills/c-journal-paper-self-review-zh)
 - [`public-management-c-journal-writing-zh`](https://github.com/Smoothsailing0/Data-/tree/main/skills/public-management-c-journal-writing-zh)
 - [`public-management-chapter-ending-synthesis-zh`](https://github.com/Smoothsailing0/Data-/tree/main/skills/public-management-chapter-ending-synthesis-zh)
-- [`social-science-paper-writing-skill`](https://github.com/fakerqwq/social-science-paper-writing-skill)：启发了任务模式、诊断标签、来源状态、检索到综述和修订报告等功能设计。
-- [`cn-academic-paper-pro`](https://github.com/MasutaFu/cn-academic-paper-pro)：启发了生命周期路由、审稿回应台账、项目级决策记忆、框架可辩护性和稿件工件质检等功能设计。审查时未在该仓库根目录发现明确许可证，因此本项目只做功能与结构分析，未复制其文本、脚本或项目专属内容。
+- [`social-science-paper-writing-skill`](https://github.com/fakerqwq/social-science-paper-writing-skill)
+- [`cn-academic-paper-pro`](https://github.com/MasutaFu/cn-academic-paper-pro)
 
-上述项目用于功能分析和结构参考。共性的过程治理原则被保留，固定禁词、固定文献比例、统一篇幅阈值、未经官网核实的期刊规则、AI 检测规避方法和特定项目作者信息均未迁移。教育技术学规则、研究范式、证据边界、示例和全部正文均为独立整理与重写；未复制或再发布来源仓库文本。
+上述项目仅用于功能分析和结构参考。教育技术学规则、研究范式、证据边界、示例和正文均为独立整理与重写；未复制或再发布来源仓库文本。固定禁词、固定文献比例、统一篇幅阈值、未经官网核实的期刊规则、AI检测规避方法和特定项目作者信息均未迁移。
 
-此外，本项目使用作者有权访问的本地教育技术学论文语料开展功能性综合，新增了难题分类、模型可追溯、图表论证、伴随式测评、人机协同与实践验证规则。仓库不包含论文 PDF、全文摘录、Zotero 数据库或私人文件路径；相关规则均为跨论文抽象后的独立表述，不用于复刻特定作者文风。
+仓库不包含论文PDF、全文摘录、Zotero数据库或私人文件路径。本 Skill 不能替代作者的真实研究、学术判断、伦理审查和目标期刊编辑部要求；使用者对数据、引用、署名、原创性和研究伦理承担最终责任。
 
-## 使用边界
-
-本 skill 是研究设计、写作和审查辅助工具，不能替代作者的学术判断、真实研究过程、伦理审查或目标期刊编辑部要求。使用者应对论文中的数据、引用、署名、原创性和研究伦理承担最终责任。
-
-## License
+### License
 
 本项目采用 [CC BY 4.0](LICENSE) 许可。允许分享和改编，但须保留适当署名。
