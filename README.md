@@ -1,13 +1,87 @@
+<p align="center">
+  <img src="assets/readme-hero.svg" alt="教育技术学 CSSCI 研究助手：问题、理论、模型、证据、实践与结论形成可追溯论证链" width="100%" />
+</p>
+
 # 教育技术学 CSSCI 研究助手
 
-> 面向中文教育技术学、教育数字化与智能教育研究的 Codex Skill。贯通选题、文献、理论、模型、方法、数据分析、论文写作、审稿修订与投稿质检。
+<p align="center"><strong>从真实教育问题出发，把“问题—理论—模型—证据—实践—结论”做成可追溯的研究论证链。</strong></p>
 
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-blue.svg)](LICENSE)
-![Language](https://img.shields.io/badge/language-Chinese-red.svg)
-![Domain](https://img.shields.io/badge/domain-Education%20Technology-6f42c1.svg)
-![Skill](https://img.shields.io/badge/Codex-Skill-111827.svg)
+<p align="center">
+  <a href="#一分钟开始"><strong>一分钟开始</strong></a> ·
+  <a href="#从你的问题开始"><strong>按任务进入</strong></a> ·
+  <a href="#能力全景"><strong>查看能力全景</strong></a> ·
+  <a href="#文件功能速查"><strong>查找文件</strong></a>
+</p>
 
-本项目的核心不是“把句子改得更像论文”，而是从真实教育问题出发，建立可追溯的：
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-CC%20BY%204.0-blue.svg" alt="CC BY 4.0 许可" /></a>
+  <img src="https://img.shields.io/badge/语言-中文-d9480f.svg" alt="中文" />
+  <img src="https://img.shields.io/badge/领域-教育技术学-6f42c1.svg" alt="教育技术学" />
+  <img src="https://img.shields.io/badge/14-任务模式-0f766e.svg" alt="14 个任务模式" />
+  <img src="https://img.shields.io/badge/18-研究参考模块-2563eb.svg" alt="18 个研究参考模块" />
+  <img src="https://img.shields.io/badge/8-可复用模板-a16207.svg" alt="8 个可复用模板" />
+</p>
+
+> 一个面向中文教育技术学、教育数字化与智能教育研究的 Codex Skill，贯通选题诊断、文献检索、理论与模型建构、研究设计、教育数据分析、论文写作及投稿前自检。
+
+## 从你的问题开始
+
+不用先理解全部文件。找到你此刻最需要完成的工作，复制对应提示词即可启动。
+
+| 你正卡在什么地方？ | 立即进入 | 你会得到什么 |
+|---|---|---|
+| 热点很大，不知道怎样形成可研究的题目 | [选题与研究问题](references/operating-modes-and-diagnostics.md) | 有对象、情境、机制、证据需求与边界的候选选题 |
+| 文献很多，但综述只是作者罗列 | [文献与理论](references/literature-search-and-zotero.md) | 可复现的检索路径、综述矩阵与研究缺口 |
+| 有模型或框架，却经不起“为什么这样分”的追问 | [理论、模型与框架](references/problem-model-evidence-practice.md) | 理论—构念—证据映射与框架防御方案 |
+| 有问卷、前后测、课堂或平台数据，却不确定怎么分析 | [教育数据分析](#教育数据分析) | 从数据审计到推断、可视化和结果边界的完整计划 |
+| 想做预测和 SHAP，但担心泄漏、过拟合或误读 | [可解释机器学习](#可解释机器学习) | 防泄漏建模、样本外验证、解释与稳定性检验方案 |
+| 收到审稿意见，或准备投 CSSCI/中文核心 | [返修与投稿](references/revision-and-reviewer-response.md) | 意见台账、回应函、终稿自检与投稿包清单 |
+
+## 为什么这个 Skill 值得安装
+
+它不是通用“论文润色器”。它将教育技术研究中的技术、学习者、教师、教学活动、情境条件与证据链放在同一张论证图中，帮助你把研究做实、写清、审严。
+
+| 核心优势 | 对你的直接价值 | 它拒绝什么 |
+|---|---|---|
+| **机制先于口号** | 追问技术通过何种活动与条件影响谁、影响什么，而非只描述“采用了技术” | 用“技术赋能、融合创新、模式重塑”替代解释 |
+| **证据贯穿全程** | 把问题、理论、研究设计、数据、结果与结论逐一对应 | 只有漂亮概念或显著性结果、没有可追溯证据 |
+| **数据分析完整进入研究设计** | 同时处理数据生成、测量、嵌套结构、时间结构、不确定性与复现 | 只报 *p* 值，或把相关/预测写成因果效果 |
+| **可解释机器学习有研究边界** | 将切分、防泄漏预处理、样本外验证、SHAP/ALE、稳定性和教育解释连起来 | 把特征重要性、模型表现或消融结果误作因果效应 |
+| **面向中文期刊的最终交付** | 兼顾匿名、引文、图表、DOCX/PDF 渲染与实时投稿规范核验 | 编造期刊要求、参考文献、数据或审稿结果 |
+
+## 一分钟开始
+
+### 1. 安装到 Codex
+
+```bash
+git clone https://github.com/Starry-cz/edtech-cssci-research-skill.git ~/.codex/skills/edtech-cssci-research-skill
+```
+
+Windows PowerShell：
+
+```powershell
+git clone https://github.com/Starry-cz/edtech-cssci-research-skill.git "$HOME\.codex\skills\edtech-cssci-research-skill"
+```
+
+也可以下载 ZIP，将整个文件夹解压到 Codex skills 目录，再重新启动或刷新 Codex。
+
+### 2. 用一个真实问题启动
+
+```text
+使用 $edtech-cssci-research-skill，诊断我的教育技术学论文。
+研究主题：[填写]
+当前阶段：[选题 / 综述 / 设计 / 分析 / 写作 / 返修 / 投稿]
+已有材料：[填写]
+目标期刊：[可选]
+
+请先判断最适合的任务模式，再指出当前最关键的问题、需要的证据和下一步动作。
+```
+
+### 3. 获得一份可执行的研究下一步
+
+Skill 会先补足问题与证据链，再给出符合你当前阶段的输出；若材料不足，会明确标记缺口与影响，不会以虚构文献、数据或期刊规则填补。
+
+## 能力全景
 
 ```mermaid
 flowchart LR
@@ -19,22 +93,15 @@ flowchart LR
     F -.反思与迭代.-> A
 ```
 
-它特别强调技术如何通过学习者、教师、教学活动与情境条件产生作用，避免用“技术赋能、融合创新、模式重塑”等抽象表述替代机制解释。
+| 研究阶段 | 主要工作 | 可交付结果 |
+|---|---|---|
+| **发现问题** | 选题诊断、对象与情境界定、研究问题精炼 | 选题画布、问题链、证据需求清单 |
+| **建立论证** | 文献检索、综述、理论、机制、概念模型与框架审查 | 检索日志、综述矩阵、理论—构念—证据表 |
+| **设计研究** | DBR、实验/准实验、问卷、质性、混合方法、学习分析 | 可执行的研究设计、数据字典、分析计划 |
+| **分析数据** | 描述、测量、推断、多层/纵向、教育机器学习与可视化 | 结果表图、稳健性说明、教育解释与结论边界 |
+| **写作与交付** | 全文诊断、章节改写、审稿回应、匿名与投稿包自检 | 修订报告、回应函、投稿前清单 |
 
-## 导航
-
-- [30 秒找到你需要的功能](#30-秒找到你需要的功能)
-- [为什么选择这个 Skill](#为什么选择这个-skill)
-- [安装与快速开始](#安装与快速开始)
-- [完整研究流程](#完整研究流程)
-- [专项研究方法](#专项研究方法)
-- [十五种任务模式](#十五种任务模式)
-- [可直接复制的提示词](#可直接复制的提示词)
-- [文件功能速查](#文件功能速查)
-- [输出形式](#输出形式)
-- [规范、边界与许可](#规范边界与许可)
-
-## 30 秒找到你需要的功能
+## 任务导航
 
 不用先理解全部文件。找到你当前的问题，复制最后一列的问法即可。
 
@@ -60,7 +127,7 @@ flowchart LR
 | 核验期刊、CSSCI目录和投稿规则 | `pre_submission_check` | [期刊核验](references/journal-verification.md) | “只使用当前官方来源核验目标期刊投稿要求” |
 | 检查匿名稿、图表、DOCX/PDF 和投稿包 | `reference_and_artifact_audit` | [稿件工件质检](references/reference-integrity-and-manuscript-artifacts.md) | “核对引文、匿名信息、图表和最终渲染” |
 
-## 为什么选择这个 Skill
+## 细化能力与研究边界
 
 | 核心优势 | 它具体做什么 | 避免什么问题 |
 |---|---|---|
@@ -75,40 +142,7 @@ flowchart LR
 | **投稿交付完整** | 审查引文、匿名稿、图表、DOCX/PDF 渲染和投稿包 | 内容已定稿但因格式、匿名或版本错位返工 |
 | **原创性而非检测规避** | 修复模板句、机械对偶、宣传腔和无证据判断 | 预测AI率、插入错误或提供检测规避技巧 |
 
-## 安装与快速开始
-
-### 安装
-
-将仓库克隆到 Codex 的 skills 目录：
-
-```bash
-git clone https://github.com/Starry-cz/edtech-cssci-research-skill.git ~/.codex/skills/edtech-cssci-research-skill
-```
-
-Windows PowerShell：
-
-```powershell
-git clone https://github.com/Starry-cz/edtech-cssci-research-skill.git "$HOME\.codex\skills\edtech-cssci-research-skill"
-```
-
-也可以下载 ZIP，将整个文件夹解压到 Codex skills 目录，然后重新启动或刷新 Codex。
-
-### 第一次使用
-
-```text
-使用 $edtech-cssci-research-skill，诊断我的教育技术学论文。
-
-研究主题：[填写]
-当前阶段：[选题/综述/设计/分析/写作/返修/投稿]
-已有材料：[填写]
-目标期刊：[可选]
-
-请先判断最适合的任务模式，再指出当前最关键的问题、需要的证据和下一步动作。
-```
-
-如果只需要正文，可明确说明：“只给正文，不要写作说明。”
-
-## 完整研究流程
+## 完整研究工作流
 
 | 阶段 | 主要任务 | 典型交付物 | 对应文件 |
 |---|---|---|---|
@@ -208,7 +242,7 @@ git clone https://github.com/Starry-cz/edtech-cssci-research-skill.git "$HOME\.c
 
 入口：[problem-model-evidence-practice.md](references/problem-model-evidence-practice.md) · [framework-defense-and-figure-audit.md](references/framework-defense-and-figure-audit.md)
 
-## 十六种任务模式
+## 十四类任务模式
 
 Skill 会根据用户请求选择一种主模式，并按需加载对应资料，而不是一次读取全部文件。
 
