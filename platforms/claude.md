@@ -1,6 +1,25 @@
 # 在 Claude 中使用
 
-推荐使用 **Project（项目）**：创建一个论文或研究项目，在 Project Instructions 中粘贴 [通用核心指令](universal-research-assistant.md) 的“核心指令”；将研究草稿、编码本、数据字典、审稿意见或允许共享的文献笔记添加至 Project Knowledge。
+## Claude Code：本地安装
+
+Claude Code 不会自动扫描本仓库的 `SKILL.md`，但会自动加载 `CLAUDE.md`，且支持通过 `@路径` 导入其他 Markdown 指令。先克隆仓库：
+
+```powershell
+New-Item -ItemType Directory -Force "$HOME\.claude\skills" | Out-Null
+git clone https://github.com/Starry-cz/edtech-cssci-research-skill.git "$HOME\.claude\skills\edtech-cssci-research-skill"
+```
+
+然后在**论文项目根目录**的 `CLAUDE.md` 中加入以下一行：
+
+```markdown
+@~/.claude/skills/edtech-cssci-research-skill/platforms/universal-research-assistant.md
+```
+
+这样只有该项目会加载教育技术研究规则。若确实希望所有 Claude Code 项目默认使用，可将同一行加入 `~/.claude/CLAUDE.md`；但这会增加所有项目的上下文，不推荐用于无关的编程任务。启动 Claude Code 后可用 `/memory` 检查已加载的指令。
+
+## Claude Desktop / 网页版：Project
+
+本地安装 Claude Desktop 并不意味着它会读取电脑上的 Skill 目录。推荐创建一个论文或研究 Project，在 Project Instructions 中粘贴 [通用核心指令](universal-research-assistant.md) 的“核心指令”；将研究草稿、编码本、数据字典、审稿意见或允许共享的文献笔记添加至 Project Knowledge。
 
 为保持上下文准确，请按任务上传必要材料，而不是一次上传来源不明的大量文件：
 
