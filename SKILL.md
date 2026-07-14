@@ -20,6 +20,7 @@ description: "Support Chinese education technology, educational digitalization, 
 按任务阅读对应文件，不要一次加载全部参考资料：
 
 - 题目、摘要、引言、综述、理论、方法、结果、讨论、结论或改写：`references/writing-workflow.md`
+- 搭建论文主论证链、重构全文、区分结果/讨论/贡献或分析修订连锁：`references/academic-writing-and-revision.md`
 - 选题诊断、研究问题细化、大纲、全文诊断、章节修订和投稿检查：`references/operating-modes-and-diagnostics.md`
 - CNKI/Google Scholar 等检索、结构化阅读、Zotero 和综述矩阵：`references/literature-search-and-zotero.md`
 - 投稿前终稿审查、原创性责任与模板化表达检查：`references/self-review.md`
@@ -36,7 +37,7 @@ description: "Support Chinese education technology, educational digitalization, 
 - 长周期论文项目、术语决议、数据/稿件版本与开放问题：`references/project-memory-and-decision-log.md`
 - 参考文献双向核对、匿名稿、图表、DOCX/PDF 和投稿包：`references/reference-integrity-and-manuscript-artifacts.md`
 - 期刊匹配、CSSCI资格与投稿格式：`references/journal-verification.md`
-- 诊断报告、综述矩阵、研究架构画布、教育数据分析报告、机器学习报告、审稿回应台账、项目上下文和投稿包直接使用：`assets/revision-report-template.md`、`assets/literature-review-matrix-template.md`、`assets/problem-model-evidence-canvas.md`、`assets/education-data-analysis-report-template.md`、`assets/interpretable-ml-report-template.md`、`assets/reviewer-response-and-revision-ledger-template.md`、`assets/project-context-template.md`、`assets/submission-package-checklist.md`
+- 诊断报告、综述矩阵、研究架构画布、论证与修订工作底稿、教育数据分析报告、机器学习报告、审稿回应台账、项目上下文和投稿包直接使用：`assets/revision-report-template.md`、`assets/literature-review-matrix-template.md`、`assets/problem-model-evidence-canvas.md`、`assets/argumentation-and-revision-workbook-template.md`、`assets/education-data-analysis-report-template.md`、`assets/interpretable-ml-report-template.md`、`assets/reviewer-response-and-revision-ledger-template.md`、`assets/project-context-template.md`、`assets/submission-package-checklist.md`
 
 ## Operating modes
 
@@ -45,12 +46,14 @@ description: "Support Chinese education technology, educational digitalization, 
 - `topic_diagnosis`：判断选题的问题意识、教育技术学相关性、可行性、证据与伦理风险。
 - `research_question_refinement`：把宽泛主题转为 2—4 个可研究问题，并列证据需求与取舍。
 - `outline_building`：搭建或修复题目—问题—文献—理论—方法—分析—结论结构。
+- `argumentation_blueprint`：搭建“问题—回答—证据—贡献—边界”主论证图与章节功能表。
 - `conceptual_model_building`：识别结构、机制、效能、发展、价值或治理难题，建立理论—模型—证据映射。
 - `practice_model_design`：设计并审查指标、系统、场景、活动、反馈、应用验证与迭代关系。
 - `literature_review_planning`：规划检索范围、文献簇、纳排逻辑和 gap statement。
 - `literature_search_to_review`：完成检索、筛选、来源状态、结构化笔记、Zotero 组织、矩阵与综述草稿。
 - `draft_review`：以逐项 `Pass / Partial / Fail` 诊断全文。
 - `section_revision`：保留可核验主张，修订章节并标记剩余缺口。
+- `revision_cascade`：定位实质修改的首要修复层、连锁更新和验证动作。
 - `reviewer_response_and_revision`：拆解审稿意见，处理多审稿人共识与冲突，生成回应函、修改台账和版本检查点。
 - `framework_defense`：检验框架维度、层级、操作化、边界案例、竞争解释及图文一致性。
 - `education_data_analysis`：完成教育数据的数据审计、清理、描述与可视化、测量质量、模型选择、诊断、稳健性、结果报告与复现边界。
@@ -94,10 +97,12 @@ description: "Support Chinese education technology, educational digitalization, 
 
 - 正式正文默认输出“正文 + 3—6 行写作逻辑与证据边界说明”；用户要求只给正文时省略说明。
 - 结构、诊断、标题或修改建议必须给出简短判断依据。
+- 论证蓝图按“问题—回答—证据—贡献—边界 + 章节功能 + 主张—证据—边界矩阵”输出。
 - 终稿自检按“总体判断—主要问题—可执行修改—反模板快扫”输出，问题需定位到章节或句段。
 - 审稿修订按“意见—判断—决定—修改位置—验证—状态”记录；多位审稿人的共识、冲突与独有意见分开处理。
 - 教育数据分析按“分析问题—数据与变量—清理—描述/测量—主模型—诊断与稳健性—教育解释—复现与边界”输出。
 - 修改建议按“必须修改 / 建议修改 / 可保留”排序。
+- 实质修订按“首要修复层—修改动作—连锁项—验证—状态”输出，先处理问题、理论、设计、结果与结论，再处理表达与格式。
 - 若用户要求先读文献再写，先列实际使用且可核验的来源，再写正文。
 - 诊断为每个问题提供“标签—严重度—用户材料中的证据—具体操作—预期改善”，不用“加强论证”等空话。
 - `Pass` 表示明确、具体、有证据且已整合；`Partial` 表示存在但模糊、迟置、证据不足或未整合；`Fail` 表示缺失、矛盾、不可核验或无法从材料判断。
@@ -106,7 +111,7 @@ description: "Support Chinese education technology, educational digitalization, 
 
 检索和写作时区分 `candidate source`、`metadata only`、`abstract only`、`full text read`、`in Zotero`、`imported to Zotero`；Zotero 中有记录不等于已阅读或支持当前主张。
 
-按需使用：`Topic Summary`、`Research Question Too Broad`、`Structure Drift`、`Literature Listing`、`Missing Research Gap`、`Theory Decoration`、`Conceptual Ambiguity`、`Method Mismatch`、`Sampling Gap`、`Operationalization Gap`、`Data Provenance Gap`、`Data Cleaning Gap`、`Data Dictionary Gap`、`Missingness Mechanism Gap`、`Measurement Invariance Gap`、`Cluster Dependence Gap`、`Model Assumption Gap`、`Multiplicity Transparency Gap`、`Effect Size/Uncertainty Gap`、`Reproducibility Gap`、`Criterion Contamination`、`Test-set Selection`、`Hierarchy Size Bias`、`Ablation-Fidelity Confusion`、`Statistical Test Mismatch`、`Evidence Gap`、`Citation Risk`、`Quotation Risk`、`Causal Overclaim`、`Conclusion Overreach`。每个标签必须指向用户材料中的证据。
+按需使用：`Topic Summary`、`Research Question Too Broad`、`Structure Drift`、`Abstract Drift`、`Literature Listing`、`Missing Research Gap`、`Theory Decoration`、`Conceptual Ambiguity`、`Method Mismatch`、`Sampling Gap`、`Operationalization Gap`、`Data Provenance Gap`、`Data Cleaning Gap`、`Data Dictionary Gap`、`Missingness Mechanism Gap`、`Measurement Invariance Gap`、`Cluster Dependence Gap`、`Model Assumption Gap`、`Multiplicity Transparency Gap`、`Effect Size/Uncertainty Gap`、`Reproducibility Gap`、`Criterion Contamination`、`Test-set Selection`、`Hierarchy Size Bias`、`Ablation-Fidelity Confusion`、`Statistical Test Mismatch`、`Evidence Gap`、`Contribution Inflation`、`Revision Cascade Gap`、`Citation Risk`、`Quotation Risk`、`Causal Overclaim`、`Conclusion Overreach`。每个标签必须指向用户材料中的证据。
 
 ## 最终检查
 
@@ -115,6 +120,7 @@ description: "Support Chinese education technology, educational digitalization, 
 - 理论是否参与设计和结果解释，方法是否真正回答问题。
 - 关键判断是否有证据，结果是否超越表格复述，因果措辞是否符合设计。
 - 章节结尾是否提炼判断而非重排标题，结论和建议是否受证据边界约束。
+- 贡献是否与证据强度相称，实质修改是否同步更新题目、摘要、图表、附录、回应函和投稿材料。
 - 模型图与流程图是否可追溯到理论、数据、方法、结果和使用主体，图表是否承担明确论证任务。
 - 是否核验动态期刊信息，并删除明显模板句与空泛拔高。
 - 参考文献、图表、匿名稿、数据/代码、摘要、结论和回应函是否对应同一最终版本。
