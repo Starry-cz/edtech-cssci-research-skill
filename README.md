@@ -34,6 +34,7 @@
 | 文献很多，但综述只是作者罗列 | [文献与理论](references/literature-search-and-zotero.md) | 可复现的检索路径、综述矩阵与研究缺口 |
 | 有模型或框架，却经不起“为什么这样分”的追问 | [理论、模型与框架](references/problem-model-evidence-practice.md) | 理论—构念—证据映射与框架防御方案 |
 | 有问卷、前后测、课堂或平台数据，或想做预测与 SHAP | [实证数据分析与建模](#实证数据分析与建模) | 从数据审计、统计推断到防泄漏预测、解释与稳健性检验的分层方案 |
+| 已有材料或结果，却不知道如何写成完整论文 | [论文写作与修改](references/writing-workflow.md) | 题目、摘要、引言、综述、方法、结果、讨论与结论的章节草稿、修改说明与证据边界 |
 | 收到审稿意见，或准备投 CSSCI/中文核心 | [返修与投稿](references/revision-and-reviewer-response.md) | 意见台账、回应函、终稿自检与投稿包清单 |
 
 ## 为什么这个 Skill 值得安装
