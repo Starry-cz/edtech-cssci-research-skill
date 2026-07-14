@@ -12,12 +12,12 @@
 
 | 模式 | 何时进入 | 组合资源 | 核心输出 |
 | --- | --- | --- | --- |
-| `topic_diagnosis` | 只有热点、政策口号或实践困扰 | `problem-model-evidence-practice.md` | 对象、情境、机制、证据需求、候选问题与边界 |
+| `topic_diagnosis` | 只有热点、政策口号或实践困扰 | `problem-model-evidence-practice.md`、`external-evidence-and-research-positioning.md` | 对象、情境、机制、证据需求、候选问题与边界 |
 | `research_question_refinement` | 题目宽泛、变量与过程混杂 | `research-paradigms.md` | 可回答的问题链、概念定义、可观察证据与不可回答部分 |
 | `outline_building` | 不知如何组织论文或章节 | `chapter-synthesis.md`、`good-outline.md`、`weak-outline.md` | 章节功能表、论证顺序与章节间证据接口 |
 | `argumentation_blueprint` | 主线不清、贡献悬空或需重构全文 | `academic-writing-and-revision.md`、`argumentation-and-revision-workbook-template.md` | 问题—回答—证据—贡献—边界主张图 |
 | `conceptual_model_building` | 需要解释“为什么/在何种条件下” | `problem-model-evidence-practice.md`、`research-paradigms.md` | 构念边界、机制链、关系命题、替代解释与检验路径 |
-| `practice_model_design` | 需提出教学、系统或实践模型 | `problem-model-evidence-practice.md` | 设计原则、活动链、实施条件和过程/结果证据 |
+| `practice_model_design` | 需提出教学、系统或实践模型 | `problem-model-evidence-practice.md`、`external-evidence-and-research-positioning.md` | 设计原则、活动链、实施条件和过程/结果证据 |
 
 诊断信号：若题目只出现技术名称或政策口号，先回到 `topic_diagnosis`；若模型仅是要素罗列，先回到 `conceptual_model_building`；若全文各段各说各话，先进入 `argumentation_blueprint`，不要直接润色。
 
@@ -28,7 +28,7 @@
 | `literature_review_planning` | 尚未形成可复核的检索与纳排规则 | `literature-search-and-zotero.md`、`literature-review-matrix-template.md` | 检索式、来源、时间边界、纳排规则与编码方案 |
 | `literature_search_to_review` | 文献很多但只是作者罗列 | `literature-search-and-zotero.md`、`evidence-and-citation.md` | 主题矩阵、争议/缺口、主张—来源映射 |
 | `citation_and_evidence_check` | 需核验关键引文或论据 | `evidence-and-citation.md` | 已核验/待核验/缺失的证据台账 |
-| `education_data_analysis` | 处理问卷、前后测、课堂或平台数据 | `education-data-analysis.md`、`education-data-analysis-report-template.md` | 数据审计、分析计划、诊断、稳健性与报告边界 |
+| `education_data_analysis` | 处理问卷、前后测、课堂或平台数据 | `education-data-analysis.md`、`education-data-analysis-report-template.md`、`external-evidence-and-research-positioning.md` | 数据审计、分析计划、诊断、稳健性与报告边界 |
 | `interpretable_ml_analysis` | 做预测、分类、SHAP 或特征解释 | `interpretable-machine-learning.md`、`interpretable-ml-report-template.md` | 切分与泄漏控制、模型比较、解释图、稳定性和复现边界 |
 
 数据任务的前置门槛：先明确分析单位、时间窗口、标签形成和数据来源；再检查缺失、重复、异常、切分、泄漏、隐私与公平。预测表现不能直接改写为教育因果效果，解释特征也不能直接等同于干预机制。
