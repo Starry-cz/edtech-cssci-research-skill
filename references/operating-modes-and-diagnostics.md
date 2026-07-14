@@ -1,128 +1,62 @@
 # 任务模式与诊断协议
 
-在选题、提问、大纲、全文审查、章节修订或投稿检查时读取。先选择一个主模式，复杂任务可以按论文阶段依次执行多个模式。
+本文件只负责三件事：识别用户要进入的模式、确定最少资源组合、约定可交付输出。章节写作、主论证、终稿自检和审稿意见治理分别由其专门文件承担，避免同一规则在多处重复。
 
-## `topic_diagnosis`
+## 使用原则
 
-1. 提取技术/教育现象、研究对象、学习或教学场景、范围、材料、论文类型和目标期刊。
-2. 评价问题价值、教育技术学相关性、可行性、范围、证据可得性、数据权限和伦理风险。
-3. 区分技术热点介绍与真实研究问题，标记 `Topic Summary`、`Weak Problem Consciousness` 或 `Research Question Too Broad`。
-4. 给出 2—4 个聚焦方向；每个方向写清对象、关系/困惑、情境、证据和方法选择。
+1. 先选一个主模式；用户同时提出多项需求时，按“问题/理论—设计/证据—写作/交付”的依赖关系拆分。
+2. 只有当前输出确实需要时才加载补充资源，不把参考文件当作通用背景材料全部复述。
+3. 输出必须标出已知材料、待核验信息和结论边界；没有原始材料时，不补写事实或结果。
 
-不要把“人工智能+教育”“教育数字化转型”等大主题直接当作选题。优先寻找技术承诺与课堂实际、系统功能与师生使用、算法指标与学习过程之间的可解释矛盾。
+## 一、问题定位与解释建构
 
-## `research_question_refinement`
+| 模式 | 何时进入 | 组合资源 | 核心输出 |
+| --- | --- | --- | --- |
+| `topic_diagnosis` | 只有热点、政策口号或实践困扰 | `problem-model-evidence-practice.md` | 对象、情境、机制、证据需求、候选问题与边界 |
+| `research_question_refinement` | 题目宽泛、变量与过程混杂 | `research-paradigms.md` | 可回答的问题链、概念定义、可观察证据与不可回答部分 |
+| `outline_building` | 不知如何组织论文或章节 | `chapter-synthesis.md`、`good-outline.md`、`weak-outline.md` | 章节功能表、论证顺序与章节间证据接口 |
+| `argumentation_blueprint` | 主线不清、贡献悬空或需重构全文 | `academic-writing-and-revision.md`、`argumentation-and-revision-workbook-template.md` | 问题—回答—证据—贡献—边界主张图 |
+| `conceptual_model_building` | 需要解释“为什么/在何种条件下” | `problem-model-evidence-practice.md`、`research-paradigms.md` | 构念边界、机制链、关系命题、替代解释与检验路径 |
+| `practice_model_design` | 需提出教学、系统或实践模型 | `problem-model-evidence-practice.md` | 设计原则、活动链、实施条件和过程/结果证据 |
 
-1. 将主题改写为问题陈述：何种现象未被现有解释充分说明。
-2. 分开现象层问题与理论/机制层问题。
-3. 生成 2—4 个候选问题，逐一说明分析单位、范围、所需证据、适配方法和取舍。
-4. 标记需要不可得数据、超出篇幅或暗含无法识别因果的问题。
+诊断信号：若题目只出现技术名称或政策口号，先回到 `topic_diagnosis`；若模型仅是要素罗列，先回到 `conceptual_model_building`；若全文各段各说各话，先进入 `argumentation_blueprint`，不要直接润色。
 
-## `outline_building`
+## 二、文献、证据与实证建模
 
-1. 锁定题目关键词、研究问题、暂定回答、材料/方法和最小贡献。
-2. 为每一节分配一个论证任务，写明该节需要的证据与产出判断。
-3. 检查文献综述、理论、设计、分析与结论是否共同回答问题。
-4. 对偏离题目关键词或只提供背景的章节标记 `Structure Drift`。
+| 模式 | 何时进入 | 组合资源 | 核心输出 |
+| --- | --- | --- | --- |
+| `literature_review_planning` | 尚未形成可复核的检索与纳排规则 | `literature-search-and-zotero.md`、`literature-review-matrix-template.md` | 检索式、来源、时间边界、纳排规则与编码方案 |
+| `literature_search_to_review` | 文献很多但只是作者罗列 | `literature-search-and-zotero.md`、`evidence-and-citation.md` | 主题矩阵、争议/缺口、主张—来源映射 |
+| `citation_and_evidence_check` | 需核验关键引文或论据 | `evidence-and-citation.md` | 已核验/待核验/缺失的证据台账 |
+| `education_data_analysis` | 处理问卷、前后测、课堂或平台数据 | `education-data-analysis.md`、`education-data-analysis-report-template.md` | 数据审计、分析计划、诊断、稳健性与报告边界 |
+| `interpretable_ml_analysis` | 做预测、分类、SHAP 或特征解释 | `interpretable-machine-learning.md`、`interpretable-ml-report-template.md` | 切分与泄漏控制、模型比较、解释图、稳定性和复现边界 |
 
-建议输出表：章节、功能、核心判断、所需证据、与研究问题的关系、风险。
+数据任务的前置门槛：先明确分析单位、时间窗口、标签形成和数据来源；再检查缺失、重复、异常、切分、泄漏、隐私与公平。预测表现不能直接改写为教育因果效果，解释特征也不能直接等同于干预机制。
 
-## `argumentation_blueprint`
+## 三、写作、修订与外部意见
 
-1. 读取 `academic-writing-and-revision.md`，提取真实教育问题、研究问题、暂定回答、证据、最小贡献和结论边界。
-2. 为题目、摘要、引言、综述、理论、方法、结果、讨论和结论分别指定最小判断与证据节点。
-3. 建立“主张—证据—边界”矩阵，标明每项判断属于提出、描述、关联、预测、检验或设计原则。
-4. 输出 `assets/argumentation-and-revision-workbook-template.md` 所需内容；不把系统、政策或案例展示写成效果证据。
+| 模式 | 何时进入 | 组合资源 | 核心输出 |
+| --- | --- | --- | --- |
+| `draft_review` | 需要诊断全文或长草稿 | `academic-writing-and-revision.md`、`self-review.md` | 高/中/低风险、重构优先级、证据缺口 |
+| `section_revision` | 需修改摘要、引言、综述、方法、结果或讨论 | `writing-workflow.md`、`chapter-synthesis.md` | 段落功能判断、修复方案、证据与连锁提示 |
+| `revision_cascade` | 一项修改可能牵动多处内容 | `academic-writing-and-revision.md`、`argumentation-and-revision-workbook-template.md` | 修改层级、传播清单、验证方式和完成状态 |
+| `reviewer_response_and_revision` | 收到审稿意见或需准备回应函 | `revision-and-reviewer-response.md`、`reviewer-response-and-revision-ledger-template.md` | 意见台账、回应逻辑、修改位置、连锁更新与证据 |
+| `framework_defense` | 被质疑理论不足、框架不新或逻辑跳跃 | `problem-model-evidence-practice.md`、`academic-writing-and-revision.md` | 构念界定、关系依据、反例/替代解释和可证伪点 |
 
-## `literature_review_planning`
+修订顺序固定为：研究问题与主张、理论/模型、设计与证据、结果—讨论—贡献边界、章节结构、段落与措辞。审稿意见不能只给礼貌回应；每条意见都要标注它影响的层级，以及摘要、图表、附录、回应函是否需同步。
 
-1. 定义中英文概念、同义词、技术名称、学习/教学结果、对象、场景、方法和排除词。
-2. 按争论、概念、机制、方法、技术场景、学习者群体或时期设计文献簇。
-3. 为每簇写“已解释什么—依赖什么证据—仍缺什么—与本文关系”。
-4. 形成可处理的 gap statement，而不是“研究较少”。
+## 四、交付、工件与投稿核验
 
-## `literature_search_to_review`
+| 模式 | 何时进入 | 组合资源 | 核心输出 |
+| --- | --- | --- | --- |
+| `reference_and_artifact_audit` | 核对参考文献、图表、附录、数据说明或投稿文件 | `self-review.md`、`submission-package-checklist.md` | 工件清单、交叉引用问题、阻断项与修复顺序 |
+| `pre_submission_check` | 投稿前需要整体质量判断 | `self-review.md`、`journal-verification.md` | 终稿门槛、官方核验项、提交判断与待办清单 |
 
-1. 按 `literature-search-and-zotero.md` 记录数据库、日期、完整检索式、筛选和去重过程。
-2. 分开候选、元数据、摘要、全文阅读与 Zotero 状态，不用摘要或元数据补造全文发现。
-3. 以结构化笔记和综述矩阵组织共识、分歧、机制、方法与情境边界。
-4. 只有可核验来源才能进入具体主张；最终把研究缺口转换为本文可回答的问题。
+期刊名称、目录、栏目、格式、伦理或政策要求属于待核验事实；除非用户提供官方材料或已完成实时核验，否则只能列为核验任务，不能作为确定要求写入稿件。
 
-## `draft_review`
+## 模式组合的常见边界
 
-1. 识别论文的问题、回答、结构、理论、方法、数据/材料、分析程序和引用状态。
-2. 对相关项目逐一使用 `Pass / Partial / Fail`，并引用用户草稿中的具体证据。
-3. 先列阻断性问题，再列重要修改和表达润色。
-4. 使用 `assets/revision-report-template.md` 输出可执行修改路径。
-
-## `section_revision`
-
-1. 判断章节在全文中的功能。
-2. 先诊断，再重写；不得为了流畅增加未经证实的文献、数据或结论。
-3. 保留用户已有的可核验主张，使用占位标记暴露缺口。
-4. 输出修订文本、变更说明和剩余风险；用户要求只给正文时省略说明。
-
-## `reviewer_response_and_revision`
-
-1. 读取 `revision-and-reviewer-response.md`，识别稿件版本、意见来源、轮次与本轮授权范围。
-2. 将复合意见拆成原子任务，分类为事实、论证、方法、扩展、呈现或冲突，并标记严重度。
-3. 对每条意见选择 `accept / partial / decline / needs verification`，给出依据、修改位置和验证方式。
-4. 合并多位审稿人的共识与互补项，显式处理冲突；同步更新稿件、分析、图表、摘要、结论和回应函。
-5. 使用 `assets/reviewer-response-and-revision-ledger-template.md` 形成回应函与可追溯台账。
-
-## `revision_cascade`
-
-1. 读取 `academic-writing-and-revision.md` 与 `revision-and-reviewer-response.md`，定位修改起点属于问题、理论、设计、数据/分析、结果、结论、图表或格式中的哪一层。
-2. 先给出首要修复动作，再列出受影响的题目、摘要、综述缺口、方法、表图、附录、回应函和投稿材料。
-3. 对每项连锁更新说明验证方式与当前状态；缺少数据、作者决定或期刊规则时标记 `[needs user verification]`。
-4. 不以“已全面修改”替代可核验的位置、变化和验证。
-
-## `framework_defense`
-
-1. 读取 `framework-defense-and-figure-audit.md`，识别框架类型、分析层级和理论/经验来源。
-2. 检查维度选择、竞争方案、组合空间、边界案例、操作化和反例。
-3. 检查框架是否进入数据、编码、分析和结果，而非只在引言或图中出现。
-4. 核对图中节点、箭头、方向和视觉等级是否与正文证据一致；证据不足时降低贡献强度。
-
-## `education_data_analysis`
-
-1. 读取 `education-data-analysis.md` 与 `data-collection-and-analysis.md`，明确研究问题、估计对象、分析单位、层级、结果变量、时间点与结论边界。
-2. 建立数据字典和清理台账，区分原始、去标识化、分析与派生数据；说明排除、缺失、异常值、量表计分和变量构造。
-3. 先完成样本流向、分布、缺失、组别、时间和聚类结构的描述与可视化，再选择测量分析和主模型。
-4. 按结果变量、独立/配对、层级、重复测量、时间顺序和识别条件选择分析；报告效应量、不确定性、模型诊断和合理敏感性分析。
-5. 用“问题—数据—结果—教育解释—边界”写作，并使用 `assets/education-data-analysis-report-template.md` 输出可复现的分析计划或报告；预测任务再读取 `interpretable-machine-learning.md`。
-
-## `reference_and_artifact_audit`
-
-1. 读取 `reference-integrity-and-manuscript-artifacts.md`，确认目标期刊最新官方格式。
-2. 双向核对正文引文与文后条目，复核高风险来源、直接引语和自动导入字段。
-3. 检查主稿、匿名稿、图表、附录、声明和回应函版本一致性。
-4. 对 DOCX/PDF 做实际渲染检查；使用 `assets/submission-package-checklist.md` 输出阻断项和提交判断。
-
-## `citation_and_evidence_check`
-
-1. 建立“主张—证据—来源状态”对应关系，定位无支持、错配、二手转引、页码和直接引语风险。
-2. 核对书目信息、来源层级、引文粒度和用户是否实际提供/阅读全文。
-3. 检查相关、预测、干预和因果措辞是否符合研究设计。
-4. 对每项风险给出当前安全表述、所需原始来源或核验动作；不得猜测缺失字段。
-
-## `interpretable_ml_analysis`
-
-1. 按 `interpretable-machine-learning.md` 界定预测对象、分析单位、目标、预测时点和泛化场景。
-2. 先切分再在训练折内完成插补、编码、标准化、降维和特征选择，检查学习者/班级/学校/时间泄漏。
-3. 比较朴素与透明基线、候选模型及同一切分下的样本外性能，再确定解释对象。
-4. 用 SHAP、ALE 或置换重要性回答明确的解释问题；若存在多级理论分类、PCA综合、分组排名或节点删除，同时读取 `hierarchical-ml-interpretation.md`，检查维度规模、构念含义、小样本与消融边界。
-5. 输出方法流程、模型比较、解释图表、复现信息和安全措辞；不得把预测重要性改写为因果效应。
-
-## `pre_submission_check`
-
-1. 检查问题、结构、综述、理论、设计、抽样/测量、分析、证据、引文、因果、结论、伦理和目标期刊格式。
-2. 把问题分为 `submission blocker`、`major revision`、`polish`。
-3. 核对所有尚未阅读全文、未核元数据、未核页码和未核动态期刊规则的项目。
-4. 给出 `submit`、`revise-before-submit` 或 `restructure-before-submit` 判断及依据。
-
-## 诊断标签使用规则
-
-- 标签不是装饰；必须附材料位置、原句/结构证据和具体修法。
-- 每个修法写清目标位置、操作（增加/删除/移动/界定/核验/缩窄/降级因果词）和预期改善。
-- 无法从用户材料判断时，标记 `[needs user verification]`，不要因为“未提供”而假定论文实际缺失。
+- “给我写一篇论文”不是单独模式：先以 `argumentation_blueprint` 或 `outline_building` 明确主线，再进入 `section_revision`。
+- “模型/平台已经做出来了”优先进入 `practice_model_design`：补足设计理由与实施证据，不把功能清单包装为效果。
+- “我跑出了显著性或 SHAP 图”优先进入 `education_data_analysis` 或 `interpretable_ml_analysis`：补足数据过程、验证与解释边界。
+- “按意见改一下”优先进入 `reviewer_response_and_revision`；如意见触及主张、理论或设计，联动 `revision_cascade`。
