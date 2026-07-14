@@ -30,7 +30,7 @@
 
 | 任务 | 建议添加的仓库文件 |
 |---|---|
-| 选题、研究问题与模型 | `references/operating-modes-and-diagnostics.md`、`references/problem-model-evidence-practice.md` |
+| 选题、研究问题与模型 | `references/operating-modes-and-diagnostics.md`、`references/problem-model-evidence-practice.md`、`references/external-evidence-and-research-positioning.md` |
 | 文献检索与综述 | `references/literature-search-and-zotero.md`、`assets/literature-review-matrix-template.md` |
 | 实证数据分析与建模 | `references/education-data-analysis.md`、`references/interpretable-machine-learning.md`、相关报告模板 |
 | 论文主线、正文与结构性修订 | `references/academic-writing-and-revision.md`、`references/writing-workflow.md`、`assets/argumentation-and-revision-workbook-template.md` |
