@@ -26,23 +26,24 @@
 
 ## 从你的问题开始
 
-不用先理解全部文件。找到你此刻最需要完成的工作，复制对应提示词即可启动。
+不用先理解全部文件。先找到此刻的研究决策，复制对应请求即可启动。
 
-| 你正卡在什么地方？ | 立即进入 | 你会得到什么 |
+> 尤其适合情感计算、多模态大模型、教育人工智能、教育技术学与教育数据挖掘研究：先把技术、教育活动、数据、证据和结论边界接起来，再决定用什么模型或写法。
+
+| 你现在需要做什么 | 直接这样说 | 你会得到什么 |
 |---|---|---|
-| 热点很大，不知道怎样形成可研究的题目 | [选题与研究问题](references/topic-diagnosis-and-research-questions.md) | 七道质量门、有对象、情境、机制、证据需求与边界的候选选题 |
-| 文献很多，但综述只是作者罗列 | [文献与理论](references/literature-search-and-zotero.md) | 可复现的检索路径、综述矩阵与研究缺口 |
-| 有模型或框架，却经不起“为什么这样分”的追问 | [理论、模型与框架](references/problem-model-evidence-practice.md) | 理论—构念—证据映射与框架防御方案 |
-| 有问卷、前后测、课堂或平台数据，或想做预测与 SHAP | [实证数据分析与建模](#实证数据分析与建模) | 从数据审计、统计推断到防泄漏预测、解释与稳健性检验的分层方案 |
-| 已有材料或结果，却不知道如何写成完整论文 | [论文写作与修改](references/writing-workflow.md) | 题目、摘要、引言、综述、方法、结果、讨论与结论的章节草稿、修改说明与证据边界 |
-| 摘要要像投稿摘要，但担心承诺超过数据和设计 | [摘要论证卡](assets/abstract-argument-card-template.md) · [摘要状态控制](references/abstract-state-and-evidence-control.md) | 先区分诊断、探索性摘要草案与投稿摘要；以“中心回答—证据锚点”取舍技术细节，再核对问题、对象、设计、最小发现、贡献与边界 |
-| 逻辑齐全，但摘要或正文像分析报告，带有“目的/方法/结果/结论”、风险标签或占位符 | [投稿正文与表层控制](references/publication-prose-and-style-control.md) | 将内部构思转换为自然投稿正文，并把诊断、待办和证据风险留在分离的修改说明中 |
-| 想用八刊近作检查文章的组织方式 | [八刊写作证据台账](references/eight-journal-writing-evidence.md) | 按同类研究诊断问题、理论—方法、结果—讨论和图表，不模仿句式或预测录用 |
-| 有了图表或结果，却无法证明每个结论经得起追问 | [主张—证据—验证契约](references/claim-evidence-validation-contract.md) | 将每项主张对应到决定性证据、比较/反例、稳健性与边界 |
-| 想检查统计报告、图注或独立样本单位 | [统计报告与图表证据门](references/statistical-reporting-and-figure-evidence.md) | 识别伪重复、多重比较、交互推断、效应量与图注口径风险 |
-| 想精读论文并将图表、术语和发现定位到原文 | [溯源式论文阅读](references/source-grounded-paper-reading.md) | 形成可定位笔记、图表清单与术语表，不把摘要写成全文结论 |
-| 章节都写了，但主线松散、贡献不稳或不知从哪里重构 | [论文主论证与重构](references/academic-writing-and-revision.md) | “问题—回答—证据—贡献—边界”主线、章节功能表与全局到局部修订顺序 |
-| 收到审稿意见，或准备投 CSSCI/中文核心 | [返修与投稿](references/revision-and-reviewer-response.md) | 意见台账、回应函、终稿自检与投稿包清单 |
+| 1. 把热点变成可研究问题 | [选题与研究问题](references/topic-diagnosis-and-research-questions.md) | “把‘多模态大模型用于课堂’改成可发表的研究问题。” | 有对象、情境、机制、证据需求与边界的候选选题 |
+| 2. 从文献中找到真正缺口 | [文献检索与综述](references/literature-search-and-zotero.md) | “为教育情感计算建立检索式、阅读矩阵和研究缺口。” | 可复现的检索路径、综述矩阵、争议与可回答缺口 |
+| 3. 让理论、变量和框架站得住 | [理论、模型与框架](references/problem-model-evidence-practice.md) | “检查这个学习投入—情感—反馈框架为何成立。” | 构念定义、关系依据、替代解释与框架防御方案 |
+| 4. 设计教育 AI / 多模态研究 | [研究范式与设计](references/research-paradigms.md) | “为课堂多模态数据研究设计问题、样本、测量、伦理与证据链。” | 与问题匹配的 DBR、实验、质性、混合或实证设计方案 |
+| 5. 分析课堂、平台、问卷或日志数据 | [教育数据分析](references/education-data-analysis.md) | “为课堂观察和学习平台数据制定完整分析计划。” | 数据审计、描述/测量/统计推断、稳健性与复现边界 |
+| 6. 做预测、SHAP 与可解释机器学习 | [可解释机器学习](references/interpretable-machine-learning.md) | “为学习表现预测设计防泄漏切分、模型比较和 SHAP/ALE 解释。” | 验证切分、泄漏防控、解释图表、稳定性与非因果边界 |
+| 7. 把结果做成经得起追问的图表与主张 | [主张—证据—验证](references/claim-evidence-validation-contract.md) | “审查我的结果图、统计报告和每项结论靠什么成立。” | 主张—证据矩阵、比较/反例、稳健性要求与图表改进方案 |
+| 8. 把材料写成有主线的论文 | [论文主论证与写作](references/academic-writing-and-revision.md) | “为我的教育 AI 论文搭问题—回答—证据—贡献—边界主线。” | 章节功能表、全文重构顺序与可写作的论证骨架 |
+| 9. 改摘要、章节或整篇正文 | [摘要与正文控制](references/abstract-state-and-evidence-control.md) | “改这份摘要：保留中心发现和必要证据锚点，不写成算法流程总览。” | 与证据状态相称的摘要/章节草案、修改说明与表层风险控制 |
+| 10. 处理返修并完成投稿前检查 | [返修与投稿](references/revision-and-reviewer-response.md) | “把审稿意见转成修改台账，并做投稿前终审。” | 回应函、连锁修改清单、终稿自检与投稿包检查 |
+
+完整能力、八刊写作诊断、论文精读、期刊核验、框架制图与文件工具见下方的[能力全景](#能力全景)和[文件功能速查](#文件功能速查)。
 
 ## 为什么这个 Skill 值得安装
 
