@@ -12,8 +12,8 @@
 
 | 模式 | 何时进入 | 组合资源 | 核心输出 |
 | --- | --- | --- | --- |
-| `topic_diagnosis` | 只有热点、政策口号或实践困扰 | `problem-model-evidence-practice.md`、`external-evidence-and-research-positioning.md` | 对象、情境、机制、证据需求、候选问题与边界 |
-| `research_question_refinement` | 题目宽泛、变量与过程混杂 | `research-paradigms.md` | 可回答的问题链、概念定义、可观察证据与不可回答部分 |
+| `topic_diagnosis` | 只有热点、政策口号或实践困扰 | `topic-diagnosis-and-research-questions.md`、`problem-model-evidence-practice.md`、`external-evidence-and-research-positioning.md` | 七道质量门、对象、情境、机制、证据需求、候选问题与边界 |
+| `research_question_refinement` | 题目宽泛、变量与过程混杂 | `topic-diagnosis-and-research-questions.md`、`research-paradigms.md`、`topic-question-evidence-canvas.md` | 主问题、相互依赖子问题、概念定义、可观察证据与不可回答部分 |
 | `outline_building` | 不知如何组织论文或章节 | `chapter-synthesis.md`、`good-outline.md`、`weak-outline.md` | 章节功能表、论证顺序与章节间证据接口 |
 | `argumentation_blueprint` | 主线不清、贡献悬空或需重构全文 | `academic-writing-and-revision.md`、`argumentation-and-revision-workbook-template.md` | 问题—回答—证据—贡献—边界主张图 |
 | `conceptual_model_building` | 需要解释“为什么/在何种条件下” | `problem-model-evidence-practice.md`、`research-paradigms.md` | 构念边界、机制链、关系命题、替代解释与检验路径 |
