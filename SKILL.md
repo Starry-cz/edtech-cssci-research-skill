@@ -24,7 +24,7 @@ description: "Support Chinese education technology, educational digitalization, 
 | 建立解释 | 理论、机制、概念模型、实践模型、主论证 | `conceptual_model_building`、`practice_model_design`、`argumentation_blueprint` | `references/academic-writing-and-revision.md`、`references/problem-model-evidence-practice.md` |
 | 获取与组织证据 | 文献检索、综述、引文、材料核验 | `literature_review_planning`、`literature_search_to_review`、`citation_and_evidence_check`、`reference_and_artifact_audit` | `references/evidence-and-citation.md`、`references/literature-search-and-zotero.md`、`assets/literature-review-matrix-template.md` |
 | 设计与分析 | 研究设计、教育数据、学习分析、可解释机器学习 | `education_data_analysis`、`interpretable_ml_analysis` | `references/education-data-analysis.md`、`references/interpretable-machine-learning.md`、`references/research-paradigms.md` |
-| 写作与重构 | 章节写作、全文诊断、主张与贡献、结构性返修 | `draft_review`、`section_revision`、`argumentation_blueprint`、`revision_cascade` | `references/writing-workflow.md`、`references/academic-writing-and-revision.md`、`references/chapter-synthesis.md` |
+| 写作与重构 | 章节写作、全文诊断、投稿表层、主张与贡献、结构性返修 | `draft_review`、`section_revision`、`argumentation_blueprint`、`revision_cascade` | `references/writing-workflow.md`、`references/publication-prose-and-style-control.md`、`references/academic-writing-and-revision.md`、`references/chapter-synthesis.md` |
 | 外部意见与交付 | 审稿回复、终稿自检、投稿包、研究过程治理 | `reviewer_response_and_revision`、`pre_submission_check` | `references/revision-and-reviewer-response.md`、`references/self-review.md`、`references/journal-verification.md` |
 
 ## 十八个任务模式
@@ -41,8 +41,8 @@ description: "Support Chinese education technology, educational digitalization, 
 | `literature_search_to_review` | 把文献材料写成有功能的综述 | 主题矩阵、争议/缺口、引文核验状态 |
 | `education_data_analysis` | 问卷、课堂、平台、前后测或日志分析 | 数据审计、分析计划、诊断/稳健性与报告边界 |
 | `interpretable_ml_analysis` | 预测、分类、SHAP 或层次分类 | 泄漏防控、验证切分、解释图、稳定性与复现边界 |
-| `draft_review` | 全文或较长草稿诊断 | 高/中/低风险清单、重构优先级和证据缺口 |
-| `section_revision` | 修改摘要、引言、综述、方法、结果或讨论 | 段落功能、改写方案、证据补强与连锁提示 |
+| `draft_review` | 全文或较长草稿诊断 | 发布门、表层泄漏、高/中/低风险、重构优先级和证据缺口 |
+| `section_revision` | 修改摘要、引言、综述、方法、结果或讨论 | 构思层判断、清洁正文、证据边界、表层审计与连锁提示 |
 | `revision_cascade` | 评估一项修改牵动的全稿更新 | 修改层级、传播清单、验证方式和完成状态 |
 | `reviewer_response_and_revision` | 回复审稿意见并落实修改 | 意见台账、回应函、修改位置、连锁更新与证据 |
 | `framework_defense` | 回应“理论不足”“框架不新”等质疑 | 构念边界、关系依据、替代解释与可证伪点 |
@@ -57,6 +57,7 @@ description: "Support Chinese education technology, educational digitalization, 
 - `references/operating-modes-and-diagnostics.md`：只说明模式入口、输出、资源组合与风险诊断。
 - `references/academic-writing-and-revision.md`：全文主论证、贡献强度、实践转化与修订传播。
 - `references/writing-workflow.md`：摘要至结论的章节写作协议。
+- `references/publication-prose-and-style-control.md`：区分内部构思与投稿正文，控制摘要标签、标题强度、机制越界、模板痕迹与清洁稿放行。
 - `references/self-review.md`：终稿质量门槛与投稿前拦截项。
 - `references/revision-and-reviewer-response.md`：外部意见、回应台账与修订治理。
 
@@ -72,6 +73,7 @@ description: "Support Chinese education technology, educational digitalization, 
 可复用工作底稿：
 
 - `assets/topic-question-evidence-canvas.md`、`assets/problem-model-evidence-canvas.md`、`assets/argumentation-and-revision-workbook-template.md`、`assets/research-positioning-evidence-matrix-template.md`：选题、问题、模型、证据、主张、外部定位和修订传播。
+- `assets/manuscript-surface-audit-template.md`：把构思标签、方法风险和证据边界转换为投稿清洁稿前的表层审计。
 - `assets/literature-review-matrix-template.md`、`assets/education-data-analysis-report-template.md`、`assets/interpretable-ml-report-template.md`：综述与实证分析报告。
 - `assets/revision-report-template.md`、`assets/reviewer-response-and-revision-ledger-template.md`：修订报告、回应函与意见台账。
 - `assets/project-context-template.md`、`assets/submission-package-checklist.md`：长篇上下文与投稿包。
@@ -84,7 +86,8 @@ description: "Support Chinese education technology, educational digitalization, 
 3. 先完成问题、理论/模型与证据的对应，再提出写作、分析或修订建议。
 4. 对数据与模型任务，先审计单位、时间、缺失、切分、泄漏、隐私与公平，再谈结果解释。
 5. 对写作与返修任务，先判断是否应重构研究问题、理论、设计或结论；段落润色排在结构修复之后。
-6. 交付时用清单、矩阵、表格或分层方案呈现；给出证据状态、风险标签和可执行下一步。
+6. 生成正文时先在内部完成“问题—对象—方法—发现—贡献—边界”检查，再转为自然投稿表层；除非期刊官方明确要求，不把“目的/方法/结果/结论”、RQ 编号、风险标签、模式名或占位符写进清洁稿。
+7. 交付时把“论文清洁稿”与“诊断/修改说明”分开；证据状态、风险标签和待办只进入后者。
 
 ## 输出与风险标记
 
@@ -93,8 +96,8 @@ description: "Support Chinese education technology, educational digitalization, 
 - 全文/审稿：给出修改层级、修改位置、连锁更新、验证方式和完成状态。
 - 核验/投稿：给出阻断项、需要官方核验的事项、已完成与待完成清单。
 
-证据状态统一标为“已核验”“待核验”“缺失”；风险统一标为“高/中/低”。若材料不足，不能以模板化语言填补事实空白。
+证据状态统一标为“已核验”“待核验”“缺失”；风险统一标为“高/中/低”。这些标签只用于诊断交付，不进入投稿清洁稿。若材料不足，不能以模板化语言填补事实空白。
 
 ## 最终检查
 
-提交前确认：研究问题可回答；理论或模型实际参与解释；方法与证据能支撑结论；结果、讨论、贡献和边界没有混写；图表、引用、附录与回应函同步；需要实时核验的期刊或政策信息已指向官方来源。
+提交前确认：研究问题可回答；题目动词与识别强度一致；理论或模型实际参与解释；方法与证据能支撑结论；结果、讨论、贡献和边界没有混写；并列预测特征没有被写成未经检验的机制、链条或闭环；清洁稿没有构思标签、风险标记或占位符；图表、引用、附录与回应函同步；需要实时核验的期刊或政策信息已指向官方来源。

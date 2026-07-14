@@ -1,4 +1,4 @@
 interface:
   display_name: "edtech-cssci-research"
   short_description: "教育技术学研究设计、实证建模、论证写作与投稿质检"
-  default_prompt: "Use $edtech-cssci-research-skill to build or audit a traceable education technology CSSCI study, from research question and evidence to empirical modeling, argumentation, revision, and submission."
+  default_prompt: "Use $edtech-cssci-research-skill to build or audit a traceable education technology CSSCI study from research question and evidence to empirical modeling, clean publication prose, revision, and submission; keep internal planning labels out of the manuscript unless official journal rules require them."

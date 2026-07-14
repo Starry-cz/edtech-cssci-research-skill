@@ -33,7 +33,7 @@
 | 选题、研究问题与模型 | `references/operating-modes-and-diagnostics.md`、`references/problem-model-evidence-practice.md`、`references/external-evidence-and-research-positioning.md` |
 | 文献检索与综述 | `references/literature-search-and-zotero.md`、`assets/literature-review-matrix-template.md` |
 | 实证数据分析与建模 | `references/education-data-analysis.md`、`references/interpretable-machine-learning.md`、相关报告模板 |
-| 论文主线、正文与结构性修订 | `references/academic-writing-and-revision.md`、`references/writing-workflow.md`、`assets/argumentation-and-revision-workbook-template.md` |
+| 论文主线、清洁正文与结构性修订 | `references/academic-writing-and-revision.md`、`references/writing-workflow.md`、`references/publication-prose-and-style-control.md`、`assets/argumentation-and-revision-workbook-template.md`、`assets/manuscript-surface-audit-template.md` |
 | 返修与投稿 | `references/self-review.md`、`references/revision-and-reviewer-response.md`、`references/journal-verification.md`、`assets/reviewer-response-and-revision-ledger-template.md` |
 
 无论使用哪个平台，期刊目录、投稿规范、政策和最新文献都必须在任务当下从官方或原始来源核验；不要把模型生成内容视为已核实证据。

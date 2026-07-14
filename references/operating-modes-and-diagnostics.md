@@ -37,13 +37,13 @@
 
 | 模式 | 何时进入 | 组合资源 | 核心输出 |
 | --- | --- | --- | --- |
-| `draft_review` | 需要诊断全文或长草稿 | `academic-writing-and-revision.md`、`self-review.md` | 高/中/低风险、重构优先级、证据缺口 |
-| `section_revision` | 需修改摘要、引言、综述、方法、结果或讨论 | `writing-workflow.md`、`chapter-synthesis.md` | 段落功能判断、修复方案、证据与连锁提示 |
+| `draft_review` | 需要诊断全文或长草稿 | `academic-writing-and-revision.md`、`publication-prose-and-style-control.md`、`self-review.md` | 发布门、表层泄漏、高/中/低风险、重构优先级、证据缺口 |
+| `section_revision` | 需修改摘要、引言、综述、方法、结果或讨论 | `writing-workflow.md`、`publication-prose-and-style-control.md`、`chapter-synthesis.md` | 构思层判断、清洁正文、证据边界、表层审计与连锁提示 |
 | `revision_cascade` | 一项修改可能牵动多处内容 | `academic-writing-and-revision.md`、`argumentation-and-revision-workbook-template.md` | 修改层级、传播清单、验证方式和完成状态 |
 | `reviewer_response_and_revision` | 收到审稿意见或需准备回应函 | `revision-and-reviewer-response.md`、`reviewer-response-and-revision-ledger-template.md` | 意见台账、回应逻辑、修改位置、连锁更新与证据 |
 | `framework_defense` | 被质疑理论不足、框架不新或逻辑跳跃 | `problem-model-evidence-practice.md`、`academic-writing-and-revision.md` | 构念界定、关系依据、反例/替代解释和可证伪点 |
 
-修订顺序固定为：研究问题与主张、理论/模型、设计与证据、结果—讨论—贡献边界、章节结构、段落与措辞。审稿意见不能只给礼貌回应；每条意见都要标注它影响的层级，以及摘要、图表、附录、回应函是否需同步。
+修订顺序固定为：研究问题与主张、理论/模型、设计与证据、结果—讨论—贡献边界、章节结构、投稿表层、段落与措辞。内部诊断标签、结构标签和待办不得泄漏到论文清洁稿。审稿意见不能只给礼貌回应；每条意见都要标注它影响的层级，以及摘要、图表、附录、回应函是否需同步。
 
 ## 四、交付、工件与投稿核验
 

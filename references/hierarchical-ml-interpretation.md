@@ -16,6 +16,8 @@
 - 同时报训练与样本外指标，识别过拟合。模型排名表不能只给成功模型；记录失败、超时、收敛和软件依赖。
 - 后续SHAP/ALE必须说明解释的是哪一个锁定模型；若选模规则改变，应重新验证解释稳定性。
 
+若同一留出集承担了20个模型的比较、最优模型选择和最终性能报告，将其视为模型选择集。修复方式是保留独立最终测试、使用嵌套交叉验证，或把现有结果明确降级为探索性比较；不能在正文承认“选择乐观性”后仍把最高 `R²` 写成已确认的样本外最优表现。
+
 ## 3. 层次SHAP汇总
 
 - 原始特征使用平均绝对SHAP排序时，同时用beeswarm或效应图呈现方向与异质性。“高值组减低值组”的单一方向标签依赖分组阈值，会掩盖U形、门槛与交互，只能作为描述性摘要。
@@ -59,7 +61,10 @@
 - 全部特征图放补充材料，正文展示理论驱动的Top-N并保留完整数据表。方向图必须说明高低组阈值，非单调特征改用beeswarm/ALE。
 - 分组多面板按样本量过滤，并统一横轴；过小群体不生成排名图。稳定性图展示区间和top-k入选率，消融图使用“性能下降/变化”而非“因果效应”。
 - 结果依次报告层次表、模型选择、原始特征解释、维度交叉验证、曲线、群体差异和稳定性；全文使用“模型依赖、预测重要性、情境差异”。
+- 题目和摘要不得用“何以达成、塑造、决定、作用机制”概括纯预测任务；优先使用“预测、预测线索、模型依赖、关联结构、非线性预测模式”。
+- 多个高重要性节点并列出现，不构成行为顺序、配置路径或过程闭环。只有序列数据、交互检验、时间信息或独立过程证据能够支持相应组织；否则把它们写成“模型同时依赖的信息组”。
+- ALE 中目测到的转折点需同时有密度、不确定区间和重复拟合支持；仅凭单条曲线使用“阈值”时标记 `Threshold Overclaim`。
 
 ## 9. 诊断标签
 
-按需标记 `Hierarchy Mapping Gap`、`Criterion Contamination`、`Test-set Selection`、`Hierarchy Size Bias`、`Compositional Dependence`、`PCA Construct Ambiguity`、`Direction Oversimplification`、`Sparse Subgroup Ranking`、`Conditional Stability Only` 或 `Ablation-Fidelity Confusion`，并给出受影响表图、当前安全表述和重跑方案。
+按需标记 `Hierarchy Mapping Gap`、`Criterion Contamination`、`Test-set Selection`、`Hierarchy Size Bias`、`Compositional Dependence`、`PCA Construct Ambiguity`、`Direction Oversimplification`、`Sparse Subgroup Ranking`、`Conditional Stability Only`、`Sequence Invention`、`Threshold Overclaim` 或 `Ablation-Fidelity Confusion`，并给出受影响表图、当前安全表述和重跑方案。这些标签只进入分析审计或修改说明，不进入论文清洁稿。

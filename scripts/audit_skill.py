@@ -67,14 +67,35 @@ def main() -> int:
     for key in ("display_name", "short_description", "default_prompt"):
         if not re.search(rf"^\s*{key}:\s*\".+\"\s*$", yaml_text, re.MULTILINE):
             errors.append(f"agents/openai.yaml 缺少带引号的 {key}")
+    if not re.search(r'^\s*display_name:\s*"edtech-cssci-research"\s*$', yaml_text, re.MULTILINE):
+        errors.append("agents/openai.yaml 的展示名称应为 edtech-cssci-research")
     if "$edtech-cssci-research-skill" not in yaml_text:
         errors.append("默认提示词未显式调用 $edtech-cssci-research-skill")
+
+    # 新增投稿表层规则后，必须同时存在入口、模板和三个代表性回归信号。
+    required_files = (
+        ROOT / "references" / "publication-prose-and-style-control.md",
+        ROOT / "assets" / "manuscript-surface-audit-template.md",
+    )
+    for required in required_files:
+        if not required.is_file():
+            errors.append(f"缺少投稿表层资源：{required.relative_to(ROOT)}")
+    validation_text = read(ROOT / "references" / "validation-scenarios.md")
+    for signal in ("目的：", "Test-set Selection", "Sequence Invention"):
+        if signal not in validation_text:
+            errors.append(f"验证场景缺少回归信号：{signal}")
 
     # SKILL 的反引号资源路径必须真实存在，防止按需路由在运行时失效。
     routes = sorted(set(re.findall(r"`((?:references|assets|examples)/[^`\s]+\.md)`", skill_text)))
     for route in routes:
         if not (ROOT / route).is_file():
             errors.append(f"失效资源路由：{route}")
+    for required_route in (
+        "references/publication-prose-and-style-control.md",
+        "assets/manuscript-surface-audit-template.md",
+    ):
+        if required_route not in routes:
+            errors.append(f"SKILL.md 未路由投稿表层资源：{required_route}")
 
     modes = re.findall(r"^\| `([a-z_]+)` \|", skill_text, re.MULTILINE)
     if len(modes) != 18 or len(set(modes)) != 18:
