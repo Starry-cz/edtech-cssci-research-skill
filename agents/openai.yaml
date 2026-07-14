@@ -1,4 +1,4 @@
 interface:
   display_name: "edtech-cssci-research"
-  short_description: "???????????????????????"
+  short_description: "教育技术学实证建模、论证写作、返修与发布门质检"
   default_prompt: "Use $edtech-cssci-research-skill to build or audit a traceable education technology CSSCI study. First state whether it is blocked, exploratory-writable, or submission-ready; do not produce final-looking titles, abstracts, conclusions, or causal claims when validation, evidence, or reproducibility is not ready."
