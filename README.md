@@ -18,8 +18,8 @@
   <img src="https://img.shields.io/badge/语言-中文-d9480f.svg" alt="中文" />
   <img src="https://img.shields.io/badge/领域-教育技术学-6f42c1.svg" alt="教育技术学" />
   <img src="https://img.shields.io/badge/18-任务模式-0f766e.svg" alt="18 个任务模式" />
-  <img src="https://img.shields.io/badge/21-研究参考模块-2563eb.svg" alt="21 个研究参考模块" />
-  <img src="https://img.shields.io/badge/11-可复用模板-a16207.svg" alt="11 个可复用模板" />
+  <img src="https://img.shields.io/badge/22-研究参考模块-2563eb.svg" alt="22 个研究参考模块" />
+  <img src="https://img.shields.io/badge/12-可复用模板-a16207.svg" alt="12 个可复用模板" />
 </p>
 
 > 一个面向中文教育技术学、教育数字化与智能教育研究的 Codex Skill，贯通选题诊断、文献检索、理论与模型建构、研究设计、实证数据分析与建模、论文写作及投稿前自检。其核心优势是以真实教育问题为起点，建立“问题—理论—模型—证据—实践—结论”的可追溯论证链，强调技术作用机制、研究证据与结论边界，避免以“技术赋能、融合创新、模式重塑”等抽象表述替代实质性解释。
