@@ -26,6 +26,7 @@ description: "Support Chinese education technology, educational digitalization, 
 | 设计与分析 | 研究设计、教育数据、学习分析、可解释机器学习 | `education_data_analysis`、`interpretable_ml_analysis` | `references/education-data-analysis.md`、`references/interpretable-machine-learning.md`、`references/research-paradigms.md` |
 | 写作与重构 | 章节写作、全文诊断、投稿表层、主张与贡献、结构性返修 | `draft_review`、`section_revision`、`argumentation_blueprint`、`revision_cascade` | `references/writing-workflow.md`、`references/publication-prose-and-style-control.md`、`references/academic-writing-and-revision.md`、`references/chapter-synthesis.md` |
 | 外部意见与交付 | 审稿回复、终稿自检、投稿包、研究过程治理 | `reviewer_response_and_revision`、`pre_submission_check` | `references/revision-and-reviewer-response.md`、`references/self-review.md`、`references/journal-verification.md` |
+| 专项工件协作 | 研究框架图、流程图、结果图、DOCX/PDF、工作簿或仓库配图 | 保持当前主模式，并按需调用外部 Skill | `references/cross-skill-artifact-routing.md`、`references/framework-defense-and-figure-audit.md` |
 
 ## 十八个任务模式
 
@@ -60,6 +61,7 @@ description: "Support Chinese education technology, educational digitalization, 
 - `references/publication-prose-and-style-control.md`：区分内部构思与投稿正文，控制摘要标签、标题强度、机制越界、模板痕迹与清洁稿放行。
 - `references/self-review.md`：终稿质量门槛与投稿前拦截项。
 - `references/revision-and-reviewer-response.md`：外部意见、回应台账与修订治理。
+- `references/cross-skill-artifact-routing.md`：何时调用 Drawio、文档、PDF、表格或图像类 Skill，以及工件交接和回检规则。
 
 常用的补充资源：
 
@@ -88,6 +90,7 @@ description: "Support Chinese education technology, educational digitalization, 
 5. 对写作与返修任务，先判断是否应重构研究问题、理论、设计或结论；段落润色排在结构修复之后。
 6. 生成正文时先在内部完成“问题—对象—方法—发现—贡献—边界”检查，再转为自然投稿表层；除非期刊官方明确要求，不把“目的/方法/结果/结论”、RQ 编号、风险标签、模式名或占位符写进清洁稿。
 7. 交付时把“论文清洁稿”与“诊断/修改说明”分开；证据状态、风险标签和待办只进入后者。
+8. 需要制作图、表、DOCX、PDF、工作簿或配图时，先写最小工件说明书，再按需调用当前环境中可用的专项 Skill；生成后回到本 Skill 核对图文一致性和结论边界。
 
 ## 输出与风险标记
 
@@ -100,4 +103,4 @@ description: "Support Chinese education technology, educational digitalization, 
 
 ## 最终检查
 
-提交前确认：研究问题可回答；题目动词与识别强度一致；理论或模型实际参与解释；方法与证据能支撑结论；结果、讨论、贡献和边界没有混写；并列预测特征没有被写成未经检验的机制、链条或闭环；清洁稿没有构思标签、风险标记或占位符；图表、引用、附录与回应函同步；需要实时核验的期刊或政策信息已指向官方来源。
+提交前确认：研究问题可回答；题目动词与识别强度一致；理论或模型实际参与解释；方法与证据能支撑结论；结果、讨论、贡献和边界没有混写；并列预测特征没有被写成未经检验的机制、链条或闭环；清洁稿没有构思标签、风险标记或占位符；图表的节点、箭头、数值、图题图注与正文一致；图表、引用、附录与回应函同步；需要实时核验的期刊或政策信息已指向官方来源。

@@ -72,16 +72,17 @@ def main() -> int:
     if "$edtech-cssci-research-skill" not in yaml_text:
         errors.append("默认提示词未显式调用 $edtech-cssci-research-skill")
 
-    # 新增投稿表层规则后，必须同时存在入口、模板和三个代表性回归信号。
+    # 核心扩展必须同时提供入口、资源与代表性回归信号，避免 README 或路由单独漂移。
     required_files = (
         ROOT / "references" / "publication-prose-and-style-control.md",
         ROOT / "assets" / "manuscript-surface-audit-template.md",
+        ROOT / "references" / "cross-skill-artifact-routing.md",
     )
     for required in required_files:
         if not required.is_file():
             errors.append(f"缺少投稿表层资源：{required.relative_to(ROOT)}")
     validation_text = read(ROOT / "references" / "validation-scenarios.md")
-    for signal in ("目的：", "Test-set Selection", "Sequence Invention"):
+    for signal in ("目的：", "Test-set Selection", "Sequence Invention", "drawio"):
         if signal not in validation_text:
             errors.append(f"验证场景缺少回归信号：{signal}")
 
@@ -93,6 +94,7 @@ def main() -> int:
     for required_route in (
         "references/publication-prose-and-style-control.md",
         "assets/manuscript-surface-audit-template.md",
+        "references/cross-skill-artifact-routing.md",
     ):
         if required_route not in routes:
             errors.append(f"SKILL.md 未路由投稿表层资源：{required_route}")
