@@ -7,7 +7,7 @@
 1. 先选一个主模式；用户同时提出多项需求时，按“问题/理论—设计/证据—写作/交付”的依赖关系拆分。
 2. 只有当前输出确实需要时才加载补充资源，不把参考文件当作通用背景材料全部复述。
 3. 输出必须标出已知材料、待核验信息和结论边界；没有原始材料时，不补写事实或结果。
-4. 所有模式继承同一发布状态：`阻断` 时只交付修复设计与连锁清单；`探索性可写` 时只交付相称的探索性文本；只有 `投稿就绪` 才能交付自然投稿摘要、定稿式结论或投稿判断。状态定义以 `SKILL.md` 为准。
+4. 所有模式继承同一发布状态：`阻断` 时先交付修复设计与连锁清单；用户明确要求摘要或段落改写时，可在其后交付明确标注为“当前分析版本、不可投稿”的探索性草案。`探索性可写` 时只交付相称的探索性文本；只有 `投稿就绪` 才能交付自然投稿摘要、定稿式结论或投稿判断。状态定义以 `SKILL.md` 为准。
 
 ## 一、问题定位与解释建构
 
@@ -39,7 +39,7 @@
 | 模式 | 何时进入 | 组合资源 | 核心输出 |
 | --- | --- | --- | --- |
 | `draft_review` | 需要诊断全文或长草稿，或希望做预审稿 | `academic-writing-and-revision.md`、`pre-submission-peer-review.md`、`publication-prose-and-style-control.md`、`self-review.md`、`eight-journal-writing-evidence.md` | 发布状态、共同事实底稿、三视角风险综合、重构优先级、证据缺口与可选八刊共性诊断 |
-| `section_revision` | 需修改摘要、引言、综述、方法、结果或讨论 | `writing-workflow.md`、`publication-prose-and-style-control.md`、`chapter-synthesis.md`、`abstract-argument-card-template.md` | 发布状态、构思层判断、清洁正文、证据边界、表层审计与连锁提示 |
+| `section_revision` | 需修改摘要、引言、综述、方法、结果或讨论 | `writing-workflow.md`、`publication-prose-and-style-control.md`、`abstract-state-and-evidence-control.md`、`chapter-synthesis.md`、`abstract-argument-card-template.md` | 发布状态、摘要产物类型、构思层判断、清洁正文或探索性草案、证据边界、表层审计与连锁提示 |
 | `revision_cascade` | 一项修改可能牵动多处内容 | `academic-writing-and-revision.md`、`argumentation-and-revision-workbook-template.md` | 修改层级、传播清单、验证方式和完成状态 |
 | `reviewer_response_and_revision` | 收到审稿意见或需准备回应函 | `revision-and-reviewer-response.md`、`reviewer-response-and-revision-ledger-template.md` | 意见台账、回应逻辑、修改位置、连锁更新与证据 |
 | `framework_defense` | 被质疑理论不足、框架不新或逻辑跳跃 | `problem-model-evidence-practice.md`、`academic-writing-and-revision.md` | 构念界定、关系依据、反例/替代解释和可证伪点 |

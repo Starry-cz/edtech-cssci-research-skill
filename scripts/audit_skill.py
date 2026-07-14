@@ -79,6 +79,7 @@ def main() -> int:
         ROOT / "references" / "cross-skill-artifact-routing.md",
         ROOT / "references" / "eight-journal-writing-evidence.md",
         ROOT / "assets" / "abstract-argument-card-template.md",
+        ROOT / "references" / "abstract-state-and-evidence-control.md",
         ROOT / "scripts" / "audit_manuscript_surface.py",
         ROOT / "references" / "claim-evidence-validation-contract.md",
         ROOT / "references" / "statistical-reporting-and-figure-evidence.md",
@@ -91,7 +92,7 @@ def main() -> int:
         if not required.is_file():
             errors.append(f"缺少投稿表层资源：{required.relative_to(ROOT)}")
     validation_text = read(ROOT / "references" / "validation-scenarios.md")
-    for signal in ("目的：", "Test-set Selection", "Sequence Invention", "drawio", "投稿就绪", "八刊", "主张—决定性证据", "图表证据契约", "共同事实底稿"):
+    for signal in ("目的：", "Test-set Selection", "Sequence Invention", "drawio", "投稿就绪", "八刊", "主张—决定性证据", "图表证据契约", "共同事实底稿", "四个发现"):
         if signal not in validation_text:
             errors.append(f"验证场景缺少回归信号：{signal}")
 
@@ -106,6 +107,7 @@ def main() -> int:
         "references/cross-skill-artifact-routing.md",
         "references/eight-journal-writing-evidence.md",
         "assets/abstract-argument-card-template.md",
+        "references/abstract-state-and-evidence-control.md",
         "references/claim-evidence-validation-contract.md",
         "references/statistical-reporting-and-figure-evidence.md",
         "references/source-grounded-paper-reading.md",
