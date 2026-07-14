@@ -20,7 +20,7 @@ description: "Support Chinese education technology, educational digitalization, 
 
 | 研究阶段 | 典型需要 | 首选模式 | 按需加载 |
 | --- | --- | --- | --- |
-| 定位问题 | 选题、研究问题、章节结构 | `topic_diagnosis`、`research_question_refinement`、`outline_building` | `references/problem-model-evidence-practice.md`、`references/research-paradigms.md` |
+| 定位问题 | 选题、研究问题、章节结构 | `topic_diagnosis`、`research_question_refinement`、`outline_building` | `references/problem-model-evidence-practice.md`、`references/external-evidence-and-research-positioning.md`、`references/research-paradigms.md` |
 | 建立解释 | 理论、机制、概念模型、实践模型、主论证 | `conceptual_model_building`、`practice_model_design`、`argumentation_blueprint` | `references/academic-writing-and-revision.md`、`references/problem-model-evidence-practice.md` |
 | 获取与组织证据 | 文献检索、综述、引文、材料核验 | `literature_review_planning`、`literature_search_to_review`、`citation_and_evidence_check`、`reference_and_artifact_audit` | `references/evidence-and-citation.md`、`references/literature-search-and-zotero.md`、`assets/literature-review-matrix-template.md` |
 | 设计与分析 | 研究设计、教育数据、学习分析、可解释机器学习 | `education_data_analysis`、`interpretable_ml_analysis` | `references/education-data-analysis.md`、`references/interpretable-machine-learning.md`、`references/research-paradigms.md` |
@@ -62,7 +62,7 @@ description: "Support Chinese education technology, educational digitalization, 
 
 常用的补充资源：
 
-- `references/research-paradigms.md`、`references/problem-model-evidence-practice.md`：研究范式、问题—模型—证据关系。
+- `references/research-paradigms.md`、`references/problem-model-evidence-practice.md`、`references/external-evidence-and-research-positioning.md`：研究范式、问题—模型—证据关系与外部研究定位。
 - `references/literature-search-and-zotero.md`、`references/evidence-and-citation.md`：综述与引文核验。
 - `references/education-data-analysis.md`、`references/interpretable-machine-learning.md`、`references/hierarchical-ml-interpretation.md`：教育数据、可解释机器学习与层次分类。
 - `references/problem-model-evidence-practice.md`、`references/framework-defense-and-figure-audit.md`：模型/系统、画像、实践模型与图文一致性。
@@ -71,7 +71,7 @@ description: "Support Chinese education technology, educational digitalization, 
 
 可复用工作底稿：
 
-- `assets/problem-model-evidence-canvas.md`、`assets/argumentation-and-revision-workbook-template.md`：问题、模型、证据、主张和修订传播。
+- `assets/problem-model-evidence-canvas.md`、`assets/argumentation-and-revision-workbook-template.md`、`assets/research-positioning-evidence-matrix-template.md`：问题、模型、证据、主张、外部定位和修订传播。
 - `assets/literature-review-matrix-template.md`、`assets/education-data-analysis-report-template.md`、`assets/interpretable-ml-report-template.md`：综述与实证分析报告。
 - `assets/revision-report-template.md`、`assets/reviewer-response-and-revision-ledger-template.md`：修订报告、回应函与意见台账。
 - `assets/project-context-template.md`、`assets/submission-package-checklist.md`：长篇上下文与投稿包。
