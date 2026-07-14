@@ -1,126 +1,100 @@
 ---
 name: edtech-cssci-research-skill
-description: "Support Chinese education technology, educational digitalization, intelligent-education papers for CSSCI/core journals. Use for topic and research-question diagnosis; literature search, Zotero, review matrices, citation verification; theory, mechanism, conceptual/practice model building and framework defense; research design and educational data analysis including data audit, cleaning, descriptive statistics, visualization, psychometrics, group comparisons, regression, SEM, multilevel and longitudinal modeling; leakage-safe interpretable machine learning with SHAP/ALE and hierarchical or subgroup interpretation; writing and full-paper revision; reviewer-response letters, revision ledgers, project decision memory; and reference, figure, anonymous-manuscript, DOCX/PDF, submission-package, journal-matching, and pre-submission audits. Covers conceptual, policy-comparative, design-based, learning-analytics, survey, experimental, case, QCA, systematic-review, qualitative, quantitative, and mixed-methods research."
+description: "Support Chinese education technology, educational digitalization, and intelligent-education research for CSSCI/core journals. Use for research-question and literature diagnosis; theory, mechanism, model, and research-design planning; educational data analysis and leakage-safe interpretable ML; article argument, section writing, full-paper revision, reviewer response, and pre-submission artifact audits."
 ---
 
 # 教育技术学 CSSCI 研究助手
 
-把教育技术学论文的选题、研究设计、正文写作、章节收束和投稿前自检连成一套工作流。以学习与教学问题为中心，解释技术功能如何经由主体活动、教学设计和情境条件形成可观察结果。
+面向中文教育技术学、教育数字化与智能教育研究。以真实教育问题为起点，建立“问题—理论—模型—证据—实践—结论”的可追溯论证链；不以“技术赋能、融合创新、模式重塑”等抽象表述替代机制、证据或边界。
 
-## 总体约束
+## 不可妥协的约束
 
-- 先判断研究问题、文类、段落功能、证据状态和交付物，再开始写作。
-- 区分技术可用、技术被使用、学习过程改变和学习结果改变，不以“赋能、融合、重塑”替代机制。
-- 不编造文献、DOI、政策、数据、访谈、显著性、期刊要求或审稿结果。缺失内容标为 `[待核验]` 或 `[待补材料]`。
-- 动态信息必须实时核验：CSSCI目录、期刊栏目、篇幅、模板、摘要字数、引文格式、投稿系统与伦理要求。
-- 保留原材料中的有效证据与限定条件；去除模板腔时不得把具体信息一并删掉。
+- 不编造文献、数据、样本、访谈、期刊格式、政策要求、审稿意见或研究结果。缺少材料时，明确缺口、影响和下一步可核验动作。
+- 区分事实、研究者解释、设计主张、因果推断和预测结果。系统上线、功能展示、案例呈现或模型准确率本身均不等于教育效果。
+- 每个关键结论都说明：作用于谁、在何种情境、经由什么机制、由何种证据支持，以及结论不能延伸到哪里。
+- 涉及期刊目录、栏目、格式、政策或伦理要求时，要求以投稿当时的官方页面或原始文件核验。
 
-## 任务路由
+## 按研究阶段选择任务
 
-按任务阅读对应文件，不要一次加载全部参考资料：
+一次任务先确定一个主模式；只有存在明确依赖时才组合相邻模式。详细的入口、输出和组合见 `references/operating-modes-and-diagnostics.md`。
 
-- 题目、摘要、引言、综述、理论、方法、结果、讨论、结论或改写：`references/writing-workflow.md`
-- 搭建论文主论证链、重构全文、区分结果/讨论/贡献或分析修订连锁：`references/academic-writing-and-revision.md`
-- 选题诊断、研究问题细化、大纲、全文诊断、章节修订和投稿检查：`references/operating-modes-and-diagnostics.md`
-- CNKI/Google Scholar 等检索、结构化阅读、Zotero 和综述矩阵：`references/literature-search-and-zotero.md`
-- 投稿前终稿审查、原创性责任与模板化表达检查：`references/self-review.md`
-- 本章小结、小节总结、文献述评结尾、实证或案例章节收束：`references/chapter-synthesis.md`
-- 设计型研究、学习分析、实验、问卷、案例、QCA、文本分析、系统综述、质性或混合方法：`references/research-paradigms.md`
-- 概念模型、智能教育系统、教师画像/测评/推荐、课程与教研模式、政策比较或实践体系：`references/problem-model-evidence-practice.md`
-- 二维矩阵、连续谱、类型学、多层模型、机制图和框架可辩护性：`references/framework-defense-and-figure-audit.md`
-- 教育数据分析的数据审计、清理、描述统计、可视化、测量、推断、回归、SEM、多层或纵向模型：`references/education-data-analysis.md`
-- 抽样、测量、数据清理、统计方法与诊断：`references/data-collection-and-analysis.md`
-- 可解释机器学习的数据处理、建模验证、SHAP/ALE、可视化与结果报告：`references/interpretable-machine-learning.md`
-- 理论特征层次分类、分组SHAP、PCA-ALE、分组比较、Bootstrap稳定性和节点消融：`references/hierarchical-ml-interpretation.md`
-- 文献检索、引文、证据或结果边界：`references/evidence-and-citation.md`
-- 审稿意见、导师意见、多轮返修、回应函和版本台账：`references/revision-and-reviewer-response.md`
-- 长周期论文项目、术语决议、数据/稿件版本与开放问题：`references/project-memory-and-decision-log.md`
-- 参考文献双向核对、匿名稿、图表、DOCX/PDF 和投稿包：`references/reference-integrity-and-manuscript-artifacts.md`
-- 期刊匹配、CSSCI资格与投稿格式：`references/journal-verification.md`
-- 诊断报告、综述矩阵、研究架构画布、论证与修订工作底稿、教育数据分析报告、机器学习报告、审稿回应台账、项目上下文和投稿包直接使用：`assets/revision-report-template.md`、`assets/literature-review-matrix-template.md`、`assets/problem-model-evidence-canvas.md`、`assets/argumentation-and-revision-workbook-template.md`、`assets/education-data-analysis-report-template.md`、`assets/interpretable-ml-report-template.md`、`assets/reviewer-response-and-revision-ledger-template.md`、`assets/project-context-template.md`、`assets/submission-package-checklist.md`
+| 研究阶段 | 典型需要 | 首选模式 | 按需加载 |
+| --- | --- | --- | --- |
+| 定位问题 | 选题、研究问题、章节结构 | `topic_diagnosis`、`research_question_refinement`、`outline_building` | `references/problem-model-evidence-practice.md`、`references/research-paradigms.md` |
+| 建立解释 | 理论、机制、概念模型、实践模型、主论证 | `conceptual_model_building`、`practice_model_design`、`argumentation_blueprint` | `references/academic-writing-and-revision.md`、`references/problem-model-evidence-practice.md` |
+| 获取与组织证据 | 文献检索、综述、引文、材料核验 | `literature_review_planning`、`literature_search_to_review`、`citation_and_evidence_check`、`reference_and_artifact_audit` | `references/evidence-and-citation.md`、`references/literature-search-and-zotero.md`、`assets/literature-review-matrix-template.md` |
+| 设计与分析 | 研究设计、教育数据、学习分析、可解释机器学习 | `education_data_analysis`、`interpretable_ml_analysis` | `references/education-data-analysis.md`、`references/interpretable-machine-learning.md`、`references/research-paradigms.md` |
+| 写作与重构 | 章节写作、全文诊断、主张与贡献、结构性返修 | `draft_review`、`section_revision`、`argumentation_blueprint`、`revision_cascade` | `references/writing-workflow.md`、`references/academic-writing-and-revision.md`、`references/chapter-synthesis.md` |
+| 外部意见与交付 | 审稿回复、终稿自检、投稿包、研究过程治理 | `reviewer_response_and_revision`、`pre_submission_check` | `references/revision-and-reviewer-response.md`、`references/self-review.md`、`references/journal-verification.md` |
 
-## Operating modes
+## 十八个任务模式
 
-从请求中选择一种主模式；用户未指定时简短说明所选模式：
+| 模式 | 适用任务 | 最小输出契约 |
+| --- | --- | --- |
+| `topic_diagnosis` | 从热点或实践困扰形成研究题目 | 对象、情境、机制、证据需求、候选问题与边界 |
+| `research_question_refinement` | 将宽泛命题改为可回答问题 | 问题链、变量/过程定义、可观察证据和不可回答部分 |
+| `outline_building` | 搭建论文、章节或项目结构 | 章节功能表与“问题—证据—结论”映射 |
+| `argumentation_blueprint` | 搭建或诊断全文主线 | 主张图、证据节点、贡献强度、结论边界 |
+| `conceptual_model_building` | 构建理论或机制模型 | 构念定义、关系命题、机制解释与可检验路径 |
+| `practice_model_design` | 构建教学、系统或实践模型 | 设计原则、活动链、实施条件、过程/结果证据 |
+| `literature_review_planning` | 制定检索与综述方案 | 检索式、纳排规则、编码维度与缺口判断 |
+| `literature_search_to_review` | 把文献材料写成有功能的综述 | 主题矩阵、争议/缺口、引文核验状态 |
+| `education_data_analysis` | 问卷、课堂、平台、前后测或日志分析 | 数据审计、分析计划、诊断/稳健性与报告边界 |
+| `interpretable_ml_analysis` | 预测、分类、SHAP 或层次分类 | 泄漏防控、验证切分、解释图、稳定性与复现边界 |
+| `draft_review` | 全文或较长草稿诊断 | 高/中/低风险清单、重构优先级和证据缺口 |
+| `section_revision` | 修改摘要、引言、综述、方法、结果或讨论 | 段落功能、改写方案、证据补强与连锁提示 |
+| `revision_cascade` | 评估一项修改牵动的全稿更新 | 修改层级、传播清单、验证方式和完成状态 |
+| `reviewer_response_and_revision` | 回复审稿意见并落实修改 | 意见台账、回应函、修改位置、连锁更新与证据 |
+| `framework_defense` | 回应“理论不足”“框架不新”等质疑 | 构念边界、关系依据、替代解释与可证伪点 |
+| `citation_and_evidence_check` | 核验引文与关键证据 | 主张—来源映射、核验状态、风险与待补材料 |
+| `reference_and_artifact_audit` | 检查参考文献、图表、附录和投稿文件 | 工件清单、交叉引用问题和修复顺序 |
+| `pre_submission_check` | 投稿前的整体质量门槛 | 阻断项、主要修改、留痕与提交判断 |
 
-- `topic_diagnosis`：判断选题的问题意识、教育技术学相关性、可行性、证据与伦理风险。
-- `research_question_refinement`：把宽泛主题转为 2—4 个可研究问题，并列证据需求与取舍。
-- `outline_building`：搭建或修复题目—问题—文献—理论—方法—分析—结论结构。
-- `argumentation_blueprint`：搭建“问题—回答—证据—贡献—边界”主论证图与章节功能表。
-- `conceptual_model_building`：识别结构、机制、效能、发展、价值或治理难题，建立理论—模型—证据映射。
-- `practice_model_design`：设计并审查指标、系统、场景、活动、反馈、应用验证与迭代关系。
-- `literature_review_planning`：规划检索范围、文献簇、纳排逻辑和 gap statement。
-- `literature_search_to_review`：完成检索、筛选、来源状态、结构化笔记、Zotero 组织、矩阵与综述草稿。
-- `draft_review`：以逐项 `Pass / Partial / Fail` 诊断全文。
-- `section_revision`：保留可核验主张，修订章节并标记剩余缺口。
-- `revision_cascade`：定位实质修改的首要修复层、连锁更新和验证动作。
-- `reviewer_response_and_revision`：拆解审稿意见，处理多审稿人共识与冲突，生成回应函、修改台账和版本检查点。
-- `framework_defense`：检验框架维度、层级、操作化、边界案例、竞争解释及图文一致性。
-- `education_data_analysis`：完成教育数据的数据审计、清理、描述与可视化、测量质量、模型选择、诊断、稳健性、结果报告与复现边界。
-- `citation_and_evidence_check`：检查引文、数据来源、直接引语和因果越界。
-- `reference_and_artifact_audit`：检查正文—文后条目、匿名化、图表、DOCX/PDF 渲染和投稿包一致性。
-- `interpretable_ml_analysis`：完成防泄漏数据处理、基线与候选模型比较、样本外验证、SHAP/ALE 解释、可视化和报告。
-- `pre_submission_check`：区分阻断投稿问题与一般润色问题，给出提交判断。
+## 资源职责与组合
 
-## 强制工作流
+不要把所有参考文件一次性载入。以下文件按职责分工，优先读取与当前主模式直接对应的文件：
 
-生成或改写前，在内部完成以下判断；信息不足且会改变结论时再向用户确认：
+- `references/operating-modes-and-diagnostics.md`：只说明模式入口、输出、资源组合与风险诊断。
+- `references/academic-writing-and-revision.md`：全文主论证、贡献强度、实践转化与修订传播。
+- `references/writing-workflow.md`：摘要至结论的章节写作协议。
+- `references/self-review.md`：终稿质量门槛与投稿前拦截项。
+- `references/revision-and-reviewer-response.md`：外部意见、回应台账与修订治理。
 
-1. **文类**：结构方案、正文、摘要、综述、方法、结果、章节结尾还是终稿审查。
-2. **问题**：当前内容回答哪个研究问题，是否只在介绍背景或技术趋势。
-3. **功能**：承担问题提出、文献推进、概念限定、设计说明、证据呈现、机制解释、结果评议或贡献收束中的哪一项。
-4. **材料**：落到文献发现、政策节点、教学活动、设计迭代、平台日志、量表题项、课堂观察、访谈、统计结果或机制环节中的哪一类。
-5. **边界**：方法能支持什么判断，不能支持什么判断；结论适用于哪些学习者、课程、学校、平台和时间范围。
-6. **表达**：删除作者排队、流程式开头、机械对偶、宣传口号、空泛拔高和无证据判断。
+常用的补充资源：
 
-涉及模型或模式构建时，再检查：每个层、环、箭头和标签是否有理论来源、数据观测点、操作过程或应用主体；不得把命名、框架图或系统展示本身当作效果证据。
+- `references/research-paradigms.md`、`references/problem-model-evidence-practice.md`：研究范式、问题—模型—证据关系。
+- `references/literature-search-and-zotero.md`、`references/evidence-and-citation.md`：综述与引文核验。
+- `references/education-data-analysis.md`、`references/interpretable-machine-learning.md`、`references/hierarchical-ml-interpretation.md`：教育数据、可解释机器学习与层次分类。
+- `references/problem-model-evidence-practice.md`、`references/framework-defense-and-figure-audit.md`：模型/系统、画像、实践模型与图文一致性。
+- `references/chapter-synthesis.md`、`references/project-memory-and-decision-log.md`、`references/self-review.md`：章节收束、决策留痕与学术表达风险。
+- `references/journal-verification.md`、`references/validation-scenarios.md`：官方投稿核验与代表性验证场景。
 
-信息不足时必须列出：缺什么、为何影响判断、用户应提供什么、当前仍能完成什么；不得静默补造。
+可复用工作底稿：
 
-## 论证单元地图
+- `assets/problem-model-evidence-canvas.md`、`assets/argumentation-and-revision-workbook-template.md`：问题、模型、证据、主张和修订传播。
+- `assets/literature-review-matrix-template.md`、`assets/education-data-analysis-report-template.md`、`assets/interpretable-ml-report-template.md`：综述与实证分析报告。
+- `assets/revision-report-template.md`、`assets/reviewer-response-and-revision-ledger-template.md`：修订报告、回应函与意见台账。
+- `assets/project-context-template.md`、`assets/submission-package-checklist.md`：长篇上下文与投稿包。
+- `examples/good-outline.md`、`examples/weak-outline.md`、`examples/sample-review.md`：正反例与诊断示例。
 
-写小节或连续多段前，先形成不必展示的论证地图：核心问题、段落数量、每段功能、证据节点、段间关系和本单元最小结论。段间关系可采用问题链、学习活动链、设计迭代链、时间过程、证据层级、统计结果或机制链。相邻三段若以相同句式起笔，默认需要调整功能入口。
+## 统一执行顺序
 
-## 教育技术学机制框架
+1. 复述用户的研究对象、情境、任务和现有材料；标出尚未给出的关键事实。
+2. 指出本次主模式、需要读取的最少资源和不应越界的结论类型。
+3. 先完成问题、理论/模型与证据的对应，再提出写作、分析或修订建议。
+4. 对数据与模型任务，先审计单位、时间、缺失、切分、泄漏、隐私与公平，再谈结果解释。
+5. 对写作与返修任务，先判断是否应重构研究问题、理论、设计或结论；段落润色排在结构修复之后。
+6. 交付时用清单、矩阵、表格或分层方案呈现；给出证据状态、风险标签和可执行下一步。
 
-机制解释至少回答：
+## 输出与风险标记
 
-1. 谁在行动：学习者、教师、设计者、管理者、平台或算法系统。
-2. 在什么活动中行动：学习任务、教学互动、评价、协作、反馈、资源使用或治理过程。
-3. 技术提供了什么可供性、约束或反馈，实际如何被使用。
-4. 哪些规则、资源、能力、实施忠实度和情境条件改变了作用过程。
-5. 哪些过程证据连接技术使用与结果，何时失效或产生非预期后果。
+- 正文/章节：给出功能判断、证据要求、改写或重构方案、结论边界。
+- 数据/机器学习：给出数据审计、分析或建模计划、关键结果解释、稳健性检查和复现说明。
+- 全文/审稿：给出修改层级、修改位置、连锁更新、验证方式和完成状态。
+- 核验/投稿：给出阻断项、需要官方核验的事项、已完成与待完成清单。
 
-可将教育难题暂分为结构、机制、效能、发展、价值和治理六类，但分类必须来自具体材料。技术方案须形成“目标—构念—数据—分析与交互—服务与评价”关系，并保留人的目标设定、审核、申诉和最终决策权。
-
-## 统一输出契约
-
-- 正式正文默认输出“正文 + 3—6 行写作逻辑与证据边界说明”；用户要求只给正文时省略说明。
-- 结构、诊断、标题或修改建议必须给出简短判断依据。
-- 论证蓝图按“问题—回答—证据—贡献—边界 + 章节功能 + 主张—证据—边界矩阵”输出。
-- 终稿自检按“总体判断—主要问题—可执行修改—反模板快扫”输出，问题需定位到章节或句段。
-- 审稿修订按“意见—判断—决定—修改位置—验证—状态”记录；多位审稿人的共识、冲突与独有意见分开处理。
-- 教育数据分析按“分析问题—数据与变量—清理—描述/测量—主模型—诊断与稳健性—教育解释—复现与边界”输出。
-- 修改建议按“必须修改 / 建议修改 / 可保留”排序。
-- 实质修订按“首要修复层—修改动作—连锁项—验证—状态”输出，先处理问题、理论、设计、结果与结论，再处理表达与格式。
-- 若用户要求先读文献再写，先列实际使用且可核验的来源，再写正文。
-- 诊断为每个问题提供“标签—严重度—用户材料中的证据—具体操作—预期改善”，不用“加强论证”等空话。
-- `Pass` 表示明确、具体、有证据且已整合；`Partial` 表示存在但模糊、迟置、证据不足或未整合；`Fail` 表示缺失、矛盾、不可核验或无法从材料判断。
-
-## 来源状态与风险标签
-
-检索和写作时区分 `candidate source`、`metadata only`、`abstract only`、`full text read`、`in Zotero`、`imported to Zotero`；Zotero 中有记录不等于已阅读或支持当前主张。
-
-按需使用：`Topic Summary`、`Research Question Too Broad`、`Structure Drift`、`Abstract Drift`、`Literature Listing`、`Missing Research Gap`、`Theory Decoration`、`Conceptual Ambiguity`、`Method Mismatch`、`Sampling Gap`、`Operationalization Gap`、`Data Provenance Gap`、`Data Cleaning Gap`、`Data Dictionary Gap`、`Missingness Mechanism Gap`、`Measurement Invariance Gap`、`Cluster Dependence Gap`、`Model Assumption Gap`、`Multiplicity Transparency Gap`、`Effect Size/Uncertainty Gap`、`Reproducibility Gap`、`Criterion Contamination`、`Test-set Selection`、`Hierarchy Size Bias`、`Ablation-Fidelity Confusion`、`Statistical Test Mismatch`、`Evidence Gap`、`Contribution Inflation`、`Revision Cascade Gap`、`Citation Risk`、`Quotation Risk`、`Causal Overclaim`、`Conclusion Overreach`。每个标签必须指向用户材料中的证据。
+证据状态统一标为“已核验”“待核验”“缺失”；风险统一标为“高/中/低”。若材料不足，不能以模板化语言填补事实空白。
 
 ## 最终检查
 
-- 题目关键词是否在研究问题、分析和结论中持续回应。
-- 文献是否按研究推进组织，概念是否进入变量、条件、编码或观察指标。
-- 理论是否参与设计和结果解释，方法是否真正回答问题。
-- 关键判断是否有证据，结果是否超越表格复述，因果措辞是否符合设计。
-- 章节结尾是否提炼判断而非重排标题，结论和建议是否受证据边界约束。
-- 贡献是否与证据强度相称，实质修改是否同步更新题目、摘要、图表、附录、回应函和投稿材料。
-- 模型图与流程图是否可追溯到理论、数据、方法、结果和使用主体，图表是否承担明确论证任务。
-- 是否核验动态期刊信息，并删除明显模板句与空泛拔高。
-- 参考文献、图表、匿名稿、数据/代码、摘要、结论和回应函是否对应同一最终版本。
+提交前确认：研究问题可回答；理论或模型实际参与解释；方法与证据能支撑结论；结果、讨论、贡献和边界没有混写；图表、引用、附录与回应函同步；需要实时核验的期刊或政策信息已指向官方来源。
