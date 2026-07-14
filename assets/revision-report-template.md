@@ -2,7 +2,7 @@
 
 ## Mode
 
-`topic_diagnosis` / `outline_building` / `draft_review` / `section_revision` / `reviewer_response_and_revision` / `framework_defense` / `education_data_analysis` / `reference_and_artifact_audit` / `pre_submission_check` / 其他：
+`topic_diagnosis` / `outline_building` / `argumentation_blueprint` / `draft_review` / `section_revision` / `revision_cascade` / `reviewer_response_and_revision` / `framework_defense` / `education_data_analysis` / `reference_and_artifact_audit` / `pre_submission_check` / 其他：
 
 ## 总体判断
 
@@ -40,6 +40,11 @@
 1. [阻断问题：定位、操作、预期改善]
 2. [重要问题：定位、操作、预期改善]
 3. [证据/方法/引文安全问题]
+
+## 修订连锁检查
+
+| 改动起点 | 首要修复层 | 必查连锁项 | 验证方式 | 状态 |
+|---|---|---|---|---|
 
 ## 修订文本
 
