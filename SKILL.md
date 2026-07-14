@@ -24,7 +24,7 @@ description: "Support Chinese education technology, educational digitalization, 
 | `探索性可写` | 分析可作为探索、描述或诊断呈现，但尚未完成独立确认、稳健性或关键证据核验。 | 降级题目、限定性的探索性摘要/结果段、待验证计划与边界说明。 | 将预测、关联或单案例写成已确认的因果、机制、普遍效果或最终样本外表现。 |
 | `投稿就绪` | 样本与测量可核验；训练/验证/最终测试角色或相称的研究质量控制已留痕；主张、证据和边界一致。 | 连续投稿摘要、清洁正文、投稿前工件审计。 | 内部标签、占位符、未经官方核验的期刊规则或超出设计的强结论。 |
 
-预测和可解释机器学习任务必须把训练、验证、最终测试分开；若同一测试集参与模型选择，状态至少为 `阻断`。具体规则读取 `references/interpretable-machine-learning.md`；摘要生成前读取 `assets/abstract-argument-card-template.md`。
+预测和可解释机器学习任务必须把训练、验证、最终测试分开；若同一测试集参与模型选择，状态至少为 `阻断`。摘要改写先确定“中心回答”和每一项方法/数字是否改变读者对该回答的判断：不把摘要写成分析过程总览，也不机械删除性能或验证锚点。具体规则读取 `references/interpretable-machine-learning.md` 和 `references/abstract-state-and-evidence-control.md`；摘要生成前读取 `assets/abstract-argument-card-template.md`。
 
 ## 按研究阶段选择任务
 
@@ -36,7 +36,7 @@ description: "Support Chinese education technology, educational digitalization, 
 | 建立解释 | 理论、机制、概念模型、实践模型、主论证与主张验证 | `conceptual_model_building`、`practice_model_design`、`argumentation_blueprint` | `references/academic-writing-and-revision.md`、`references/problem-model-evidence-practice.md`、`references/claim-evidence-validation-contract.md` |
 | 获取与组织证据 | 文献检索、精读、综述、引文、材料核验 | `literature_review_planning`、`literature_search_to_review`、`citation_and_evidence_check`、`reference_and_artifact_audit` | `references/evidence-and-citation.md`、`references/literature-search-and-zotero.md`、`references/source-grounded-paper-reading.md`、`assets/literature-review-matrix-template.md` |
 | 设计与分析 | 研究设计、教育数据、学习分析、可解释机器学习、统计报告和图表证据 | `education_data_analysis`、`interpretable_ml_analysis` | `references/education-data-analysis.md`、`references/statistical-reporting-and-figure-evidence.md`、`references/interpretable-machine-learning.md`、`references/research-paradigms.md` |
-| 写作与重构 | 章节写作、全文诊断、投稿表层、主张与贡献、结构性返修、八刊共性诊断 | `draft_review`、`section_revision`、`argumentation_blueprint`、`revision_cascade` | `references/writing-workflow.md`、`references/publication-prose-and-style-control.md`、`references/academic-writing-and-revision.md`、`references/eight-journal-writing-evidence.md`、`assets/abstract-argument-card-template.md` |
+| 写作与重构 | 章节写作、全文诊断、投稿表层、主张与贡献、结构性返修、八刊共性诊断 | `draft_review`、`section_revision`、`argumentation_blueprint`、`revision_cascade` | `references/writing-workflow.md`、`references/publication-prose-and-style-control.md`、`references/abstract-state-and-evidence-control.md`、`references/academic-writing-and-revision.md`、`references/eight-journal-writing-evidence.md`、`assets/abstract-argument-card-template.md` |
 | 外部意见与交付 | 审稿回复、终稿自检、投稿包、研究过程治理 | `reviewer_response_and_revision`、`pre_submission_check` | `references/revision-and-reviewer-response.md`、`references/self-review.md`、`references/journal-verification.md` |
 | 专项工件协作 | 研究框架图、流程图、结果图、DOCX/PDF、工作簿或仓库配图 | 保持当前主模式，并按需调用外部 Skill | `references/cross-skill-artifact-routing.md`、`references/framework-defense-and-figure-audit.md` |
 
@@ -109,7 +109,7 @@ description: "Support Chinese education technology, educational digitalization, 
 3. 先给出当前 `阻断 / 探索性可写 / 投稿就绪` 状态及产出权限；再完成问题、理论/模型与证据的对应，最后提出写作、分析或修订建议。
 4. 对数据与模型任务，先审计单位、时间、缺失、切分、泄漏、隐私与公平；将每项关键主张对应到决定性证据、比较/反例、稳健性与边界，再谈结果解释。
 5. 对写作与返修任务，先判断是否应重构研究问题、理论、设计或结论；段落润色排在结构修复之后。
-6. 生成正文时先在内部完成“问题—对象—方法—发现—贡献—边界”检查，再转为自然表层；摘要还须完成 `assets/abstract-argument-card-template.md` 和 `references/abstract-state-and-evidence-control.md`。`阻断` 不等于只能给提纲：用户明确要求改摘要时，可交付与诊断分开的探索性草案，但不得把它称为投稿摘要或定稿。除非期刊官方明确要求，不把“目的/方法/结果/结论”、RQ 编号、风险标签、模式名或占位符写进清洁稿。
+6. 生成正文时先在内部完成“问题—对象—方法—发现—贡献—边界”检查，再转为自然表层；摘要还须完成 `assets/abstract-argument-card-template.md` 和 `references/abstract-state-and-evidence-control.md`。先用“删减检验”确认去掉算法目录、重复数字后能否仍回答为什么研究、发现什么、意味着什么；仅把改变读者对中心回答判断的设计或性能锚点放回摘要。`阻断` 不等于只能给提纲：用户明确要求改摘要时，可交付与诊断分开的探索性草案，但不得把它称为投稿摘要或定稿。除非期刊官方明确要求，不把“目的/方法/结果/结论”、RQ 编号、风险标签、模式名或占位符写进清洁稿。
 7. 交付时把“论文清洁稿”与“诊断/修改说明”分开；证据状态、风险标签和待办只进入后者。
 8. 需要制作图、表、DOCX、PDF、工作簿或配图时，先填写图表证据契约，写清核心结论、面板任务、证据层级、统计需求和审稿风险；再按需调用当前环境中可用的专项 Skill；生成后回到本 Skill 核对图文一致性和结论边界。
 

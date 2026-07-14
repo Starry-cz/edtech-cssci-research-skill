@@ -12,6 +12,14 @@ from xml.etree import ElementTree
 
 WORD_NS = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
 
+# 这些术语跨越方法、性能、解释和稳健性层，组合出现时才提示摘要可能在复述分析流程。
+TECHNICAL_TERM_GROUPS = {
+    "方法": ("模型比较", "交叉验证", "XGBoost", "GBRT", "梯度提升", "随机森林", "超参数"),
+    "性能": ("R²", "R2", "MAE", "RMSE", "MSE", "准确率", "AUC"),
+    "解释": ("SHAP", "ALE", "PDP", "置换重要性", "特征重要性"),
+    "稳健性": ("Bootstrap", "重抽样", "删除节点", "消融", "稳定性"),
+}
+
 
 def read_paragraphs(path: Path) -> list[str]:
     """读取段落，保留文本边界，避免把正文小标题误判为摘要标签。"""
@@ -73,6 +81,23 @@ def add_if_found(items: list[tuple[str, str, list[str]]], text: str, name: str, 
         items.append((name, advice, found))
 
 
+def add_technical_bandwidth_signal(items: list[tuple[str, str, list[str]]], abstract: str) -> None:
+    """只在多个证据层同时拥挤时提示，避免把单个必要术语当成错误。"""
+    matched_groups: dict[str, list[str]] = {}
+    for group, terms in TECHNICAL_TERM_GROUPS.items():
+        matched = [term for term in terms if term.lower() in abstract.lower()]
+        if matched:
+            matched_groups[group] = matched
+    distinct_terms = {term for terms in matched_groups.values() for term in terms}
+    if len(matched_groups) >= 3 and len(distinct_terms) >= 4:
+        summary = "；".join(f"{group}：{'、'.join(terms)}" for group, terms in matched_groups.items())
+        items.append((
+            "摘要技术带宽过载候选",
+            "这不是按术语数量自动判错。先删去不改变中心回答的算法目录、重复数字和次级诊断；仅保留能说明研究类型、验证角色或中心发现可信度的证据锚点。",
+            [summary],
+        ))
+
+
 def main() -> int:
     if len(sys.argv) != 2:
         print("用法：python scripts/audit_manuscript_surface.py <稿件.docx|md|txt>")
@@ -96,6 +121,7 @@ def main() -> int:
         add_if_found(candidates, abstract, "摘要内部标签候选", r"\bRQ\s*\d+\b|\[\s*(?:待补|待核验|TODO|TODO:|placeholder)[^\]]*\]", "将工作标签移至修改说明，清洁摘要只保留已核验内容。")
         add_if_found(candidates, abstract, "摘要强结论候选", r"塑造(?:了|出)?|作用机制|最优(?:模型|方案)?|稳定阈值|决定(?:了|性)?", "回查设计与验证角色；预测研究通常改用预测、关联或模型依赖表述。")
         add_if_found(candidates, abstract, "摘要方法堆叠", r"(?:SHAP|ALE|Bootstrap|XGBoost|随机森林|梯度提升|交叉验证|消融).{0,30}(?:SHAP|ALE|Bootstrap|XGBoost|随机森林|梯度提升|交叉验证|消融).{0,50}", "摘要只保留理解设计所需的方法功能；完整算法与诊断转入方法或附录。")
+        add_technical_bandwidth_signal(candidates, abstract)
         add_if_found(candidates, abstract, "摘要机制跃迁候选", r"(?:SHAP|特征重要性|预测重要性).{0,100}(?:闭环|链条|路径|机制)|(?:闭环|链条|路径|机制).{0,100}(?:SHAP|特征重要性|预测重要性)", "并列特征不构成时序或机制；要求过程、交互、时序或干预证据。")
         add_if_found(candidates, abstract, "摘要非因果边界提示", r"(?:不(?:能|宜)|并非|不等同于|不表示).{0,36}(?:因果|机制|效应|导致|提高)|(?:预测|关联).{0,24}(?:不(?:能|宜)|并非|不等同于|不表示)", "这是正向信号，仍需核对标题、摘要、结果和结论是否保持同一边界。")
     else:

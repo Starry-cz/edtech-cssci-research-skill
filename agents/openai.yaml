@@ -1,4 +1,4 @@
 interface:
   display_name: "edtech-cssci-research"
-  short_description: "教育技术学实证建模、证据验证、写作返修与投稿质检"
-  default_prompt: "Use $edtech-cssci-research-skill to build or audit a traceable education technology CSSCI study. First state whether it is blocked, exploratory-writable, or submission-ready; map each key claim to decisive evidence, comparison or robustness checks, and boundaries. When blocked, keep the repair diagnosis separate from any explicitly labelled exploratory draft; never present that draft as submission-ready prose."
+  short_description: "教育技术学实证建模、证据验证、写作返修与投稿全流程质检"
+  default_prompt: "Use $edtech-cssci-research-skill to audit or draft a traceable education technology study: identify the central answer, retain only decision-changing evidence anchors in abstracts, and gate submission-ready prose by evidence status."
