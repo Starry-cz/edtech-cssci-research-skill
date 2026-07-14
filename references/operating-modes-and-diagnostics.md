@@ -27,6 +27,13 @@
 
 建议输出表：章节、功能、核心判断、所需证据、与研究问题的关系、风险。
 
+## `argumentation_blueprint`
+
+1. 读取 `academic-writing-and-revision.md`，提取真实教育问题、研究问题、暂定回答、证据、最小贡献和结论边界。
+2. 为题目、摘要、引言、综述、理论、方法、结果、讨论和结论分别指定最小判断与证据节点。
+3. 建立“主张—证据—边界”矩阵，标明每项判断属于提出、描述、关联、预测、检验或设计原则。
+4. 输出 `assets/argumentation-and-revision-workbook-template.md` 所需内容；不把系统、政策或案例展示写成效果证据。
+
 ## `literature_review_planning`
 
 1. 定义中英文概念、同义词、技术名称、学习/教学结果、对象、场景、方法和排除词。
@@ -62,6 +69,13 @@
 3. 对每条意见选择 `accept / partial / decline / needs verification`，给出依据、修改位置和验证方式。
 4. 合并多位审稿人的共识与互补项，显式处理冲突；同步更新稿件、分析、图表、摘要、结论和回应函。
 5. 使用 `assets/reviewer-response-and-revision-ledger-template.md` 形成回应函与可追溯台账。
+
+## `revision_cascade`
+
+1. 读取 `academic-writing-and-revision.md` 与 `revision-and-reviewer-response.md`，定位修改起点属于问题、理论、设计、数据/分析、结果、结论、图表或格式中的哪一层。
+2. 先给出首要修复动作，再列出受影响的题目、摘要、综述缺口、方法、表图、附录、回应函和投稿材料。
+3. 对每项连锁更新说明验证方式与当前状态；缺少数据、作者决定或期刊规则时标记 `[needs user verification]`。
+4. 不以“已全面修改”替代可核验的位置、变化和验证。
 
 ## `framework_defense`
 
