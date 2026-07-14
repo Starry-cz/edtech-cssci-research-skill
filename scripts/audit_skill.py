@@ -80,12 +80,18 @@ def main() -> int:
         ROOT / "references" / "eight-journal-writing-evidence.md",
         ROOT / "assets" / "abstract-argument-card-template.md",
         ROOT / "scripts" / "audit_manuscript_surface.py",
+        ROOT / "references" / "claim-evidence-validation-contract.md",
+        ROOT / "references" / "statistical-reporting-and-figure-evidence.md",
+        ROOT / "references" / "source-grounded-paper-reading.md",
+        ROOT / "references" / "pre-submission-peer-review.md",
+        ROOT / "assets" / "claim-evidence-validation-matrix-template.md",
+        ROOT / "assets" / "figure-evidence-contract-template.md",
     )
     for required in required_files:
         if not required.is_file():
             errors.append(f"缺少投稿表层资源：{required.relative_to(ROOT)}")
     validation_text = read(ROOT / "references" / "validation-scenarios.md")
-    for signal in ("目的：", "Test-set Selection", "Sequence Invention", "drawio", "投稿就绪", "八刊"):
+    for signal in ("目的：", "Test-set Selection", "Sequence Invention", "drawio", "投稿就绪", "八刊", "主张—决定性证据", "图表证据契约", "共同事实底稿"):
         if signal not in validation_text:
             errors.append(f"验证场景缺少回归信号：{signal}")
 
@@ -100,6 +106,12 @@ def main() -> int:
         "references/cross-skill-artifact-routing.md",
         "references/eight-journal-writing-evidence.md",
         "assets/abstract-argument-card-template.md",
+        "references/claim-evidence-validation-contract.md",
+        "references/statistical-reporting-and-figure-evidence.md",
+        "references/source-grounded-paper-reading.md",
+        "references/pre-submission-peer-review.md",
+        "assets/claim-evidence-validation-matrix-template.md",
+        "assets/figure-evidence-contract-template.md",
     ):
         if required_route not in routes:
             errors.append(f"SKILL.md 未路由投稿表层资源：{required_route}")

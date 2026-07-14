@@ -1,6 +1,6 @@
 # 教育数据分析工作流
 
-用于问卷、测验、课堂观察、平台日志、学习过程、教师/学校调查、前后测或追踪数据的分析设计、执行审查、结果解读与论文报告。用于传统统计与测量分析；预测建模、SHAP/ALE 等任务同时或优先读取 `interpretable-machine-learning.md`。
+用于问卷、测验、课堂观察、平台日志、学习过程、教师/学校调查、前后测或追踪数据的分析设计、执行审查、结果解读与论文报告。用于传统统计与测量分析；预测建模、SHAP/ALE 等任务同时或优先读取 `interpretable-machine-learning.md`。当任务涉及统计分析小节、结果统计表述、图注、样本量、重复测量、多重比较或效应量时，同时读取 `statistical-reporting-and-figure-evidence.md`。
 
 ## 目录
 
@@ -112,7 +112,7 @@
 - 维护分析计划、数据字典、清理日志、代码/语法、软件与包版本、随机种子、表图生成记录和输出版本。
 - 公开或共享数据、代码与材料前，先处理隐私、授权、去标识化、平台条款、未成年人保护和二次使用边界；无法共享时说明限制及可提供的替代材料。
 - 区分主分析、附加分析和探索性分析，说明预注册或分析计划的存在与否，不虚构预先计划。
-- 使用 `assets/education-data-analysis-report-template.md` 输出分析计划、结果报告或方法审查。
+- 使用 `assets/education-data-analysis-report-template.md` 输出分析计划、结果报告或方法审查。关键结论同步登记到 `assets/claim-evidence-validation-matrix-template.md`：每项结论要能回指决定性证据、比较或替代解释、稳健性和结论边界。
 
 ## 诊断标签
 
