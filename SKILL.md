@@ -26,21 +26,21 @@ description: "Support Chinese education technology, educational digitalization, 
 
 预测和可解释机器学习任务必须把训练、验证、最终测试分开；若同一测试集参与模型选择，状态至少为 `阻断`。摘要改写先确定“中心回答”和每一项方法/数字是否改变读者对该回答的判断：不把摘要写成分析过程总览，也不机械删除性能或验证锚点。具体规则读取 `references/interpretable-machine-learning.md` 和 `references/abstract-state-and-evidence-control.md`；摘要生成前读取 `assets/abstract-argument-card-template.md`。
 
-## 按研究阶段选择任务
+## 五层任务架构
 
-一次任务先确定一个主模式；只有存在明确依赖时才组合相邻模式。详细的入口、输出和组合见 `references/operating-modes-and-diagnostics.md`。
+一次任务先确定一个主模式；只有存在明确依赖时才组合相邻模式。五层是用户任务和资源路由的共同分类，详细组合见 `references/operating-modes-and-diagnostics.md`。
 
-| 研究阶段 | 典型需要 | 首选模式 | 按需加载 |
+| 层级 | 回答的问题 | 主模式 | 首要资源 |
 | --- | --- | --- | --- |
-| 定位问题 | 选题、研究问题、章节结构 | `topic_diagnosis`、`research_question_refinement`、`outline_building` | `references/topic-diagnosis-and-research-questions.md`、`references/problem-model-evidence-practice.md`、`references/external-evidence-and-research-positioning.md`、`references/research-paradigms.md` |
-| 建立解释 | 理论、机制、概念模型、实践模型、主论证与主张验证 | `conceptual_model_building`、`practice_model_design`、`argumentation_blueprint` | `references/academic-writing-and-revision.md`、`references/problem-model-evidence-practice.md`、`references/claim-evidence-validation-contract.md` |
-| 获取与组织证据 | 文献检索、精读、综述、引文、材料核验 | `literature_review_planning`、`literature_search_to_review`、`citation_and_evidence_check`、`reference_and_artifact_audit` | `references/evidence-and-citation.md`、`references/literature-search-and-zotero.md`、`references/source-grounded-paper-reading.md`、`assets/literature-review-matrix-template.md` |
-| 设计与分析 | 研究设计、教育数据、学习分析、可解释机器学习、统计报告和图表证据 | `education_data_analysis`、`interpretable_ml_analysis` | `references/education-data-analysis.md`、`references/statistical-reporting-and-figure-evidence.md`、`references/interpretable-machine-learning.md`、`references/research-paradigms.md` |
-| 写作与重构 | 章节写作、全文诊断、投稿表层、主张与贡献、结构性返修、八刊共性诊断 | `draft_review`、`section_revision`、`argumentation_blueprint`、`revision_cascade` | `references/writing-workflow.md`、`references/publication-prose-and-style-control.md`、`references/abstract-state-and-evidence-control.md`、`references/academic-writing-and-revision.md`、`references/eight-journal-writing-evidence.md`、`assets/abstract-argument-card-template.md` |
-| 外部意见与交付 | 审稿回复、终稿自检、投稿包、研究过程治理 | `reviewer_response_and_revision`、`pre_submission_check` | `references/revision-and-reviewer-response.md`、`references/self-review.md`、`references/journal-verification.md` |
-| 专项工件协作 | 研究框架图、流程图、结果图、DOCX/PDF、工作簿或仓库配图 | 保持当前主模式，并按需调用外部 Skill | `references/cross-skill-artifact-routing.md`、`references/framework-defense-and-figure-audit.md` |
+| 1. 研究定位与主线 | 值不值得研究、具体回答什么、全文如何组织 | `topic_diagnosis`、`research_question_refinement`、`outline_building`、`argumentation_blueprint` | `references/topic-diagnosis-and-research-questions.md`、`references/external-evidence-and-research-positioning.md`、`references/academic-writing-and-revision.md` |
+| 2. 理论、模型与研究设计 | 为什么这样解释、设计什么活动/系统、以何种范式生成证据 | `conceptual_model_building`、`practice_model_design`、`framework_defense` | `references/problem-model-evidence-practice.md`、`references/research-paradigms.md`、`references/framework-defense-and-figure-audit.md` |
+| 3. 文献、数据与实证验证 | 证据从哪里来、怎样分析、怎样避免把预测写成因果 | `literature_review_planning`、`literature_search_to_review`、`citation_and_evidence_check`、`education_data_analysis`、`interpretable_ml_analysis` | `references/literature-search-and-zotero.md`、`references/evidence-and-citation.md`、`references/education-data-analysis.md`、`references/interpretable-machine-learning.md` |
+| 4. 写作、诊断与修订 | 如何把证据写成连续论证、怎样处理全文和审稿意见 | `draft_review`、`section_revision`、`revision_cascade`、`reviewer_response_and_revision` | `references/writing-workflow.md`、`references/publication-prose-and-style-control.md`、`references/revision-and-reviewer-response.md` |
+| 5. 投稿、工件与专项协作 | 是否可提交、附件和图表是否一致、何时调用其他 Skill | `reference_and_artifact_audit`、`pre_submission_check` | `references/self-review.md`、`references/reference-integrity-and-manuscript-artifacts.md`、`references/journal-verification.md`、`references/cross-skill-artifact-routing.md` |
 
 ## 十八个任务模式
+
+### 1. 研究定位与主线
 
 | 模式 | 适用任务 | 最小输出契约 |
 | --- | --- | --- |
@@ -48,59 +48,53 @@ description: "Support Chinese education technology, educational digitalization, 
 | `research_question_refinement` | 将宽泛命题改为可回答问题 | 主问题、相互依赖子问题、变量/过程定义、可观察证据和不可回答部分 |
 | `outline_building` | 搭建论文、章节或项目结构 | 章节功能表与“问题—证据—结论”映射 |
 | `argumentation_blueprint` | 搭建或诊断全文主线 | 主张图、证据节点、贡献强度、结论边界 |
+
+### 2. 理论、模型与研究设计
+
+| 模式 | 适用任务 | 最小输出契约 |
+| --- | --- | --- |
 | `conceptual_model_building` | 构建理论或机制模型 | 构念定义、关系命题、机制解释与可检验路径 |
 | `practice_model_design` | 构建教学、系统或实践模型 | 设计原则、活动链、实施条件、过程/结果证据 |
+| `framework_defense` | 回应“理论不足”“框架不新”等质疑 | 构念边界、关系依据、替代解释与可证伪点 |
+
+### 3. 文献、数据与实证验证
+
+| 模式 | 适用任务 | 最小输出契约 |
+| --- | --- | --- |
 | `literature_review_planning` | 制定检索与综述方案 | 检索式、纳排规则、编码维度与缺口判断 |
 | `literature_search_to_review` | 把文献材料写成有功能的综述 | 主题矩阵、争议/缺口、引文核验状态 |
+| `citation_and_evidence_check` | 核验引文与关键证据 | 主张—来源映射、核验状态、风险与待补材料 |
 | `education_data_analysis` | 问卷、课堂、平台、前后测或日志分析 | 数据审计、分析计划、诊断/稳健性与报告边界 |
 | `interpretable_ml_analysis` | 预测、分类、SHAP 或层次分类 | 泄漏防控、验证切分、解释图、稳定性与复现边界 |
+
+### 4. 写作、诊断与修订
+
+| 模式 | 适用任务 | 最小输出契约 |
+| --- | --- | --- |
 | `draft_review` | 全文或较长草稿诊断 | 发布门、表层泄漏、高/中/低风险、重构优先级和证据缺口 |
 | `section_revision` | 修改摘要、引言、综述、方法、结果或讨论 | 构思层判断、清洁正文、证据边界、表层审计与连锁提示 |
 | `revision_cascade` | 评估一项修改牵动的全稿更新 | 修改层级、传播清单、验证方式和完成状态 |
 | `reviewer_response_and_revision` | 回复审稿意见并落实修改 | 意见台账、回应函、修改位置、连锁更新与证据 |
-| `framework_defense` | 回应“理论不足”“框架不新”等质疑 | 构念边界、关系依据、替代解释与可证伪点 |
-| `citation_and_evidence_check` | 核验引文与关键证据 | 主张—来源映射、核验状态、风险与待补材料 |
+
+### 5. 投稿、工件与专项协作
+
+| 模式 | 适用任务 | 最小输出契约 |
+| --- | --- | --- |
 | `reference_and_artifact_audit` | 检查参考文献、图表、附录和投稿文件 | 工件清单、交叉引用问题和修复顺序 |
 | `pre_submission_check` | 投稿前的整体质量门槛 | 阻断项、主要修改、留痕与提交判断 |
 
-## 资源职责与组合
+## 资源分层与按需读取
 
-不要把所有参考文件一次性载入。以下文件按职责分工，优先读取与当前主模式直接对应的文件：
+不要一次性载入全部参考文件。资源按下列六类分层；`references/operating-modes-and-diagnostics.md` 只负责把某个模式组合到必要资源，`references/validation-scenarios.md` 只用于更新后的回归验证。
 
-- `references/operating-modes-and-diagnostics.md`：只说明模式入口、输出、资源组合与风险诊断。
-- `references/academic-writing-and-revision.md`：全文主论证、贡献强度、实践转化与修订传播。
-- `references/writing-workflow.md`：摘要至结论的章节写作协议。
-- `references/publication-prose-and-style-control.md`：区分内部构思与投稿正文，控制摘要标签、标题强度、机制越界、模板痕迹与清洁稿放行。
-- `references/abstract-state-and-evidence-control.md`：区分诊断、探索性摘要草案与投稿摘要；控制摘要的信息密度、预测研究动词和“教育化”概括的证据强度。
-- `references/eight-journal-writing-evidence.md`：八刊样本的可迁移写作规则、16 篇透明台账与“八刊风格诊断”边界；不用于判断当前 CSSCI 身份或模仿句式。
-- `references/claim-evidence-validation-contract.md`：把关键主张映射到决定性证据、比较/反例、稳健性与边界；用于研究设计、图表和全文的一致性审计。
-- `references/statistical-reporting-and-figure-evidence.md`：教育研究的独立单位、层级、比较家族、效应量/不确定性和图注统计报告门。
-- `references/source-grounded-paper-reading.md`：按材料状态建立论文源图谱、可定位笔记、图文对应与术语表；不把摘要读写成全文结论。
-- `references/pre-submission-peer-review.md`：基于共同事实底稿的三视角预审稿与风险综合；不虚构审稿人或编辑决定。
-- `references/self-review.md`：终稿质量门槛与投稿前拦截项。
-- `references/revision-and-reviewer-response.md`：外部意见、回应台账与修订治理。
-- `references/cross-skill-artifact-routing.md`：何时调用 Drawio、文档、PDF、表格或图像类 Skill，以及工件交接和回检规则。
-
-常用的补充资源：
-
-- `references/topic-diagnosis-and-research-questions.md`、`references/research-paradigms.md`、`references/problem-model-evidence-practice.md`、`references/external-evidence-and-research-positioning.md`：选题质量门、问题类型、研究范式、问题—模型—证据关系与外部研究定位。
-- `references/literature-search-and-zotero.md`、`references/evidence-and-citation.md`、`references/source-grounded-paper-reading.md`：精读、综述与引文核验。
-- `references/education-data-analysis.md`、`references/interpretable-machine-learning.md`、`references/hierarchical-ml-interpretation.md`：教育数据、可解释机器学习与层次分类。
-- `references/statistical-reporting-and-figure-evidence.md`：统计报告与图表证据门。
-- `references/problem-model-evidence-practice.md`、`references/framework-defense-and-figure-audit.md`：模型/系统、画像、实践模型与图文一致性。
-- `references/chapter-synthesis.md`、`references/project-memory-and-decision-log.md`、`references/self-review.md`：章节收束、决策留痕与学术表达风险。
-- `references/journal-verification.md`、`references/validation-scenarios.md`：官方投稿核验与代表性验证场景。
-
-可复用工作底稿：
-
-- `assets/topic-question-evidence-canvas.md`、`assets/problem-model-evidence-canvas.md`、`assets/argumentation-and-revision-workbook-template.md`、`assets/research-positioning-evidence-matrix-template.md`：选题、问题、模型、证据、主张、外部定位和修订传播。
-- `assets/manuscript-surface-audit-template.md`：把构思标签、方法风险和证据边界转换为投稿清洁稿前的表层审计。
-- `assets/abstract-argument-card-template.md`：在生成摘要前核对问题、对象、设计、锁定模型、最小发现、贡献和边界；明确当前是诊断、探索性摘要草案还是投稿摘要，再把通过核对的内容转为连续文本。
-- `assets/claim-evidence-validation-matrix-template.md`、`assets/figure-evidence-contract-template.md`：主张验证包与制图前证据契约。
-- `assets/literature-review-matrix-template.md`、`assets/education-data-analysis-report-template.md`、`assets/interpretable-ml-report-template.md`：综述与实证分析报告。
-- `assets/revision-report-template.md`、`assets/reviewer-response-and-revision-ledger-template.md`：修订报告、回应函与意见台账。
-- `assets/project-context-template.md`、`assets/submission-package-checklist.md`：长篇上下文与投稿包。
-- `examples/good-outline.md`、`examples/weak-outline.md`、`examples/sample-review.md`：正反例与诊断示例。
+| 资源层 | 解决什么 | 按需读取 |
+| --- | --- | --- |
+| 0. 路由与项目治理 | 模式选择、验证、长期术语和决策留痕 | `references/operating-modes-and-diagnostics.md`、`references/validation-scenarios.md`、`references/project-memory-and-decision-log.md`、`assets/project-context-template.md` |
+| 1. 定位、理论与设计 | 选题、外部定位、研究范式、概念/实践模型与框架 | `references/topic-diagnosis-and-research-questions.md`、`references/external-evidence-and-research-positioning.md`、`references/research-paradigms.md`、`references/problem-model-evidence-practice.md`、`references/framework-defense-and-figure-audit.md`；`assets/topic-question-evidence-canvas.md`、`assets/research-positioning-evidence-matrix-template.md`、`assets/problem-model-evidence-canvas.md` |
+| 2. 文献与来源证据 | 检索、精读、综述、引文与材料状态 | `references/literature-search-and-zotero.md`、`references/source-grounded-paper-reading.md`、`references/evidence-and-citation.md`；`assets/literature-review-matrix-template.md` |
+| 3. 数据、建模与验证 | 数据采集审查、统计分析、预测建模、层次解释、主张/图表证据 | `references/data-collection-and-analysis.md`、`references/education-data-analysis.md`、`references/interpretable-machine-learning.md`、`references/hierarchical-ml-interpretation.md`、`references/statistical-reporting-and-figure-evidence.md`、`references/claim-evidence-validation-contract.md`；`assets/education-data-analysis-report-template.md`、`assets/interpretable-ml-report-template.md`、`assets/claim-evidence-validation-matrix-template.md`、`assets/figure-evidence-contract-template.md` |
+| 4. 论证、写作与修订 | 全文主线、章节协议、摘要、投稿表层、八刊诊断与审稿回应 | `references/academic-writing-and-revision.md`、`references/writing-workflow.md`、`references/abstract-state-and-evidence-control.md`、`references/publication-prose-and-style-control.md`、`references/chapter-synthesis.md`、`references/eight-journal-writing-evidence.md`、`references/revision-and-reviewer-response.md`；`assets/argumentation-and-revision-workbook-template.md`、`assets/abstract-argument-card-template.md`、`assets/manuscript-surface-audit-template.md`、`assets/revision-report-template.md`、`assets/reviewer-response-and-revision-ledger-template.md` |
+| 5. 质量门、投稿与工件协作 | 预审稿、终稿、引文/附件、期刊核验与专项工具交接 | `references/pre-submission-peer-review.md`、`references/self-review.md`、`references/reference-integrity-and-manuscript-artifacts.md`、`references/journal-verification.md`、`references/cross-skill-artifact-routing.md`；`assets/submission-package-checklist.md`、`examples/good-outline.md`、`examples/weak-outline.md`、`examples/sample-review.md` |
 
 ## 统一执行顺序
 

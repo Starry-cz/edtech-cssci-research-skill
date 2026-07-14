@@ -128,38 +128,19 @@ flowchart LR
 | **分析数据** | 描述、测量、推断、多层/纵向、教育机器学习与可视化 | 结果表图、稳健性说明、教育解释与结论边界 |
 | **写作与交付** | 搭建主论证、章节写作、全文重构、审稿回应、匿名与投稿包自检 | 论证工作底稿、修订报告、回应函、投稿前清单 |
 
-## 任务导航
+## 五层能力结构
 
-不用先理解全部文件。找到你当前的问题，复制最后一列的问法即可。
+不必逐个理解 18 个模式。先按研究阶段进入对应层级；同层资源解决同一类判断，跨层只在前一层结论会影响当前工作时联动。完整模式索引见[18 类任务模式](#18-类任务模式)。
 
-| 你现在需要什么 | 推荐模式 | 主要入口 | 可以这样问 |
+| 层级 | 解决的核心判断 | 包含的任务模式 | 优先入口 |
 |---|---|---|---|
-| 把宽泛热点变成可研究选题 | `topic_diagnosis` | [选题诊断](references/topic-diagnosis-and-research-questions.md) | “把‘AI赋能教育’按七道质量门改成三个可研究的CSSCI选题” |
-| 凝练研究问题、对象与范围 | `research_question_refinement` | [研究问题](references/topic-diagnosis-and-research-questions.md) | “检查这些研究问题是否可回答，并写出主问题、子问题和所需证据” |
-| 搭建或修复论文大纲 | `outline_building` | [写作工作流](references/writing-workflow.md) | “按问题—证据—结论关系重构这份大纲” |
-| 搭建论文主线、检查贡献与边界 | `argumentation_blueprint` | [论文论证与重构](references/academic-writing-and-revision.md) | “为这项研究建立问题—回答—证据—贡献—边界图，并标出缺口” |
-| 检索中英文文献、整理 Zotero | `literature_search_to_review` | [检索与 Zotero](references/literature-search-and-zotero.md) | “生成检索式、筛选日志、Zotero标签和综述矩阵” |
-| 写文献综述、理论框架或机制 | `section_revision` | [写作工作流](references/writing-workflow.md) | “把作者罗列式综述改成围绕争论推进的综述” |
-| 构建概念模型、实践模式或智能系统 | `conceptual_model_building` / `practice_model_design` | [问题—模型—证据—实践](references/problem-model-evidence-practice.md) | “检查模型每个节点是否有理论、数据、活动和验证证据” |
-| 审查二维框架、类型学或机制图 | `framework_defense` | [框架防御与图示审计](references/framework-defense-and-figure-audit.md) | “检查维度依据、边界案例、缺失象限和图中箭头” |
-| 制作研究框架图、流程图或数据处理图 | 保持当前研究模式 + 按需协作 | [跨 Skill 工件路由](references/cross-skill-artifact-routing.md) | “先输出图表说明书，再调用可用 Drawio Skill 制作可编辑图，并回检图文一致性” |
-| 设计问卷、实验、DBR、质性或混合研究 | 按研究范式选择 | [研究范式](references/research-paradigms.md) | “为这个问题比较实验、DBR和混合方法的适配性” |
-| 开展教育数据分析 | `education_data_analysis` | [教育数据分析](references/education-data-analysis.md) | “为问卷、前后测和班级嵌套数据设计完整分析流程” |
-| 审查抽样、测量、清洗和统计分析 | `draft_review` | [数据采集与分析](references/data-collection-and-analysis.md) | “检查分析单位、缺失处理、统计检验和因果措辞” |
-| 开展教育可解释机器学习 | `interpretable_ml_analysis` | [可解释机器学习](references/interpretable-machine-learning.md) | “设计防泄漏建模、样本外验证、SHAP/ALE和图表流程” |
-| 诊断八刊同类论文的摘要与结构组织 | `draft_review` / `section_revision` | [八刊写作证据台账](references/eight-journal-writing-evidence.md) | “按八刊样本库诊断这篇预测研究的摘要、结果—讨论与图表功能；不要模仿句式” |
-| 审查关键结论是否有相称验证 | `argumentation_blueprint` / `education_data_analysis` | [主张—证据—验证契约](references/claim-evidence-validation-contract.md) | “把我的题目、摘要、表图和结论做成主张—证据—验证矩阵” |
-| 模拟投稿前预审而不虚构审稿人 | `draft_review` | [预审稿与风险综合](references/pre-submission-peer-review.md) | “用共同事实底稿，从问题价值、理论设计证据、报告图表三个视角预审” |
-| 处理层次 SHAP、PCA-ALE 与稳定性 | `interpretable_ml_analysis` | [层次机器学习解释](references/hierarchical-ml-interpretation.md) | “审查维度汇总、分组排名、Bootstrap和节点消融” |
-| 严格诊断或修改整篇论文 | `draft_review` / `section_revision` | [终稿自检](references/self-review.md) | “按Pass/Partial/Fail定位问题，并给出可执行修法” |
-| 把模板式摘要或报告腔正文改成投稿清洁稿 | `section_revision` | [投稿正文与表层控制](references/publication-prose-and-style-control.md) | “先检查期刊是否要求结构式摘要，再给清洁正文；诊断标签和待办另列修改说明” |
-| 分析一次修改会影响哪些部分 | `revision_cascade` | [论文论证与重构](references/academic-writing-and-revision.md) | “我重估了模型并缩窄结论，列出摘要、图表、附录和回应函的连锁更新” |
-| 降低模板腔、宣传腔和机械表达 | `pre_submission_check` | [原创性与反模板快扫](references/self-review.md) | “按章节定位模板句和空泛句，保留数据、引用与结论边界” |
-| 回应导师、同行或匿名审稿意见 | `reviewer_response_and_revision` | [审稿回应与修订治理](references/revision-and-reviewer-response.md) | “整理意见冲突，生成回应函和修订台账” |
-| 写本章小结或文献述评结尾 | `section_revision` | [章节收束](references/chapter-synthesis.md) | “提炼本章判断并自然引向下一章，不复述小标题” |
-| 核查引用、因果与证据真实性 | `citation_and_evidence_check` | [证据与引用](references/evidence-and-citation.md) | “建立主张—证据—来源状态表，标出越界结论” |
-| 核验期刊、CSSCI目录和投稿规则 | `pre_submission_check` | [期刊核验](references/journal-verification.md) | “只使用当前官方来源核验目标期刊投稿要求” |
-| 检查匿名稿、图表、DOCX/PDF 和投稿包 | `reference_and_artifact_audit` | [稿件工件质检](references/reference-integrity-and-manuscript-artifacts.md) | “核对引文、匿名信息、图表和最终渲染” |
+| 1. 研究定位与主线 | 这个问题是否值得研究，论文准备回答什么 | 选题诊断、研究问题、提纲、主论证图 | [选题与问题](references/topic-diagnosis-and-research-questions.md) · [论文论证与重构](references/academic-writing-and-revision.md) |
+| 2. 理论、模型与研究设计 | 为什么会发生，模型或研究设计如何成立 | 概念模型、实践模型、框架防御 | [问题—模型—证据—实践](references/problem-model-evidence-practice.md) · [研究范式](references/research-paradigms.md) |
+| 3. 文献、数据与实证验证 | 证据从哪里来，如何分析且不越界 | 综述规划、检索与精读、引文核验、教育数据分析、可解释机器学习 | [文献检索与 Zotero](references/literature-search-and-zotero.md) · [教育数据分析](references/education-data-analysis.md) · [可解释机器学习](references/interpretable-machine-learning.md) |
+| 4. 写作、诊断与修订 | 如何将证据写成可审查的论证，并修复核心缺陷 | 全文诊断、章节修订、修订连锁、审稿回应 | [写作工作流](references/writing-workflow.md) · [论文论证与重构](references/academic-writing-and-revision.md) |
+| 5. 投稿、工件与专项协作 | 稿件、图表、引文和投稿材料能否安全交付 | 工件质检、投稿前检查；按需调用绘图等其他 Skill | [终稿自检](references/self-review.md) · [稿件工件质检](references/reference-integrity-and-manuscript-artifacts.md) · [跨 Skill 工件路由](references/cross-skill-artifact-routing.md) |
+
+“教育数据分析”负责形成和报告分析流程；“数据采集与分析审查”负责审计样本、测量、清洗和统计报告。二者同层互补，不合并为一份冗长规则。“全文自检、预审稿、工件质检”则依次处理论证质量、同行审查风险和交付物一致性。
 
 ## 细化能力与研究边界
 

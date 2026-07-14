@@ -72,6 +72,36 @@ def main() -> int:
     if "$edtech-cssci-research-skill" not in yaml_text:
         errors.append("默认提示词未显式调用 $edtech-cssci-research-skill")
 
+    # 五层架构是主入口、模式协议和 README 的共同导航，不允许三处各自演化。
+    operating = ROOT / "references" / "operating-modes-and-diagnostics.md"
+    operating_text = read(operating) if operating.is_file() else ""
+    if not operating.is_file():
+        errors.append("缺少任务模式与诊断协议")
+    skill_layers = (
+        "### 1. 研究定位与主线",
+        "### 2. 理论、模型与研究设计",
+        "### 3. 文献、数据与实证验证",
+        "### 4. 写作、诊断与修订",
+        "### 5. 投稿、工件与专项协作",
+    )
+    operating_layers = (
+        "## 一、研究定位与主线",
+        "## 二、理论、模型与研究设计",
+        "## 三、文献、数据与实证验证",
+        "## 四、写作、诊断与修订",
+        "## 五、投稿、工件与专项协作",
+    )
+    for layer in skill_layers:
+        if layer not in skill_text:
+            errors.append(f"SKILL.md 缺少五层架构：{layer}")
+    for layer in operating_layers:
+        if layer not in operating_text:
+            errors.append(f"任务模式协议缺少五层架构：{layer}")
+    if "## 五层能力结构" not in readme_text:
+        errors.append("README 缺少五层能力结构导航")
+    if "reference-integrity-and-manuscript-artifacts.md" not in operating_text:
+        errors.append("任务模式协议未路由稿件工件质检资源")
+
     # 核心扩展必须同时提供入口、资源与代表性回归信号，避免 README 或路由单独漂移。
     required_files = (
         ROOT / "references" / "publication-prose-and-style-control.md",
@@ -112,6 +142,7 @@ def main() -> int:
         "references/statistical-reporting-and-figure-evidence.md",
         "references/source-grounded-paper-reading.md",
         "references/pre-submission-peer-review.md",
+        "references/reference-integrity-and-manuscript-artifacts.md",
         "assets/claim-evidence-validation-matrix-template.md",
         "assets/figure-evidence-contract-template.md",
     ):
