@@ -122,7 +122,7 @@ def main() -> int:
         if not required.is_file():
             errors.append(f"缺少投稿表层资源：{required.relative_to(ROOT)}")
     validation_text = read(ROOT / "references" / "validation-scenarios.md")
-    for signal in ("目的：", "Test-set Selection", "Sequence Invention", "drawio", "投稿就绪", "八刊", "主张—决定性证据", "图表证据契约", "共同事实底稿", "四个发现", "删减检验"):
+    for signal in ("目的：", "Test-set Selection", "Sequence Invention", "drawio", "投稿就绪", "八刊", "主张—决定性证据", "图表证据契约", "共同事实底稿", "四个发现", "删减检验", "自然改写"):
         if signal not in validation_text:
             errors.append(f"验证场景缺少回归信号：{signal}")
 
