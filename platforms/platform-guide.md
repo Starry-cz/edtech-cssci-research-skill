@@ -38,6 +38,7 @@
 | 研究框架图、流程图、结果图或 DOCX/PDF 工件 | `references/cross-skill-artifact-routing.md`、`references/framework-defense-and-figure-audit.md`；再按平台可用能力调用 Drawio、文档、PDF、表格或图像 Skill |
 | 论文主线、清洁正文与结构性修订 | `references/academic-writing-and-revision.md`、`references/writing-workflow.md`、`references/publication-prose-and-style-control.md`、`assets/argumentation-and-revision-workbook-template.md`、`assets/manuscript-surface-audit-template.md` |
 | 返修与投稿 | `references/self-review.md`、`references/revision-and-reviewer-response.md`、`references/journal-verification.md`、`assets/reviewer-response-and-revision-ledger-template.md` |
+| 按期刊改稿与章节写作 | `references/journals/index.md`、目标期刊画像卡、相应 `assets/section-prompts/` 文件、`references/functional-phrasing-bank.md` |
 
 无论使用哪个平台，期刊目录、投稿规范、政策和最新文献都必须在任务当下从官方或原始来源核验；不要把模型生成内容视为已核实证据。
 

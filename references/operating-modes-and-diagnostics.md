@@ -11,6 +11,22 @@
 
 五层分类与 `SKILL.md` 保持一致。每个模式只承担一个主要判断；只有当前输出确实依赖另一层的结论时，才显式联动相应模式或资源。
 
+## 文类预路由
+
+文类不是第 19 个任务模式，而是在进入既有模式前确定“什么证据、什么章节功能和什么检查器优先”的选择层。用户没有指定时，不强制猜测；可先询问或按现有材料作暂定判断并说明依据。
+
+| 文类 | 优先进入的既有模式 | 按需加载 | 首要检查 |
+| --- | --- | --- | --- |
+| 理论/概念 | `conceptual_model_building`、`framework_defense` | `assets/section-prompts/introduction.md`、`literature-review.md`、`discussion.md` | 概念边界、关系依据与替代解释 |
+| 综述/系统综述 | `literature_review_planning`、`literature_search_to_review` | `assets/section-prompts/literature-review.md`、`methods.md` | 检索、纳排、编码与综合是否可复核 |
+| 实验/准实验 | `education_data_analysis`、`section_revision` | `assets/section-prompts/methods.md`、`results.md`、`discussion.md` | 分配、对照、实施忠实度与效应解释 |
+| 设计型研究与实践模型 | `practice_model_design`、`framework_defense` | `assets/section-prompts/methods.md`、`results.md`、`discussion.md` | 迭代证据、修改理由与设计原则 |
+| 质性/案例/政策 | `research_question_refinement`、`section_revision` | `assets/section-prompts/methods.md`、`results.md`、`discussion.md` | 案例选择、研究者位置、编码与反例 |
+| 混合方法 | `education_data_analysis`、`section_revision` | `references/research-paradigms.md`；`assets/section-prompts/methods.md`、`results.md`、`discussion.md` | 整合节点、冲突处理与新增解释 |
+| 学习分析/可解释机器学习 | `education_data_analysis`、`interpretable_ml_analysis` | `assets/section-prompts/abstract.md`、`methods.md`、`results.md`、`discussion.md` | 数据生成、切分、泄漏、解释边界与教育转译 |
+
+指定目标期刊时，再读取 `references/journals/index.md` 和对应画像卡。画像仅汇集已核验的官方入口与可执行项：超过 90 天、没有机器可读细则或文件未能获取时，只能输出“待官方核验”，不能以通用格式代替该刊要求。可在投稿前运行 `scripts/check_journal_profile.py <稿件> <期刊画像>`；该结果是候选风险清单，不是编辑部合格证明。
+
 ## 一、研究定位与主线
 
 | 模式 | 何时进入 | 组合资源 | 核心输出 |
@@ -47,7 +63,7 @@
 | 模式 | 何时进入 | 组合资源 | 核心输出 |
 | --- | --- | --- | --- |
 | `draft_review` | 需要诊断全文或长草稿，或希望做预审稿 | `academic-writing-and-revision.md`、`pre-submission-peer-review.md`、`publication-prose-and-style-control.md`、`self-review.md`、`eight-journal-writing-evidence.md` | 共同事实底稿、三视角风险综合、重构优先级、证据缺口与可选八刊共性诊断；按需给发布状态 |
-| `section_revision` | 需修改摘要、引言、综述、方法、结果或讨论 | `writing-workflow.md`、`publication-prose-and-style-control.md`、`abstract-state-and-evidence-control.md`、`chapter-synthesis.md`、`abstract-argument-card-template.md` | 构思层判断、自然清洁正文、必要的证据边界、表层审计与连锁提示；按需说明当前产物类型 |
+| `section_revision` | 需修改摘要、引言、综述、方法、结果或讨论 | `writing-workflow.md`、相应 `assets/section-prompts/` 文件、`functional-phrasing-bank.md`；摘要再读 `abstract-state-and-evidence-control.md` | 构思层判断、自然清洁正文、必要的证据边界、表层审计与连锁提示；按需说明当前产物类型 |
 | `revision_cascade` | 一项修改可能牵动多处内容 | `academic-writing-and-revision.md`、`argumentation-and-revision-workbook-template.md` | 修改层级、传播清单、验证方式和完成状态 |
 | `reviewer_response_and_revision` | 收到审稿意见或需准备回应函 | `revision-and-reviewer-response.md`、`reviewer-response-and-revision-ledger-template.md` | 意见台账、回应逻辑、修改位置、连锁更新与证据 |
 
@@ -60,7 +76,7 @@
 | 模式 | 何时进入 | 组合资源 | 核心输出 |
 | --- | --- | --- | --- |
 | `reference_and_artifact_audit` | 核对参考文献、图表、附录、数据说明或投稿文件 | `reference-integrity-and-manuscript-artifacts.md`、`self-review.md`、`submission-package-checklist.md` | 工件清单、交叉引用问题、阻断项与修复顺序 |
-| `pre_submission_check` | 投稿前需要整体质量判断 | `self-review.md`、`pre-submission-peer-review.md`、`reference-integrity-and-manuscript-artifacts.md`、`journal-verification.md` | 终稿门槛、预审稿风险、工件与官方核验项、提交判断与待办清单 |
+| `pre_submission_check` | 投稿前需要整体质量判断 | `self-review.md`、`pre-submission-peer-review.md`、`reference-integrity-and-manuscript-artifacts.md`、`journal-verification.md`；指定期刊时加 `journals/index.md` 与两项检查器 | 终稿门槛、预审稿风险、工件与官方核验项、提交判断与待办清单 |
 
 期刊名称、目录、栏目、格式、伦理或政策要求属于待核验事实；除非用户提供官方材料或已完成实时核验，否则只能列为核验任务，不能作为确定要求写入稿件。
 

@@ -1,4 +1,4 @@
 interface:
   display_name: "edtech-cssci-research"
-  short_description: "教育技术学实证建模、证据验证、写作返修与投稿全流程质检"
-  default_prompt: "Use $edtech-cssci-research-skill to audit or draft a traceable education technology study: identify the central answer, retain only decision-changing evidence anchors in abstracts, and gate submission-ready prose by evidence status."
+  short_description: "教育技术学研究、期刊适配、章节写作与投稿规范质检支持"
+  default_prompt: "Use $edtech-cssci-research-skill to route an education technology study by genre and target journal, then draft or audit evidence-aligned submission materials."

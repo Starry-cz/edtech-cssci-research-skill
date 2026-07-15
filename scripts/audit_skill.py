@@ -3,6 +3,8 @@
 
 from __future__ import annotations
 
+import datetime as dt
+import json
 import re
 import sys
 from pathlib import Path
@@ -117,17 +119,58 @@ def main() -> int:
         ROOT / "references" / "pre-submission-peer-review.md",
         ROOT / "assets" / "claim-evidence-validation-matrix-template.md",
         ROOT / "assets" / "figure-evidence-contract-template.md",
+        ROOT / "references" / "journals" / "index.md",
+        ROOT / "references" / "functional-phrasing-bank.md",
+        ROOT / "scripts" / "check_journal_profile.py",
+        ROOT / "scripts" / "check_section_function.py",
+        ROOT / "scripts" / "test_checkers.py",
     )
     for required in required_files:
         if not required.is_file():
             errors.append(f"缺少投稿表层资源：{required.relative_to(ROOT)}")
+    journal_cards = list((ROOT / "references" / "journals").glob("*.md"))
+    if len(journal_cards) != 9:
+        errors.append(f"期刊画像目录应包含索引和 8 张画像卡，当前为 {len(journal_cards)} 个 Markdown 文件")
+    for card in journal_cards:
+        if card.name == "index.md":
+            continue
+        match = re.search(r"```journal-profile\s*\n(.*?)\n```", read(card), re.DOTALL)
+        if not match:
+            errors.append(f"期刊画像缺少机器可读数据块：{card.relative_to(ROOT)}")
+            continue
+        try:
+            profile = json.loads(match.group(1))
+            for key in ("id", "journal", "last_verified", "valid_days", "official_urls", "checks"):
+                if key not in profile:
+                    errors.append(f"期刊画像缺少 {key}：{card.relative_to(ROOT)}")
+            dt.date.fromisoformat(profile["last_verified"])
+            if profile["valid_days"] != 90:
+                errors.append(f"期刊画像有效期不是 90 天：{card.relative_to(ROOT)}")
+            if not profile["official_urls"] or not all(url.startswith("https://") for url in profile["official_urls"]):
+                errors.append(f"期刊画像缺少 HTTPS 官方入口：{card.relative_to(ROOT)}")
+        except (json.JSONDecodeError, KeyError, TypeError, ValueError) as exc:
+            errors.append(f"期刊画像数据无效：{card.relative_to(ROOT)}（{exc}）")
+    section_templates = list((ROOT / "assets" / "section-prompts").glob("*.md"))
+    if len(section_templates) != 7:
+        errors.append(f"章节提示模板应为 7 个，当前为 {len(section_templates)} 个")
+    writing_examples = list((ROOT / "examples" / "writing").glob("*.md"))
+    if len(writing_examples) < 4:
+        errors.append(f"合成写作样例至少应为 4 个，当前为 {len(writing_examples)} 个")
+    if "## 文类预路由" not in operating_text:
+        errors.append("任务模式协议缺少文类预路由")
+    for genre in ("理论/概念", "综述/系统综述", "实验/准实验", "设计型研究与实践模型", "质性/案例/政策", "混合方法", "学习分析/可解释机器学习"):
+        if genre not in operating_text:
+            errors.append(f"文类预路由缺少：{genre}")
+    for entry in ("我要选题", "我要写摘要", "我要按某刊改稿", "我要投稿前自检"):
+        if entry not in readme_text:
+            errors.append(f"README 缺少直接入口：{entry}")
     validation_text = read(ROOT / "references" / "validation-scenarios.md")
-    for signal in ("目的：", "Test-set Selection", "Sequence Invention", "drawio", "投稿就绪", "八刊", "主张—决定性证据", "图表证据契约", "共同事实底稿", "四个发现", "删减检验", "自然改写"):
+    for signal in ("目的：", "Test-set Selection", "Sequence Invention", "drawio", "投稿就绪", "八刊", "主张—决定性证据", "图表证据契约", "共同事实底稿", "四个发现", "删减检验", "自然改写", "待官方核验", "混合方法研究", "理论/概念预路由"):
         if signal not in validation_text:
             errors.append(f"验证场景缺少回归信号：{signal}")
 
     # SKILL 的反引号资源路径必须真实存在，防止按需路由在运行时失效。
-    routes = sorted(set(re.findall(r"`((?:references|assets|examples)/[^`\s]+\.md)`", skill_text)))
+    routes = sorted(set(re.findall(r"`((?:references|assets|examples|scripts)/[^`\s]+(?:\.md|\.py))`", skill_text)))
     for route in routes:
         if not (ROOT / route).is_file():
             errors.append(f"失效资源路由：{route}")
@@ -145,6 +188,11 @@ def main() -> int:
         "references/reference-integrity-and-manuscript-artifacts.md",
         "assets/claim-evidence-validation-matrix-template.md",
         "assets/figure-evidence-contract-template.md",
+        "references/journals/index.md",
+        "references/functional-phrasing-bank.md",
+        "assets/section-prompts/abstract.md",
+        "scripts/check_journal_profile.py",
+        "scripts/check_section_function.py",
     ):
         if required_route not in routes:
             errors.append(f"SKILL.md 未路由投稿表层资源：{required_route}")
@@ -164,8 +212,9 @@ def main() -> int:
     if missing_readme_modes:
         errors.append("README 未列出任务模式：" + "、".join(missing_readme_modes))
 
-    reference_count = len(list((ROOT / "references").glob("*.md")))
-    template_count = len(list((ROOT / "assets").glob("*.md")))
+    # 新增期刊画像和章节模板均为分层目录，数量统计必须递归进行。
+    reference_count = len(list((ROOT / "references").rglob("*.md")))
+    template_count = len(list((ROOT / "assets").rglob("*.md")))
     if badge_count(readme_text, "研究参考模块") != reference_count:
         errors.append("README 的研究参考模块数量与 references/ 实际数量不一致")
     if badge_count(readme_text, "可复用模板") != template_count:
