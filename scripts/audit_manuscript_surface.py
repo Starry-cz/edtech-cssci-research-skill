@@ -20,6 +20,25 @@ TECHNICAL_TERM_GROUPS = {
     "稳健性": ("Bootstrap", "重抽样", "删除节点", "消融", "稳定性"),
 }
 
+# 仅在 --final 模式启用：这些句式不是正常研究局限，而是把应有事实推迟到未来的占位式兜底。
+FINAL_PLACEHOLDER_PATTERNS = (
+    (
+        "最终稿未来式补充候选",
+        r"(?:投稿|提交|定稿)(?:前|时|后).{0,24}(?:补充|完善|填写|说明|核验|披露)",
+        "最终提交稿必须写入已确认事实；将未来补充动作移至稿外缺失清单，补齐后再放行。",
+    ),
+    (
+        "最终稿合规兜底候选",
+        r"(?:编码质量|数据授权|数据使用权|伦理(?:信息|审批)?|利益冲突|作者贡献).{0,36}(?:应|需|需要|有待).{0,12}(?:如实)?(?:补充|完善|填写|说明|核验|披露)",
+        "不要用通用合规提醒替代编码、授权或伦理事实；提供真实状态、批准/授权依据或在稿外阻断终稿。",
+    ),
+    (
+        "最终稿待办候选",
+        r"(?:待补|待核验|待完善|稍后补充|后续补充|按(?:期刊|投稿)?要求填写|具体信息另行补充)",
+        "最终稿不能保留待办式表述；删除不必要内容，或补齐可核验事实后再提交。",
+    ),
+)
+
 
 def read_paragraphs(path: Path) -> list[str]:
     """读取段落，保留文本边界，避免把正文小标题误判为摘要标签。"""
@@ -99,10 +118,11 @@ def add_technical_bandwidth_signal(items: list[tuple[str, str, list[str]]], abst
 
 
 def main() -> int:
-    if len(sys.argv) != 2:
-        print("用法：python scripts/audit_manuscript_surface.py <稿件.docx|md|txt>")
+    if len(sys.argv) not in {2, 3} or (len(sys.argv) == 3 and sys.argv[2] != "--final"):
+        print("用法：python scripts/audit_manuscript_surface.py <稿件.docx|md|txt> [--final]")
         return 2
     path = Path(sys.argv[1])
+    final_mode = len(sys.argv) == 3
     if not path.is_file():
         print(f"找不到文件：{path}")
         return 2
@@ -130,13 +150,21 @@ def main() -> int:
     add_if_found(candidates, title, "预测研究强标题候选", r"何以达成|塑造(?:了|出)?|作用机制|最优(?:模型|方案)?|稳定阈值|决定(?:了|性)?", "核对题目动词是否超过设计；预测研究通常改用预测、关联或模型依赖表述。")
     add_if_found(candidates, text, "测试集选模候选", r"(?:同一|相同).{0,45}(?:训练[—-]测试|测试集).{0,180}(?:比较|筛选|选择).{0,120}(?:20个|多个|若干|候选).{0,220}(?:模型|GBRT|梯度提升)|(?:测试集).{0,120}(?:20个|多个|若干).{0,160}(?:模型).{0,160}(?:最高|最优|表现最好)", "人工核对训练/验证/最终测试角色；若测试集参与选模，阻断最终样本外结论并重跑或降级。")
     add_if_found(candidates, text, "全文占位符候选", r"\[\s*(?:待补|待核验|TODO|TODO:|placeholder)[^\]]*\]", "将工作标签移至修改说明，清洁稿只保留已核验内容。")
+    if final_mode:
+        for name, pattern, advice in FINAL_PLACEHOLDER_PATTERNS:
+            add_if_found(candidates, text, name, pattern, advice)
 
     blockers = {"测试集选模候选", "预测研究强标题候选", "摘要强结论候选"}
+    final_blockers = {"全文占位符候选", *(name for name, _, _ in FINAL_PLACEHOLDER_PATTERNS)}
     blocker_names = [name for name, _, _ in candidates if name in blockers]
-    status = "阻断" if blocker_names else ("探索性可写" if candidates else "投稿就绪候选")
+    final_blocker_names = [name for name, _, _ in candidates if name in final_blockers] if final_mode else []
+    status = "最终提交不通过" if final_blocker_names else ("阻断" if blocker_names else ("探索性可写" if candidates else "投稿就绪候选"))
     print(f"稿件表层审计：{path.name}")
     print(f"识别范围：标题 {'已识别' if title else '未识别'}；中文摘要 {'已识别' if abstract else '未识别'}。")
+    print(f"审计模式：{'最终提交' if final_mode else '常规'}。")
     print(f"建议发布状态：{status}")
+    if final_blocker_names:
+        print("最终提交阻断原因：" + "、".join(final_blocker_names))
     if blocker_names:
         print("阻断原因：" + "、".join(blocker_names))
     if not candidates:
@@ -145,7 +173,7 @@ def main() -> int:
         print(f"\n[{name}]\n建议：{advice}")
         for snippet in snippets:
             print(f"- {snippet}")
-    print("\n说明：结构式标签、方法堆叠和机制跃迁只在已识别摘要中扫描；测试集选模和占位符在全文扫描。本工具只提示候选风险，不能证明不存在泄漏、因果识别或复现问题。")
+    print("\n说明：结构式标签、方法堆叠和机制跃迁只在已识别摘要中扫描；测试集选模和占位符在全文扫描。--final 会额外扫描未来式补充和合规兜底句，但仍需人工区分真实研究陈述与占位内容。本工具只提示候选风险，不能证明不存在泄漏、因果识别或复现问题。")
     return 0
 
 

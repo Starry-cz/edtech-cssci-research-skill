@@ -165,7 +165,7 @@ def main() -> int:
         if entry not in readme_text:
             errors.append(f"README 缺少直接入口：{entry}")
     validation_text = read(ROOT / "references" / "validation-scenarios.md")
-    for signal in ("目的：", "Test-set Selection", "Sequence Invention", "drawio", "投稿就绪", "八刊", "主张—决定性证据", "图表证据契约", "共同事实底稿", "四个发现", "删减检验", "自然改写", "待官方核验", "混合方法研究", "理论/概念预路由", "解释性过程结构", "同一留出集用于选模", "何以达成", "英文摘要", "AI 参与"):
+    for signal in ("目的：", "Test-set Selection", "Sequence Invention", "drawio", "投稿就绪", "八刊", "主张—决定性证据", "图表证据契约", "共同事实底稿", "四个发现", "删减检验", "自然改写", "待官方核验", "混合方法研究", "理论/概念预路由", "解释性过程结构", "同一留出集用于选模", "何以达成", "英文摘要", "AI 参与", "可直接提交的最终版论文"):
         if signal not in validation_text:
             errors.append(f"验证场景缺少回归信号：{signal}")
 
@@ -176,7 +176,7 @@ def main() -> int:
             errors.append(f"摘要规则缺少关键分层：{signal}")
 
     prose_control = read(ROOT / "references" / "publication-prose-and-style-control.md")
-    for signal in ("分章节话语职责", "双视角内部质检", "英文摘要：视为二次学术写作"):
+    for signal in ("分章节话语职责", "双视角内部质检", "英文摘要：视为二次学术写作", "最终提交契约"):
         if signal not in prose_control:
             errors.append(f"投稿正文控制缺少关键分层：{signal}")
 
@@ -202,6 +202,7 @@ def main() -> int:
         "references/journals/index.md",
         "references/functional-phrasing-bank.md",
         "assets/section-prompts/abstract.md",
+        "scripts/audit_manuscript_surface.py",
         "scripts/check_journal_profile.py",
         "scripts/check_section_function.py",
     ):

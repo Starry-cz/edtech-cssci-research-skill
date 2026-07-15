@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""为两项检查器生成最小 MD/TXT/DOCX 样本并执行回归测试。"""
+"""为期刊、章节与终稿表层检查器生成最小样本并执行回归测试。"""
 
 from __future__ import annotations
 
@@ -87,6 +87,15 @@ Keywords: classroom observation; feedback; engagement; design; educational techn
         incomplete.write_text("作者：合成作者\n摘要：简短测试。\n关键词：教育技术；课堂\n", encoding="utf-8")
         mixed = folder / "mixed.md"
         mixed.write_text("本研究采用混合方法，并在定量阶段使用 SHAP。\n" + complete.read_text(encoding="utf-8"), encoding="utf-8")
+        final_placeholder = folder / "final-placeholder.md"
+        final_placeholder.write_text(
+            """# 合成研究标题
+摘要：本研究基于合成课堂观察材料形成初步分析。关键词：课堂观察；教育技术
+# 研究方法
+编码质量、数据授权和伦理信息应如实说明，投稿时补充完整材料。
+""",
+            encoding="utf-8",
+        )
         docx = folder / "complete.docx"
         make_docx(docx, complete.read_text(encoding="utf-8").splitlines())
 
@@ -96,6 +105,7 @@ Keywords: classroom observation; feedback; engagement; design; educational techn
         section_md = run("scripts/check_section_function.py", str(complete), "experiment")
         section_docx = run("scripts/check_section_function.py", str(docx), "auto")
         section_mixed = run("scripts/check_section_function.py", str(mixed), "auto")
+        final_surface = run("scripts/audit_manuscript_surface.py", str(final_placeholder), "--final")
 
         assertions = (
             ("总体：Pass", journal_pass, "期刊规则通过样本"),
@@ -105,6 +115,8 @@ Keywords: classroom observation; feedback; engagement; design; educational techn
             ("总体：Pass", section_docx, "章节功能 DOCX 样本"),
             ("自动暂定", section_docx, "自动文类路由"),
             ("文类：mixed", section_mixed, "混合方法优先路由"),
+            ("最终提交不通过", final_surface, "终稿占位式兜底阻断"),
+            ("最终稿合规兜底候选", final_surface, "终稿合规兜底识别"),
         )
         failed = [label for expected, output, label in assertions if expected not in output]
         if failed:
