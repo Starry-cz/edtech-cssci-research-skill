@@ -80,11 +80,11 @@ def main() -> int:
     if not operating.is_file():
         errors.append("缺少任务模式与诊断协议")
     skill_layers = (
-        "### 1. 研究定位与主线",
-        "### 2. 理论、模型与研究设计",
-        "### 3. 文献、数据与实证验证",
-        "### 4. 写作、诊断与修订",
-        "### 5. 投稿、工件与专项协作",
+        "| 1. 研究定位与主线 |",
+        "| 2. 理论、模型与研究设计 |",
+        "| 3. 文献、数据与实证分析 |",
+        "| 4. 写作、诊断与修订 |",
+        "| 5. 投稿、工件与专项协作 |",
     )
     operating_layers = (
         "## 一、研究定位与主线",
@@ -104,7 +104,7 @@ def main() -> int:
     if "reference-integrity-and-manuscript-artifacts.md" not in operating_text:
         errors.append("任务模式协议未路由稿件工件质检资源")
 
-    # 核心扩展必须同时提供入口、资源与代表性回归信号，避免 README 或路由单独漂移。
+    # 核心写作、方法审计、期刊适配与终稿检查均须保留，但不要求一次任务加载全部资源。
     required_files = (
         ROOT / "references" / "publication-prose-and-style-control.md",
         ROOT / "assets" / "manuscript-surface-audit-template.md",
@@ -165,18 +165,18 @@ def main() -> int:
         if entry not in readme_text:
             errors.append(f"README 缺少直接入口：{entry}")
     validation_text = read(ROOT / "references" / "validation-scenarios.md")
-    for signal in ("目的：", "Test-set Selection", "Sequence Invention", "drawio", "投稿就绪", "八刊", "主张—决定性证据", "图表证据契约", "共同事实底稿", "四个发现", "删减检验", "自然改写", "待官方核验", "混合方法研究", "理论/概念预路由", "解释性过程结构", "同一留出集用于选模", "何以达成", "英文摘要", "AI 参与", "可直接提交的最终版论文"):
+    for signal in ("论文写作轨", "方法审计轨", "社会科学论文", "同一留出集用于选模", "SHAP", "八刊", "drawio", "待官方核验", "混合方法研究", "理论/概念预路由", "可直接提交的最终版论文"):
         if signal not in validation_text:
             errors.append(f"验证场景缺少回归信号：{signal}")
 
-    # 摘要规则必须同时允许教育学解释、局部限制强承诺，避免退化为方法说明书或因果放行器。
+    # 摘要规则须避免退化为方法说明书，并明确将方法审计另行交付。
     abstract_rules = read(ROOT / "references" / "abstract-state-and-evidence-control.md")
-    for signal in ("解释性过程结构", "局部承诺，而非整段降级", "原始变量 → 理论或观察构念"):
+    for signal in ("从方法报告到学术判断", "原始变量 → 教育构念", "方法审计"):
         if signal not in abstract_rules:
             errors.append(f"摘要规则缺少关键分层：{signal}")
 
     prose_control = read(ROOT / "references" / "publication-prose-and-style-control.md")
-    for signal in ("分章节话语职责", "双视角内部质检", "英文摘要：视为二次学术写作", "最终提交契约"):
+    for signal in ("正文的优先级", "何时才进入方法审计", "最终提交契约"):
         if signal not in prose_control:
             errors.append(f"投稿正文控制缺少关键分层：{signal}")
 
@@ -187,24 +187,11 @@ def main() -> int:
             errors.append(f"失效资源路由：{route}")
     for required_route in (
         "references/publication-prose-and-style-control.md",
-        "assets/manuscript-surface-audit-template.md",
-        "references/cross-skill-artifact-routing.md",
-        "references/eight-journal-writing-evidence.md",
         "assets/abstract-argument-card-template.md",
         "references/abstract-state-and-evidence-control.md",
-        "references/claim-evidence-validation-contract.md",
-        "references/statistical-reporting-and-figure-evidence.md",
-        "references/source-grounded-paper-reading.md",
-        "references/pre-submission-peer-review.md",
-        "references/reference-integrity-and-manuscript-artifacts.md",
-        "assets/claim-evidence-validation-matrix-template.md",
-        "assets/figure-evidence-contract-template.md",
         "references/journals/index.md",
-        "references/functional-phrasing-bank.md",
         "assets/section-prompts/abstract.md",
         "scripts/audit_manuscript_surface.py",
-        "scripts/check_journal_profile.py",
-        "scripts/check_section_function.py",
     ):
         if required_route not in routes:
             errors.append(f"SKILL.md 未路由投稿表层资源：{required_route}")

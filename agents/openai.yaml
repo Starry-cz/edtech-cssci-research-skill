@@ -1,4 +1,4 @@
 interface:
   display_name: "edtech-cssci-research"
-  short_description: "教育技术学研究、期刊适配、章节写作与投稿规范质检支持"
-  default_prompt: "Use $edtech-cssci-research-skill to route an education technology study by genre and target journal, then draft or audit evidence-aligned submission materials."
+  short_description: "教育技术学研究、社会科学论文写作、期刊适配与按需方法审计"
+  default_prompt: "Use $edtech-cssci-research-skill to route an education technology study by genre and target journal, then turn the research materials into a coherent Chinese social-science paper. Run a separate method audit only when I ask for it."

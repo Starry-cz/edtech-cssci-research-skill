@@ -102,6 +102,6 @@
 
 ## 七、输出与外部标准
 
-- `argumentation_blueprint` 默认输出：主论证链、章节功能表、主张—证据—边界矩阵、阻断问题和下一步材料。
+- `argumentation_blueprint` 默认输出：主论证链、章节功能表、主张—证据—边界矩阵、关键缺口和下一步材料。
 - `revision_cascade` 默认输出：修改优先级、首要修复层、连锁更新、验证动作与未决事项。
 - 实证报告的透明性可参照 [AERA 经验社会科学研究报告标准](https://www.aera.net/Research-Policy-Advocacy/AERA-Shaping-Research-Policy/Standards-for-Research-Conduct/Standards-for-Empirical-Social-Science-Research) 与 [APA JARS](https://www.apa.org/journals/authors/all-instructions.html)。它们用于检查报告完整性，不替代目标中文期刊的当前官方要求。

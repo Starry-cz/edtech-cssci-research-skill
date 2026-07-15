@@ -2,32 +2,23 @@
 
 ## Claude Code：本地安装
 
-Claude Code 不会自动扫描本仓库的 `SKILL.md`，但会自动加载 `CLAUDE.md`，且支持通过 `@路径` 导入其他 Markdown 指令。先克隆仓库：
-
-无论使用本地目录还是项目指令，都保留通用核心指令中的“阻断 / 探索性可写 / 投稿就绪”内部证据判断：存在测试集选模、泄漏或不可复核结果时，不把未确认结果写成定稿事实，但仍生成与当前证据相称的自然文本。
+Claude Code 不会自动扫描本仓库的 `SKILL.md`，但可通过项目的 `CLAUDE.md` 导入指令。先克隆仓库：
 
 ```powershell
 New-Item -ItemType Directory -Force "$HOME\.claude\skills" | Out-Null
 git clone https://github.com/Starry-cz/edtech-cssci-research-skill.git "$HOME\.claude\skills\edtech-cssci-research-skill"
 ```
 
-然后在**论文项目根目录**的 `CLAUDE.md` 中加入以下一行：
+然后在论文项目根目录的 `CLAUDE.md` 写入：
 
 ```markdown
 @~/.claude/skills/edtech-cssci-research-skill/platforms/universal-research-assistant.md
 ```
 
-这样只有该项目会加载教育技术研究规则。若确实希望所有 Claude Code 项目默认使用，可将同一行加入 `~/.claude/CLAUDE.md`；但这会增加所有项目的上下文，不推荐用于无关的编程任务。启动 Claude Code 后可用 `/memory` 检查已加载的指令。
+通用指令默认走社会科学论文写作轨；只有明确要求方法审计或投稿前技术核验时，才单列分析设计、选模或复现问题。这样不会把技术审计语言自动搬进摘要、讨论和结论。
 
 ## Claude Desktop / 网页版：Project
 
-本地安装 Claude Desktop 并不意味着它会读取电脑上的 Skill 目录。推荐创建一个论文或研究 Project，在 Project Instructions 中粘贴 [通用核心指令](universal-research-assistant.md) 的“核心指令”；将研究草稿、编码本、数据字典、审稿意见或允许共享的文献笔记添加至 Project Knowledge。
+创建论文 Project，在 Project Instructions 粘贴 [通用核心指令](universal-research-assistant.md)，并按当前任务将草稿、编码本、数据字典、审稿意见、期刊官网链接或允许共享的文献笔记添加到 Project Knowledge。
 
-为保持上下文准确，请按任务上传必要材料，而不是一次上传来源不明的大量文件：
-
-- 写综述：检索日志、阅读笔记、已阅读全文或可核验的来源信息；
-- 做实证分析：数据字典、样本流向、变量说明、分析代码/语法和匿名化数据摘要；
-- 写回应函：审稿意见、当前版本及已修改位置；
-- 核验投稿：目标期刊官网链接或最新作者指南。
-
-每轮对话开始时可以使用 [通用核心指令](universal-research-assistant.md) 中的“推荐的首条请求”。Claude 未实际读取或未核验的材料，不得据此声称文献或期刊要求已经得到确认。
+建议按任务上传材料：写综述时上传检索日志和阅读笔记；做实证分析时上传数据字典、样本说明和分析语法；写回应函时上传审稿意见和已修改位置；核验投稿时上传目标期刊官网或最新作者指南。Claude 未实际读取或未核验的材料，不得据此确认文献结论或期刊规则。

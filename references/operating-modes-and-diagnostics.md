@@ -6,8 +6,8 @@
 
 1. 先选一个主模式；用户同时提出多项需求时，按“问题/理论—设计/证据—写作/交付”的依赖关系拆分。
 2. 只有当前输出确实需要时才加载补充资源，不把参考文件当作通用背景材料全部复述。
-3. 输出必须标出已知材料、待核验信息和结论边界；没有原始材料时，不补写事实或结果。
-4. 所有模式继承同一发布状态：它在内部约束结论强度，不默认占据写作输出。`阻断` 时应提出修复设计与连锁清单，并仍可交付与当前证据相称的自然文本；只有用户要求投稿判断、或风险会改变当前主张时，才在稿外集中说明。`探索性可写` 时可给相称的实证结论与解释；`投稿就绪` 后才作提交判断。状态定义以 `SKILL.md` 为准。
+3. 输出基于已给材料和已核验来源；没有原始材料时，不补写事实或结果。
+4. 默认区分论文写作与方法审计。写作任务先交付社会科学正文；用户明确要求设计检查、复现、代码审查或投稿前方法预审时，才另行输出审计清单。审计事项不自动变成摘要、讨论或结论的固定措辞。
 
 五层分类与 `SKILL.md` 保持一致。每个模式只承担一个主要判断；只有当前输出确实依赖另一层的结论时，才显式联动相应模式或资源。
 
@@ -54,20 +54,20 @@
 | `literature_search_to_review` | 文献很多但只是作者罗列，或需要精读一篇论文 | `literature-search-and-zotero.md`、`source-grounded-paper-reading.md`、`evidence-and-citation.md` | 主题矩阵、可定位阅读笔记、争议/缺口、主张—来源映射 |
 | `citation_and_evidence_check` | 需核验关键引文或论据 | `evidence-and-citation.md` | 已核验/待核验/缺失的证据台账 |
 | `education_data_analysis` | 处理问卷、前后测、课堂或平台数据，或需起草统计/图注 | `education-data-analysis.md`、`statistical-reporting-and-figure-evidence.md`、`education-data-analysis-report-template.md`、`claim-evidence-validation-matrix-template.md` | 数据审计、独立单位读出、分析计划、诊断、稳健性与报告边界 |
-| `interpretable_ml_analysis` | 做预测、分类、SHAP 或特征解释 | `interpretable-machine-learning.md`、`hierarchical-ml-interpretation.md`、`interpretable-ml-report-template.md`、`abstract-argument-card-template.md` | 内部判定风险，再给切分与泄漏控制、模型比较、解释图、稳定性和复现边界；必要时于稿外说明风险 |
+| `interpretable_ml_analysis` | 做预测、分类、SHAP 或特征解释 | `interpretable-machine-learning.md`、`hierarchical-ml-interpretation.md`、`interpretable-ml-report-template.md`、`abstract-argument-card-template.md` | 按用户任务交付教育化结果解释或独立的方法审计；不把审计语言自动写入论文 |
 
-数据任务的前置门槛：先明确分析单位、时间窗口、标签形成和数据来源；再检查缺失、重复、异常、切分、泄漏、隐私与公平。关键主张须有决定性证据、比较/反例、稳健性和边界的最小验证包。预测表现不能直接改写为教育因果效果，解释特征也不能直接等同于干预机制。
+数据分析或方法审计任务先明确分析单位、时间窗口、标签形成和数据来源，再检查缺失、重复、异常、切分、隐私与公平。论文写作任务优先将已完成的结果归并为教育构念、过程信息和研究判断；不要默认复述审计步骤。
 
 ## 四、写作、诊断与修订
 
 | 模式 | 何时进入 | 组合资源 | 核心输出 |
 | --- | --- | --- | --- |
-| `draft_review` | 需要诊断全文或长草稿，或希望做预审稿 | `academic-writing-and-revision.md`、`pre-submission-peer-review.md`、`publication-prose-and-style-control.md`、`self-review.md`、`eight-journal-writing-evidence.md` | 共同事实底稿、三视角风险综合、重构优先级、证据缺口与可选八刊共性诊断；按需给发布状态 |
-| `section_revision` | 需修改摘要、引言、综述、方法、结果或讨论 | `writing-workflow.md`、相应 `assets/section-prompts/` 文件、`functional-phrasing-bank.md`；摘要再读 `abstract-state-and-evidence-control.md` | 构思层判断、自然清洁正文、必要的证据边界、表层审计与连锁提示；按需说明当前产物类型 |
+| `draft_review` | 需要诊断全文或长草稿 | `academic-writing-and-revision.md`、`writing-workflow.md`、`publication-prose-and-style-control.md`、`eight-journal-writing-evidence.md` | 主线、章节功能、社会科学表达与重构优先级；预审稿仅在用户要求时追加 |
+| `section_revision` | 需修改摘要、引言、综述、方法、结果或讨论 | `writing-workflow.md`、相应 `assets/section-prompts/` 文件、`functional-phrasing-bank.md`；摘要再读 `abstract-state-and-evidence-control.md` | 可直接进入论文的自然正文；方法审计或修改说明按需另附 |
 | `revision_cascade` | 一项修改可能牵动多处内容 | `academic-writing-and-revision.md`、`argumentation-and-revision-workbook-template.md` | 修改层级、传播清单、验证方式和完成状态 |
 | `reviewer_response_and_revision` | 收到审稿意见或需准备回应函 | `revision-and-reviewer-response.md`、`reviewer-response-and-revision-ledger-template.md` | 意见台账、回应逻辑、修改位置、连锁更新与证据 |
 
-修订顺序固定为：研究问题与主张、理论/模型、设计与证据、结果—讨论—贡献边界、章节结构、投稿表层、段落与措辞。内部诊断标签、结构标签和待办不得泄漏到论文清洁稿。审稿意见不能只给礼貌回应；每条意见都要标注它影响的层级，以及摘要、图表、附录、回应函是否需同步。
+修订优先检查研究问题、理论、章节功能和中心判断，再处理数据呈现、投稿表层和句子。只有用户要求审稿或方法预审时，才添加技术风险分级。内部标签和待办不得泄漏到论文清洁稿。
 
 当任务需要“八刊风格诊断”时，不新增一个写作模式：在 `draft_review` 或 `section_revision` 中按需读取 `eight-journal-writing-evidence.md`，只输出同类研究可迁移的论证规则与不适用项，不作录用预测或现时收录判断。
 
