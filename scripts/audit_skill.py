@@ -165,9 +165,15 @@ def main() -> int:
         if entry not in readme_text:
             errors.append(f"README 缺少直接入口：{entry}")
     validation_text = read(ROOT / "references" / "validation-scenarios.md")
-    for signal in ("目的：", "Test-set Selection", "Sequence Invention", "drawio", "投稿就绪", "八刊", "主张—决定性证据", "图表证据契约", "共同事实底稿", "四个发现", "删减检验", "自然改写", "待官方核验", "混合方法研究", "理论/概念预路由"):
+    for signal in ("目的：", "Test-set Selection", "Sequence Invention", "drawio", "投稿就绪", "八刊", "主张—决定性证据", "图表证据契约", "共同事实底稿", "四个发现", "删减检验", "自然改写", "待官方核验", "混合方法研究", "理论/概念预路由", "解释性过程结构", "同一留出集用于选模"):
         if signal not in validation_text:
             errors.append(f"验证场景缺少回归信号：{signal}")
+
+    # 摘要规则必须同时允许教育学解释、局部限制强承诺，避免退化为方法说明书或因果放行器。
+    abstract_rules = read(ROOT / "references" / "abstract-state-and-evidence-control.md")
+    for signal in ("解释性过程结构", "局部承诺，而非整段降级", "原始变量 → 理论或观察构念"):
+        if signal not in abstract_rules:
+            errors.append(f"摘要规则缺少关键分层：{signal}")
 
     # SKILL 的反引号资源路径必须真实存在，防止按需路由在运行时失效。
     routes = sorted(set(re.findall(r"`((?:references|assets|examples|scripts)/[^`\s]+(?:\.md|\.py))`", skill_text)))

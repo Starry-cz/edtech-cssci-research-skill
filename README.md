@@ -30,6 +30,8 @@
 
 **四个直接入口：** [我要选题](references/topic-diagnosis-and-research-questions.md) · [我要写摘要](assets/section-prompts/abstract.md) · [我要按某刊改稿](references/journals/index.md) · [我要投稿前自检](references/self-review.md)
 
+> 写学习分析或可解释机器学习摘要时，先把变量归并为教育构念与过程维度，再形成有理论依据的解释性过程结构；验证风险只收束“最终最优、严格阈值、净因果”等对应承诺，不把摘要写成方法审计说明书。
+
 > 尤其适合情感计算、多模态大模型、教育人工智能、教育技术学与教育数据挖掘研究：先把技术、教育活动、数据、证据和结论边界接起来，再决定用什么模型或写法。
 
 | 你现在需要做什么 | 对应入口 | 直接这样说 | 你会得到什么 |
