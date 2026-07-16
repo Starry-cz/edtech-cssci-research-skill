@@ -107,6 +107,7 @@ def main() -> int:
     # 核心写作、方法审计、期刊适配与终稿检查均须保留，但不要求一次任务加载全部资源。
     required_files = (
         ROOT / "references" / "publication-prose-and-style-control.md",
+        ROOT / "references" / "revision-governance-and-style-diagnosis.md",
         ROOT / "assets" / "manuscript-surface-audit-template.md",
         ROOT / "references" / "cross-skill-artifact-routing.md",
         ROOT / "references" / "eight-journal-writing-evidence.md",
@@ -165,7 +166,7 @@ def main() -> int:
         if entry not in readme_text:
             errors.append(f"README 缺少直接入口：{entry}")
     validation_text = read(ROOT / "references" / "validation-scenarios.md")
-    for signal in ("论文写作轨", "方法审计轨", "社会科学论文", "同一留出集用于选模", "SHAP", "八刊", "drawio", "待官方核验", "混合方法研究", "理论/概念预路由", "可直接提交的最终版论文"):
+    for signal in ("论文写作轨", "方法审计轨", "社会科学论文", "P0/P1/P2", "同一留出集用于选模", "SHAP", "八刊", "drawio", "待官方核验", "混合方法研究", "理论/概念预路由", "可直接提交的最终版论文"):
         if signal not in validation_text:
             errors.append(f"验证场景缺少回归信号：{signal}")
 
@@ -190,6 +191,7 @@ def main() -> int:
         "assets/abstract-argument-card-template.md",
         "references/abstract-state-and-evidence-control.md",
         "references/journals/index.md",
+        "references/revision-governance-and-style-diagnosis.md",
         "assets/section-prompts/abstract.md",
         "scripts/audit_manuscript_surface.py",
     ):

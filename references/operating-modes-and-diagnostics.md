@@ -62,12 +62,12 @@
 
 | 模式 | 何时进入 | 组合资源 | 核心输出 |
 | --- | --- | --- | --- |
-| `draft_review` | 需要诊断全文或长草稿 | `academic-writing-and-revision.md`、`writing-workflow.md`、`publication-prose-and-style-control.md`、`eight-journal-writing-evidence.md` | 主线、章节功能、社会科学表达与重构优先级；预审稿仅在用户要求时追加 |
+| `draft_review` | 需要诊断全文或长草稿 | `academic-writing-and-revision.md`、`writing-workflow.md`、`revision-governance-and-style-diagnosis.md`、`publication-prose-and-style-control.md`、`eight-journal-writing-evidence.md` | P0/P1/P2 修订优先级、主线、章节功能、社会科学表达与重构顺序；预审稿仅在用户要求时追加 |
 | `section_revision` | 需修改摘要、引言、综述、方法、结果或讨论 | `writing-workflow.md`、相应 `assets/section-prompts/` 文件、`functional-phrasing-bank.md`；摘要再读 `abstract-state-and-evidence-control.md` | 可直接进入论文的自然正文；方法审计或修改说明按需另附 |
-| `revision_cascade` | 一项修改可能牵动多处内容 | `academic-writing-and-revision.md`、`argumentation-and-revision-workbook-template.md` | 修改层级、传播清单、验证方式和完成状态 |
-| `reviewer_response_and_revision` | 收到审稿意见或需准备回应函 | `revision-and-reviewer-response.md`、`reviewer-response-and-revision-ledger-template.md` | 意见台账、回应逻辑、修改位置、连锁更新与证据 |
+| `revision_cascade` | 一项修改可能牵动多处内容 | `academic-writing-and-revision.md`、`revision-governance-and-style-diagnosis.md`、`argumentation-and-revision-workbook-template.md` | 修改层级、P0/P1/P2 优先级、传播清单、验证方式和完成状态 |
+| `reviewer_response_and_revision` | 收到审稿意见或需准备回应函 | `revision-and-reviewer-response.md`、`revision-governance-and-style-diagnosis.md`、`reviewer-response-and-revision-ledger-template.md` | 意见台账、P0/P1/P2 优先级、回应逻辑、修改位置、连锁更新与证据 |
 
-修订优先检查研究问题、理论、章节功能和中心判断，再处理数据呈现、投稿表层和句子。只有用户要求审稿或方法预审时，才添加技术风险分级。内部标签和待办不得泄漏到论文清洁稿。
+修订优先检查研究问题、理论、章节功能和中心判断，再处理数据呈现、投稿表层和句子。全文诊断或返修时使用 P0/P1/P2 管理修改顺序；方法风险只在用户要求方法审计或投稿预审时单列。内部标签和待办不得泄漏到论文清洁稿。
 
 当任务需要“八刊风格诊断”时，不新增一个写作模式：在 `draft_review` 或 `section_revision` 中按需读取 `eight-journal-writing-evidence.md`，只输出同类研究可迁移的论证规则与不适用项，不作录用预测或现时收录判断。
 

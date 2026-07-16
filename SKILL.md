@@ -32,7 +32,7 @@ description: "Support Chinese education technology, educational digitalization, 
 | 1. 研究定位与主线 | `topic_diagnosis`、`research_question_refinement`、`outline_building`、`argumentation_blueprint` | `references/topic-diagnosis-and-research-questions.md`、`references/academic-writing-and-revision.md` |
 | 2. 理论、模型与研究设计 | `conceptual_model_building`、`practice_model_design`、`framework_defense` | `references/problem-model-evidence-practice.md`、`references/research-paradigms.md` |
 | 3. 文献、数据与实证分析 | `literature_review_planning`、`literature_search_to_review`、`citation_and_evidence_check`、`education_data_analysis`、`interpretable_ml_analysis` | `references/literature-search-and-zotero.md`、`references/education-data-analysis.md`、`references/interpretable-machine-learning.md` |
-| 4. 写作、诊断与修订 | `draft_review`、`section_revision`、`revision_cascade`、`reviewer_response_and_revision` | `references/writing-workflow.md`、`references/publication-prose-and-style-control.md`、`assets/section-prompts/` |
+| 4. 写作、诊断与修订 | `draft_review`、`section_revision`、`revision_cascade`、`reviewer_response_and_revision` | `references/writing-workflow.md`、`references/revision-governance-and-style-diagnosis.md`、`references/publication-prose-and-style-control.md`、`assets/section-prompts/` |
 | 5. 投稿、工件与专项协作 | `reference_and_artifact_audit`、`pre_submission_check` | `references/journals/index.md`、`references/self-review.md`、`references/cross-skill-artifact-routing.md` |
 
 ## 十八个任务模式
@@ -65,6 +65,8 @@ description: "Support Chinese education technology, educational digitalization, 
 3. 摘要通常用“问题—研究行动—发现簇—中心判断/意义”推进。样本、方法和一个关键数字按需要保留；不默认加入验证划分、SHAP/ALE、Bootstrap、消融或方法免责声明。
 4. 讨论优先回答“这项发现改变了我们对何种学习、教学、评价或技术实践的理解”，再与理论和文献对话。可以形成具有理论依据的过程结构、形成逻辑或机制解释；不要把它写成算法运行日志。
 5. 局限只在论文需要时，用一段保留一至两项真正影响结论范围的研究条件。不要把完整的方法审计清单改写成“仍需……检验”的结尾，也不要在摘要、结果、讨论和结论重复免责语。
+
+全文诊断、返修或审稿回应时，再读取 `references/revision-governance-and-style-diagnosis.md`：先按 P0/P1/P2 收敛问题，再分别处理论证重构、内容补强和表达打磨。语体诊断检查对称模板、无证据升华、汇报口吻和技术流水账，不设机械禁词或词频配额。
 
 学习分析与可解释机器学习写作时，默认读取 `references/interpretable-machine-learning.md`、`references/writing-workflow.md` 和相应章节模板；摘要再读取 `references/abstract-state-and-evidence-control.md` 与 `assets/abstract-argument-card-template.md`，其他章节从 `assets/section-prompts/abstract.md` 进入。方法质量、复现或投稿技术预审时，才将其中的审计部分作为独立交付。
 
