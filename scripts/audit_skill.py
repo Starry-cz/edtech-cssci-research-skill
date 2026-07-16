@@ -113,6 +113,7 @@ def main() -> int:
         ROOT / "references" / "eight-journal-writing-evidence.md",
         ROOT / "assets" / "abstract-argument-card-template.md",
         ROOT / "references" / "abstract-state-and-evidence-control.md",
+        ROOT / "references" / "education-technology-empirical-writing-closure.md",
         ROOT / "scripts" / "audit_manuscript_surface.py",
         ROOT / "references" / "claim-evidence-validation-contract.md",
         ROOT / "references" / "statistical-reporting-and-figure-evidence.md",
@@ -120,6 +121,7 @@ def main() -> int:
         ROOT / "references" / "pre-submission-peer-review.md",
         ROOT / "assets" / "claim-evidence-validation-matrix-template.md",
         ROOT / "assets" / "figure-evidence-contract-template.md",
+        ROOT / "assets" / "empirical-writing-closure-canvas.md",
         ROOT / "references" / "journals" / "index.md",
         ROOT / "references" / "functional-phrasing-bank.md",
         ROOT / "scripts" / "check_journal_profile.py",
@@ -166,7 +168,7 @@ def main() -> int:
         if entry not in readme_text:
             errors.append(f"README 缺少直接入口：{entry}")
     validation_text = read(ROOT / "references" / "validation-scenarios.md")
-    for signal in ("论文写作轨", "方法审计轨", "社会科学论文", "P0/P1/P2", "同一留出集用于选模", "SHAP", "八刊", "drawio", "待官方核验", "混合方法研究", "理论/概念预路由", "可直接提交的最终版论文"):
+    for signal in ("论文写作轨", "方法审计轨", "社会科学论文", "P0/P1/P2", "同一留出集用于选模", "SHAP", "八刊", "drawio", "待官方核验", "混合方法研究", "理论/概念预路由", "可直接提交的最终版论文", "理论—构念—指标—表图—讨论—启示"):
         if signal not in validation_text:
             errors.append(f"验证场景缺少回归信号：{signal}")
 
@@ -192,6 +194,8 @@ def main() -> int:
         "references/abstract-state-and-evidence-control.md",
         "references/journals/index.md",
         "references/revision-governance-and-style-diagnosis.md",
+        "references/education-technology-empirical-writing-closure.md",
+        "assets/empirical-writing-closure-canvas.md",
         "assets/section-prompts/abstract.md",
         "scripts/audit_manuscript_surface.py",
     ):

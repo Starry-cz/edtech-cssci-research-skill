@@ -23,7 +23,7 @@
 | 设计型研究与实践模型 | `practice_model_design`、`framework_defense` | `assets/section-prompts/methods.md`、`results.md`、`discussion.md` | 迭代证据、修改理由与设计原则 |
 | 质性/案例/政策 | `research_question_refinement`、`section_revision` | `assets/section-prompts/methods.md`、`results.md`、`discussion.md` | 案例选择、研究者位置、编码与反例 |
 | 混合方法 | `education_data_analysis`、`section_revision` | `references/research-paradigms.md`；`assets/section-prompts/methods.md`、`results.md`、`discussion.md` | 整合节点、冲突处理与新增解释 |
-| 学习分析/可解释机器学习 | `education_data_analysis`、`interpretable_ml_analysis` | `assets/section-prompts/abstract.md`、`methods.md`、`results.md`、`discussion.md` | 数据生成、切分、泄漏、解释边界与教育转译 |
+| 学习分析/可解释机器学习 | `education_data_analysis`、`interpretable_ml_analysis` | `references/education-technology-empirical-writing-closure.md`、`assets/empirical-writing-closure-canvas.md`、`assets/section-prompts/abstract.md`、`methods.md`、`results.md`、`discussion.md` | 数据生成、切分、泄漏、解释边界与教育转译 |
 
 指定目标期刊时，再读取 `references/journals/index.md` 和对应画像卡。画像仅汇集已核验的官方入口与可执行项：超过 90 天、没有机器可读细则或文件未能获取时，只能输出“待官方核验”，不能以通用格式代替该刊要求。可在投稿前运行 `scripts/check_journal_profile.py <稿件> <期刊画像>`；该结果是候选风险清单，不是编辑部合格证明。
 
@@ -62,8 +62,8 @@
 
 | 模式 | 何时进入 | 组合资源 | 核心输出 |
 | --- | --- | --- | --- |
-| `draft_review` | 需要诊断全文或长草稿 | `academic-writing-and-revision.md`、`writing-workflow.md`、`revision-governance-and-style-diagnosis.md`、`publication-prose-and-style-control.md`、`eight-journal-writing-evidence.md` | P0/P1/P2 修订优先级、主线、章节功能、社会科学表达与重构顺序；预审稿仅在用户要求时追加 |
-| `section_revision` | 需修改摘要、引言、综述、方法、结果或讨论 | `writing-workflow.md`、相应 `assets/section-prompts/` 文件、`functional-phrasing-bank.md`；摘要再读 `abstract-state-and-evidence-control.md` | 可直接进入论文的自然正文；方法审计或修改说明按需另附 |
+| `draft_review` | 需要诊断全文或长草稿 | `academic-writing-and-revision.md`、`writing-workflow.md`、`education-technology-empirical-writing-closure.md`、`revision-governance-and-style-diagnosis.md`、`publication-prose-and-style-control.md`、`eight-journal-writing-evidence.md` | P0/P1/P2 修订优先级、主线、章节功能、社会科学表达与重构顺序；预审稿仅在用户要求时追加 |
+| `section_revision` | 需修改摘要、引言、综述、方法、结果或讨论 | `writing-workflow.md`、相应 `assets/section-prompts/` 文件、`functional-phrasing-bank.md`；实证研究再读 `education-technology-empirical-writing-closure.md`，摘要再读 `abstract-state-and-evidence-control.md` | 可直接进入论文的自然正文；方法审计或修改说明按需另附 |
 | `revision_cascade` | 一项修改可能牵动多处内容 | `academic-writing-and-revision.md`、`revision-governance-and-style-diagnosis.md`、`argumentation-and-revision-workbook-template.md` | 修改层级、P0/P1/P2 优先级、传播清单、验证方式和完成状态 |
 | `reviewer_response_and_revision` | 收到审稿意见或需准备回应函 | `revision-and-reviewer-response.md`、`revision-governance-and-style-diagnosis.md`、`reviewer-response-and-revision-ledger-template.md` | 意见台账、P0/P1/P2 优先级、回应逻辑、修改位置、连锁更新与证据 |
 
